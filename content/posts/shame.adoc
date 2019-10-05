@@ -1,0 +1,13 @@
+---
+title: "Shame"
+date: 2019-03-04T07:34:40+02:00
+draft: false
+---
+
+To motivate me to actually finish some of the projects I start, I'm going to
+try announcing them to the world. Shame me into finishing these:
+
+- A nicer arXiv frontend of daily new additions.
+- A modern typesetting of Beauville's _Surfaces algebriques complexes_.
+
+Shame. Shame. Shame.

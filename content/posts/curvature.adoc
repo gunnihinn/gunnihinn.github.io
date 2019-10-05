@@ -1,0 +1,28 @@
+---
+title: "Curvature as a bilinear form"
+date: 2019-05-15T07:36:52+02:00
+draft: false
+---
+
+Here's something I thought of when I couldn't sleep last night.
+
+The curvature tensor of a Kähler metric can be viewed as a Hermitian form on
+\(\bigwedge^{1,1} T_X^+++*+++\) by mapping \(\operatorname{End} T_X \to \bigwedge^{1,1}
+T_X^+++*+++\) via the metric.
+
+If we're on a compact Kähler manifold with zero first Chern class, then for each
+Kähler class \(\omega\) and \((1,1)\)-classes \(u, v\), we can pick the Ricci-flat
+metric in \(\omega\) and the harmonic representatives of \(u, v\). If \(R\) is the
+curvature tensor of the metric, viewed as a Hermitian form, we can then set
+\[
+b(u,v)(\omega) := \int_X R(u, v) \, dV_{\omega}.
+\]
+This defines a smooth bilinear form \(b\) on the tangent space of the Kähler cone
+of \(X\).
+
+Besides being fun times, can we say anything interesting about \(b\)? For example,
+what is its norm with respect to the Riemannian metric on the Kähler cone, or
+its trace with respect to that metric? Can we integrate it over some subset of
+the cone?
+
+

@@ -1,0 +1,141 @@
+---
+title: "Request-level configuration invariance in Go"
+date: 2018-09-12T07:44:22+02:00
+draft: false
+---
+
+Suppose we have an HTTP service. The behaviour of service depends on some
+configuration that may change at runtime; it may reload a static configuration
+file on `SIGHUP`, need to react to changes in its service discovery mechanism,
+or have A/B test state or features toggled on and off.
+
+In Go, a naive way of handling this is by writing our configuration state to a
+struct and updating it in background goroutines:
+
+[source,go]
+----
+type State struct {
+    frobinate bool
+}
+
+var state State{}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    if s.frobinate {
+        fmt.Fprintln(w, "Great success")
+    } else {
+        fmt.Fprintln(w, "Great non-success")
+    }
+}
+----
+
+This naive approach has at least two problems:
+
+1. The state may change while we’re processing a request, causing us to process
+part of the request with one state, and another part with another. This isn’t a
+big deal in our example, but becomes more of a problem as the time needed to
+handle a request increases.
+2. There are no synchronization primitives in play, so updating the state has data
+race conditions.
+
+Check out the working example in
+https://github.com/gunnihinn/go-state-channel/tree/ecb5ac180cdcd31f1f1885a1b82d7ca57a9195f4:[this
+commit]
+to see the first problem in action.
+
+One way to resolve these problems is to add a mutex and to pass copies of the
+state to the request handlers:
+
+[source,go]
+----
+type State struct {
+    frobinate bool
+
+    *sync.Mutex
+}
+
+// Copy may be arbitrarily complicated if State contains slices, maps,
+// pointers, or other structs.
+func (s *State) Copy() State {
+    s.Lock()
+    defer s.Unlock()
+
+    return *s
+}
+
+var state &State{}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    s := state.Copy()
+
+    if s.frobinate {
+        fmt.Fprintln(w, "Great success")
+    } else {
+        fmt.Fprintln(w, "Great non-success")
+    }
+}
+----
+
+The background goroutine that updates the state then either does so through a
+dedicated method that locks/unlocks the mutex, or does the locking itself.
+
+While this works fine, it relies on global state and uses none of Go’s built-in
+concurrency features. We were promised a brave new world, and encouraged to
+"share memory by communicating". This points the way to another solution to our
+two problems that leverages Go’s primitives better:
+
+[source,go]
+----
+type State struct {
+    frobinate bool
+}
+
+// Copy may be arbitrarily complicated if State contains slices, maps,
+// pointers, or other structs.
+func (s State) Copy() State {
+    return s
+}
+
+var stateCh chan State
+var toggle chan struct{}
+
+func stateManager() {
+    state := State{}
+
+    for {
+        select {
+        case stateCh <- state.Copy():
+
+        case <-toggle:
+            state.frobinate = !state.frobinate
+        }
+    }
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    s := <-stateCh
+
+    if s.frobinate {
+        fmt.Fprintln(w, "Great success")
+    } else {
+        fmt.Fprintln(w, "Great non-success")
+    }
+}
+----
+
+A complete working example is 
+https://github.com/gunnihinn/go-state-channel/blob/master/go-state-channel.go[here].
+Note that the working example doesn’t rely
+on any global state to pass state to the handler functions, using closures
+instead. Modifying the state is also only possible within the `stateManager`
+function. The working example could also be extended to have middleware copy the
+state to each request processing function instead of the ad-hoc way done there.
+
+It is still up to the developers to ensure the `Copy` method doesn’t pass mutable
+state around, but they no longer need to deal with mutexes and locks themselves.
+This also means that any future additions to the program that use the same
+pattern won’t need to worry about those locks either.
+
+There are no silver bullets in heavily concurrent systems, but in Go we can
+choose to not deal with some of the footguns we would need to handle in C, Java
+or other similar languages.

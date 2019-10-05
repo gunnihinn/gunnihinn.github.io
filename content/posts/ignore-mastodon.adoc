@@ -1,0 +1,10 @@
+---
+title: "Ignore Mastodon"
+date: 2019-03-05T07:33:59+02:00
+draft: false
+---
+
+Point: https://carlchenet.com/do-not-ignore-the-mastodon-social-network/[You should not ignore the Mastodon social network any more].
+
+Counterpoint: I truly, madly, deeply want to ignore all new and existing social
+networks.

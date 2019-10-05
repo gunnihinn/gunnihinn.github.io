@@ -1,0 +1,73 @@
+---
+title: "Not made for this world"
+date: 2019-07-31T07:38:25+02:00
+draft: false
+---
+
+
+It’s hot tonight, and this is going to be mostly the whiskey talking while I
+wait for it to get cool enough to sleep. I’ve killed the mosquitos I’ve seen,
+however, so until then I have only Haskell to keep me company.
+
+This morning, tef tweeted about 
+https://twitter.com/tef_ebooks/status/1155705690947805184[monads],
+which sent the Haskell pack his way with
+barks of not getting it. Just now, pinboard was reminded of some guy’s rage
+against 
+https://twitter.com/Pinboard/status/1156288764345348096[Esperanto],
+from back in the 90’s when the web was fun and mostly devoted
+to things like explaining how "The Downward Spiral" is a concept album or
+destroying Unix instead of each other’s mental health.
+
+For the Haskell pack, I did a PhD in the type of math that necessitates a lot of
+category theory, and I have looked at your use of category theory, and judged it
+to be unnecessary and pretentious and mainly focused on making you look smart
+while being entirely trivial. But this is not that kind of blog post, one that
+gets too tangled up in whether category theory is useful to get to the point.
+(If nothing else, 
+https://jneem.github.io/merging/[Pijul]
+proves that category theory is useful.) We’re here to discuss how Haskell as a
+whole is nonsense if you’re not an academic. Our claim is that Haskell is a
+useless language for writing software that has users.
+
+Our point is simple, and focused on IO. We propose that you can measure how
+user-facing a program or language is by measuring how much of its time it spends
+or worries about doing IO. That is, after all, the medium through which anyone
+who is not a program’s author (of which there may be many) will interact with
+the program. The time spent doing IO can be on the command line, via a GUI, over
+a network, or wherever; but to be a serious contender for user-facing programs,
+a language has to make IO be easy.
+
+C is a terrible language for most new things today. Anyone writing new software
+in C, that they expect to be used by other than thouroughly vetted people, needs
+to be able to explain why they’ve chosen C. At the same time, a lot of us are
+still exposed to C through the BSD or Linux kernels and syscalls, the undying
+popularity of K&R, random software on the internet, or other vectors. The
+culture around C invented the modern language textbook, K&R, and the modern
+user-facing program, "Hello world", both of which spend most or all of their
+time dealing with IO to talk to you or other users.
+
+I claim making IO as simple as possible, which C does for all its faults, to do
+is analogous to trying to making it as simple as possible for other people to
+talk to you in designed languages as you can.footnote:[One could say that what I
+mean is something more like making FFI as easy as possible, but that’s missing
+the point and would just move this discussion to some other, less inflammatory,
+level that we’re keen to avoid.]. Esperanto shows you can fail
+at that goal, if you even had it, for it favors sounds native to European
+languages above others. Likewise, Haskell shows you can fail at the goal of
+making IO easy, if you even had it, for it does not.
+
+Haskell is a purely functional, lazily evaluated language, with a type system.
+Like tef explains, that is great, until you run into IO. Up until that point,
+you could rearrange computations in any order you liked, if they needed to be
+done at all. As soon as you need to do IO, though, you need something to happen
+before another thing, which makes you very unhappy if you’re Haskell. It in fact
+makes you so unhappy that you’ll drag the entire lost-at-sea community of
+category theorists into the orbit of your language just so you can have an
+abstraction for doing IO that fits into your model of the world. This
+abstraction, monoids, then comes with the added benefit of being abstract enough
+that all of your programmers can spend their time explaining it to each other
+instead of writing programs that use the abstraction to do IO, and therefore
+deal with any actual users.
+
+Haskell is where programmers go to not have users.

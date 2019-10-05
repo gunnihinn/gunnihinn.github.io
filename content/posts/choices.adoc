@@ -1,0 +1,11 @@
+---
+title: "Choices"
+date: 2019-03-09T07:32:23+02:00
+draft: false
+---
+
+I only have time to work on the arXiv project so often, so I'm taking a lot of
+time between sessions to think about what I'm doing. When I look at my system
+design notes, I feel like all the decisions I'm making are the obvious choices,
+but they also were not at all obvious when I started thinking about them. It's a
+good feeling.

@@ -1,0 +1,23 @@
+---
+title: "Queuesim"
+date: 2019-03-08T07:33:20+02:00
+draft: false
+---
+
+I haven't made a lot of progress on my projects. I _did_ create a Scaleway VM
+and shoved an OAI harvester on there that's happily downloading the arXiv's
+backlog of metadata. I can also parse the XML it fetches, and have some ideas
+about how I'm going to store it.
+
+This lack of progress mostly comes from me being nerd-sniped into thinking
+about bounded queues under load. My 
+https://github.com/bookingcom/carbonapi/issues/35[old work project]
+wanted to use a FIFO queue to hold its requests. That is a bad idea, because
+FIFO queues perform very poorly under load, as I 
+https://github.com/gunnihinn/queuesim[went a little overboard]
+in demonstrating.
+
+Funnily enough, that very simple thing is one of my most popular Github
+projects ever.
+
+

@@ -1,0 +1,37 @@
+---
+title: "The standard deviation for mathematical developers"
+date: 2019-05-16T07:30:03+02:00
+draft: true
+---
+
+The average and standard deviation come up in all kinds of places, and the
+closer we come to applications of math the more useful understanding them
+becomes. I got through all of my PhD in differential geometry without really
+understanding what they were; after a year of working on distributed systems I'd
+needed to sit down and really grok them. This is the way I think about those
+concepts and helped me feel like I really understand them. It's very influenced
+by my geometry background and may not be for everyone.
+
+The average and standard deviation belong, if not to statistics, then to
+probability theory. To be good citizens, we should thus work in a probability
+space; that is, a measure space of volume one. That is what we'll do in
+practice, but I prefer starting from a slightly more concrete situation and
+building up our probability space.
+
+Let thus $X$ be some space. We'll always take $X$ to be a subset of the real
+numbers here, and we'll imagine the points of $X$ represent time. If we're
+inspired by software engineering, we'll think of $X$ as being a set $X = \{x_1,
+\ldots, x_n\}$ of points that are all the same distance apart, as if they were
+the time-series resolution of a monitoring system like Graphite or Prometheus.
+
+We're interested in things that happen, and we look at the set $X$ as the set of
+points where we're able to measure observations of things that happen. The set
+of all events we can observe is thus the set of real-values functions $F(X) = \{
+f : X \to \mathbb{R} \}$. This is a real vector space, and if the set $X$ is
+finite it is also finite-dimensional. We'll assume we've picked an inner product
+on this vector space such that the norm of the constant function 1 is 1. This is
+always possible.
+
+This is our setup. Events happen, we can only measure them at certain times, and
+we have an inner product to compare events. Think, again, of time-series
+monitoring of systems.

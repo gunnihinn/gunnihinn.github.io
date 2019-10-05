@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Magnússon"
+author = "Gunnar Þór Magnússon"
+theme = "hugo-flex"
