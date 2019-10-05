@@ -1,5 +1,5 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Magnússon"
+title = "Gunnar Þór Magnússon"
 author = "Gunnar Þór Magnússon"
 theme = "hugo-flex"

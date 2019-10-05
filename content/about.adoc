@@ -1,5 +1,5 @@
 ---
-title: "Gunnar Þór Magnússon"
+title: "About me"
 date: 2019-10-05T07:54:31+02:00
 draft: false
 ---
@@ -152,12 +152,12 @@ B.Sc. in Mathematics, University of Iceland, Reykjavík, Iceland.
 https://magnusson.io/files/kahler-cone-geometry.pdf[preprint].
 
 - _Automorphisms and examples of compact non-Kähler manifolds_,
-Mathematica Scandinavica <strong>Volume 121</strong>, 2017, 49&mdash;56.
+Mathematica Scandinavica *Volume 121*, 2017, 49&mdash;56.
 http://dx.doi.org/10.7146/math.scand.a-25983[DOI],
 https://arxiv.org/abs/1204.3165[arXiv].
 
 - _The inner product on exterior powers of a complex vector space_,
-Linear Algebra and its Applications <strong>Volume 504</strong>, 2014, 372&mdash;386.
+Linear Algebra and its Applications *Volume 504*, 2014, 372&mdash;386.
 https://doi.org/10.1016/j.laa.2016.04.014[DOI],
 https://arxiv.org/abs/1401.4048[arXiv].
 
@@ -171,7 +171,7 @@ https://tel.archives-ouvertes.fr/tel-00849096[HAL].
 
 - _A natural hermitian metric associated with local universal families of
 compact Kähler manifolds with zero first Chern class_,
-Comptes Rendus Mathematique <strong>Volume 350</strong>, 2012, 63&mdash;66.
+Comptes Rendus Mathematique *Volume 350*, 2012, 63&mdash;66.
 https://doi.org/10.1016/j.crma.2011.11.013[DOI],
 https://arxiv.org/abs/1112.1343[arXiv].
 
@@ -183,7 +183,7 @@ http://www.magnusson.io/files/magnusson-masters-thesis.pdf[Link].
 === Personal
 
 - _Bókahillan_,
-Stína <strong>9</strong>, November 2014.
+Stína *9*, November 2014.
 http://www.stinastina.is/stina112014.html[Link].
 
 - _Miscellaneous answers to reader questions about science_,
