@@ -1,0 +1,195 @@
+---
+title: "Gunnar Þór Magnússon"
+date: 2019-10-05T07:54:31+02:00
+draft: false
+---
+
+I am a developer, mathematician, editor, and writer who lives in Amsterdam. I
+grew up in Iceland, and have also lived in France and Mexico.
+
+As a developer, I am interested in distributed systems, reliability and
+debugging. I enjoy solving hard business problems through the use of computers,
+rather than using computers for their own sake. I like to understand the domain
+I work in, and to know and communicate with the stakeholders among my
+coworkers.
+
+As a mathematician, I am interested in complex differential geometry and its
+applications to projective algebraic geometry. I'm also an amateur of linear
+algebra, and prefer deep understanding of subjects to casual acquaintance.
+I don't do a lot of research anymore, but keep meaning to finish a manuscript
+on an interesting, but ultimately disappointing, cohomological approach to the
+Riemannian geometry of the Kähler cones of compact manifolds.
+
+== Online presence
+
+- mailto:gunnar.thor.magnusson@gmail.com[Email]
+- https://github.com/gunnihinn/[Github]
+- https://www.linkedin.com/in/gunnar-magn%C3%BAsson-45b636105/[LinkedIn]
+- https://mathoverflow.net/users/4054/gunnar-%c3%9e%c3%b3r-magn%c3%basson[MathOverflow]
+- https://math.stackexchange.com/users/3225/gunnar-%c3%9e%c3%b3r-magn%c3%basson[math.StackExchange]
+- https://arxiv.org/search/?searchtype=author&amp;query=%22Magn%C3%BAsson%2C+Gunnar+%C3%9E%C3%B3r%22[arXiv]
+
+
+== Curriculum vitae
+
+=== Professional experience
+
+2019&mdash;now::
+Senior software engineer, https://www.independentview.nl/[Independent View].
+Responsible for the operations and development of trading infrastructure at a
+hedge fund. Working on Python, Java and Scala systems deployed on Windows.
+
+- Ported existing codebase from Python 2 to 3 in time for the Python 2 end of
+  life deadline.
+- Setup continuous integration and test lifecycles of strategies to enable
+  stable and correct deployments.
+- Improved interactive trader system performance by orders of magnitude.
+
+2018&mdash;2019::
+Senior developer, http://www.booking.com[Booking.com].
+From May to December 2018, I was the lead developer on a team responsible for a
+Golang-based Graphite frontend based on
+https://www.github.com/go-graphite/carbonapi[carbonapi].
+
+- Implemented basic infrastructure around the project; brought rollouts to
+the company standard, defined monitoring and alerting, wrote operational
+documents for on-call personnel, resolved an impasse that had blocked
+rollouts for six months.
+- Made numerous upstream contributions to open-source projects the company
+used, including
+https://www.github.com/gogo/protobuf[gogo/protobuf],
+https://www.github.com/lomik/go-carbon[go-carbon], and
+https://www.github.com/uber-go/zap[zap].
+- Engaged in company-wide efforts to improve the resilience of services
+across all teams. Reviewed internal outage postmortems, industry lessons,
+and interviewed personnel to come up with a checklist that teams could use
+to assess their own status and see where improvement was needed.
+
+2016&mdash;2018::
+Developer, http://www.booking.com[Booking.com].
+Performed self-guided work in large existing code bases in Java, Golang, Perl
+and Python as a member of both autonomous and Agile-based teams.
+
+- Took ownership of the hotel search engine at Booking.com, a
+business-critical highly available distributed system, after its authors
+left the company. Communicated best-practices of its use to company users,
+ensured its capacity through the year of 2017, and provided strategies for
+future scaling of the system.
+- Took on other non-classical developer responsibilities as needed, including
+system administration at scale via Puppet and Salt, provisioning of new
+hardware, setup of monitoring and alerting, and communication with other
+teams and upper management in the absence of a product owner.
+- Gave a series of talks whose aim was to educate other developers at the
+company about our systems in the hope of making the boat go faster. Topics
+included the Booking.com hotel search engine, memory use in Java, and
+geometric interpretations of the average and standard deviations.
+
+2015&mdash;2016::
+Associate publisher, https://msp.org[Mathematical Sciences Publishers].
+Responsible for the publication of the journals
+https://msp.org/publications/journals/#gt[Geometry & Topology]
+and
+https://msp.org/publications/journals/#agt[Algebraic & Geometric Topology].
+Also oversaw the edition and publication of Volume 18 of the conference series
+https://msp.org/gtm/2012/18/[Geometry & Topology Monographs].
+This work was done remotely.
+
+- Stabilized the journal backlogs, making time-to-publication a known factor,
+enabling better communication with authors.
+- Wrote a linter of LaTeX documents customized for our editorial tasks, that
+was adopted by other editors while still in the prototype stage, and
+whose use lead to increased editor productivity.
+- Analyzed hundreds of thousands of records in our publications to estimate
+the value of building an in-house database of correctly formatted citations,
+and then argued the ROI was too low to be worth it.
+- Managed a team of remote copyeditors, ensuring quality through review and
+feedback cycles.
+
+2012&mdash;2015::
+Copyeditor, https://msp.org[Mathematical Sciences Publishers].
+Edited articles in world-known mathematical research journals like
+https://msp.org/pjm/2018/295-2/[Pacific Journal of Mathematics]
+and
+https://msp.org/ant/about/cover/cover.html[Algebra & Number Theory].
+Like other editors at the company, became an expert on TeX and LaTeX internals.
+This work was done remotely.
+
+- Top 10% performer among peer editors.
+- Took over maintenance and extension of in-house editing software.
+- Communicated with authors on final proof changes.
+
+2009&mdash;2012::
+Undergraduate lecturer, Université Joseph-Fourier.
+Taught a course in linear algebra to first-year undergraduate students in
+physics and mathematics. Responsible for one class of 30 students in a batch of
+150 students. All classes, homework and communication were in French.
+
+- Gave involved weekly homework assignments and provided detailed individual
+feedback on improvement points, above what was required of teachers.
+- Constructed a lecture plan from a list of topics a common final exam would
+question students on.
+- Wrote and graded mid-term exams in coordination with other teachers.
+
+=== Education
+2009&mdash;2012::
+Ph.D. in Mathematics, Université Joseph-Fourier, Grenoble, France.
+https://tel.archives-ouvertes.fr/tel-00849096[Thesis]:
+_Métriques naturelles associées aux familles de variétés Kahlériennes compactes_
+
+2007&mdash;2009::
+M.Sc. in Mathematics, Université Joseph-Fourier, Grenoble, France.
+http://www.magnusson.io/files/magnusson-masters-thesis.pdf[Thesis]:
+_Géométrie algébrique, géométrie analytique_
+
+2004&mdash;2007::
+B.Sc. in Mathematics, University of Iceland, Reykjavík, Iceland.
+
+== Publications
+
+=== Academic
+
+- _Cohomological expression of the curvature of Kähler moduli_, 2019, 
+https://magnusson.io/files/kahler-cone-geometry.pdf[preprint].
+
+- _Automorphisms and examples of compact non-Kähler manifolds_,
+Mathematica Scandinavica <strong>Volume 121</strong>, 2017, 49&mdash;56.
+http://dx.doi.org/10.7146/math.scand.a-25983[DOI],
+https://arxiv.org/abs/1204.3165[arXiv].
+
+- _The inner product on exterior powers of a complex vector space_,
+Linear Algebra and its Applications <strong>Volume 504</strong>, 2014, 372&mdash;386.
+https://doi.org/10.1016/j.laa.2016.04.014[DOI],
+https://arxiv.org/abs/1401.4048[arXiv].
+
+- _The geometry of Kähler cones_,
+2012,
+https://arxiv.org/abs/1211.6934[arXiv].
+
+- _Métriques naturelles associées aux familles de variétés Kahlériennes compactes_,
+Ph.D. thesis, defended at Institut Fourier in Grenoble, France in 2012.
+https://tel.archives-ouvertes.fr/tel-00849096[HAL].
+
+- _A natural hermitian metric associated with local universal families of
+compact Kähler manifolds with zero first Chern class_,
+Comptes Rendus Mathematique <strong>Volume 350</strong>, 2012, 63&mdash;66.
+https://doi.org/10.1016/j.crma.2011.11.013[DOI],
+https://arxiv.org/abs/1112.1343[arXiv].
+
+- _Géométrie algébrique, géométrie analytique_,
+M.Sc. thesis, defended at Institut Fourier in Grenoble, France in 2009.
+http://www.magnusson.io/files/magnusson-masters-thesis.pdf[Link].
+
+
+=== Personal
+
+- _Bókahillan_,
+Stína <strong>9</strong>, November 2014.
+http://www.stinastina.is/stina112014.html[Link].
+
+- _Miscellaneous answers to reader questions about science_,
+The Icelandic Science Web, 2006&mdash;2007.
+https://www.visindavefur.is/hofundur/1140/gunnar-thor-magnusson/[Link].
+
+- _Popular music reviews_,
+Rjóminn, 2005&mdash;2006.
+
