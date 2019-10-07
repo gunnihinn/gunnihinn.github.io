@@ -45,7 +45,7 @@ hedge fund. Working on Python, Java and Scala systems deployed on Windows.
   stable and correct deployments.
 - Improved interactive trader system performance by orders of magnitude.
 
-2018&mdash;2019::
+2018::
 Senior developer, http://www.booking.com[Booking.com].
 From May to December 2018, I was the lead developer on a team responsible for a
 Golang-based Graphite frontend based on
@@ -181,6 +181,9 @@ http://www.magnusson.io/files/magnusson-masters-thesis.pdf[Link].
 
 
 === Personal
+
+- Lyttle Lytton semifinalist, 2017.
+http://adamcadre.ac/17lyttle.html[Link].
 
 - _Bókahillan_,
 Stína *9*, November 2014.
