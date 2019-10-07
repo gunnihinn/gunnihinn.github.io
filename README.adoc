@@ -1,0 +1,27 @@
+= Gunnar's blog
+
+Currently served at https://magnusson.io[magnusson.io].
+
+Setup:
+
+----
+$ git clone --recursive https://www.github.com/gunnihinn/blog.git
+----
+
+Create new post:
+
+----
+$ hugo new post/title.adoc
+----
+
+Serve locally:
+
+----
+$ make dev
+----
+
+Publish:
+
+----
+$ make deploy
+----
