@@ -1,0 +1,73 @@
+---
+title: "Gitsplorer"
+date: 2019-10-20T16:49:02+02:00
+draft: false
+---
+
+Have you ever found yourself using Git and thinking "This is great, but I wish
+these filesystem operations were read-only and ten times slower?". Well, friend,
+do I have news for you.
+
+I was thinking about a project the other day that involved comparing the public
+API of a Golang codebase at different times in its history. To do this, I
+figured I'd clone the repo, check out commit A and analyze it, then check out
+commit B and analyze that, and boo! Hiss! That's inelegant and leaves clutter
+that needs to be cleaned up all around the disk. There has got to be a better
+way!
+
+Once I made a https://github.com/gunnihinn/git-commit-mine[Git commit hash
+miner] because I wanted to race it against a coworker to see who could get a
+commit with more leading zeros into a frequently used repository at work. That
+had the side effect of teaching me some about Git's internals, like what its
+objects are (blobs, trees, commits, tags) and how they fit together. I figured
+that if I could convince the Golang AST parser to read the Git database instead
+of the filesystem, I could do what I wanted in a much better way.
+
+Alas, doing that would have required monkey-patching the Go standard library,
+and I don't want to hunt down every system call it ends up making to be sure I
+got them all. However, Git is famously a content-addressable filesystem, so what
+if we just made a filesystem that points to a given commit in a repo and pointed
+the parser at that?
+
+This turns out to be pretty easy to do by combining `libgit2` and `libfuse`. We
+use the former to read objects in the Git repository. (The objects are easy to
+read by hand, until you have to read packed objects. That's doable, but a bit
+of a distraction in what is already quite the distraction.) We then use the
+latter to create a very basic read-only filesystem. In the end, we have a
+read-only version of `git checkout` that writes nothing to disk.
+
+I put a prototype of this together in Python, because I'm lazy. It's called
+https://github.com/gunnihinn/gitsplorer/[`gitsplorer`] and you should absolutely
+not use it anywhere near a production system. It scratches my itch pretty well,
+though. In addition to my API comparisons (which I still haven't got to), I do
+sometimes want to poke around the state of a repository at a given commit and
+this saves me doing a stash-checkout dance or reading the `git worktree` manpage
+again.
+
+For fun, and to see how bad of an idea this was, I came up with a very
+unscientific benchmark: We checkout the Linux kernel repository at a randomly
+selected
+https://github.com/torvalds/linux/commit/29c7f1f53bfb3770bdb65a9e79064a963dd40621[commit],
+run Boyter's https://github.com/boyter/scc[scc] line-counting tool, and checkout
+`master` again. We do this both with `gitsplorer` and with ye olde `git
+checkout`. The results speak for themselves:
+
+----
+git checkout: 62 seconds
+gitsplorer: 567 seconds
+----
+
+The `gitsplorer` version is also remarkable for spending all its time using 100%
+of a CPU, which the `git` version does not. (It uses around 90% of a CPU while
+doing the checkouts, then all of my CPUs while counting lines. The Python FUSE
+filesystem is single-threaded, so beyond Python being slow it must also be a
+point of congestion for the line counting.) I did some basic profiling of this
+with the wonderful profiler https://github.com/P403n1x87/austin[Austin], and saw
+that the Python process spends most of its time reading Git blobs. I think, but
+did not verify, that this is because `libgit2` decompresses the contents of the
+blobs on every such call, while most of the reads we make are in the FUSE
+`getattr` call where we are only interested in metadata about the blob. I made
+no attempts to optimize any of this.
+
+So, friends, if you've ever wished `git checkout` was read-only and 10 times
+slower than it is, today is your lucky day.
