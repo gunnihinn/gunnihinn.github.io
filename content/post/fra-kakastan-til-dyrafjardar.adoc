@@ -1,0 +1,49 @@
+---
+title: Frá Kakastan til Dýrafjarðar
+date: 2013-10-21T19:19:46
+draft: false
+tags: ["Áhugafólk um almenna skynsemi"]
+---
+
+Nýlega mistókst utanríkisráðherra vorum að bera fram nafn landsins http://en.wikipedia.org/wiki/Kazakhstan[Kasakstan] við opinbert tilefni. Þetta er neyðarlegt mjög fyrir ráðherrann, sem hefur verið gagnrýndur fyrir reynsluleysi og vanþekkingu á viðfangsefni ráðuneyti síns: útlöndum. Stefán Gunnar Sveinsson tekur upp hanskann fyrir ráðherrann í Morgunblaðinu í dag:
+
+<blockquote>Barack Obama hefur heimsótt öll 58 ríki Bandaríkjanna. Dan Quayle sagði að framtíðin yrði betri á morgun og fólk átti það til að misvanmeta George W. Bush. Og látum nú vera í hvaða firði Jón Sigurðsson fæddist. Nú hefur utanríkisráðherrann okkar bæst í hóp stjórnmálamanna sem hafa talað illilega af sér enda ekki á allra færi að bera fram orðið Kasakstan. Og hvað um það?</blockquote>
+
+Ráðherrann gerði mistök, so fucking what?
+
+Mér finnst reyndar erfitt að vera ósammála Stefáni hér. Fólk mismælir sig. Punktur. (Þó sú staðhæfing Stefáns um að bera fram "Kasakstan" sé aðeins á færi tunguliprustu manna sé bull -- prófaðu bara.)
+
+Nei, ræða Stefáns verður áhugavert því hann finnur sig knúinn til að halda áfram og heimspekúlera um að maður hafi gert mistök:
+
+<blockquote>Þetta verður þeim mun sérstæðara þegar haft er í huga að tilvitnanasöfn eru sneisafull af visku um það hversu gott sé að gera mistök, af þeim læri menn nú mest. Og þegar horft er yfir þann hóp sem hefur látið eitthvað flakka um mistökin verður ekki sagt annað en að kannski hafi hann eitthvað til síns máls, enda þar samankomnir flestir uppfinningamenn og frumkvöðlar sem sagan hefur að geyma, menn sem breyttu heiminum eins og Steve Jobs, Henry Ford og Edison.</blockquote>
+
+Látum okkur nú sjá. Mér sýnist Stefán hér ýja að þessu: Ráðherra er í hópi þeirra manna sem gert hafa mistök. Í þeim hópi eru líka X, Y og Z. Þeir voru allir frábærir. Því er ráðherra frábær.
+
+Önnur óformleg leið til að segja sama hlut er: "Sjáðu hvað ráðherra á flotta vini! Hann hlýtur þá að vera góður drengur."
+
+Því miður er þetta rökvilla, sem við getum kallað http://en.wikipedia.org/wiki/Association_fallacy[félagsskapavillu]. Hér er Venn-teikning sem útskýrir þesa villu:
+
+<img src="http://upload.wikimedia.org/wikipedia/en/0/06/Venn-diagram-AB.svg" alt="" />
+
+
+Í okkar tilfelli táknar A allt það fólk sem er frábært. Til að umræða okkar hafi innihald skulum við, eins og Stefán, gera ráð fyrir að Steve Jobs, Henry Ford og Thomas Edison hafi verið frábærir. Í hópi B er þá allt fólk sem hefur gert mistök. Þar eru vissulega Steve Jobs, Henry Ford og Thomas Edison, sem eru þá bæði í hópum A og B. Í hópi B er líka ráðherra vor. Því miður hefur Stefán ekki rökstutt að ráðherra sé frábær, svo við vitum ekki hvort hann sé utan við gula hringinn.
+
+Ráðherra hefur gert mistök. Af því leiðir ekki að hann sé jafningi Henry Ford.
+
+
+-------------
+
+
+Frá Kakastan til Dýrafjarðar
+Stefán Gunnar Sveinsson
+
+
+Barack Obama hefur heimsótt öll 58 ríki Bandaríkjanna. Dan Quayle sagði að framtíðin yrði betri á morgun og fólk átti það til að misvanmeta George W. Bush. Og látum nú vera í hvaða firði Jón Sigurðsson fæddist. Nú hefur utanríkisráðherrann okkar bæst í hóp stjórnmálamanna sem hafa talað illilega af sér enda ekki á allra færi að bera fram orðið Kasakstan. Og hvað um það?
+
+Stjórnmálamenn og fjölmiðlafólk sker sig úr að því leyti að þegar það mismælir sig eða gerir meinlega villu er það oftar en ekki á almannafæri. Mistök sem annars yrðu gleymd um leið geta því lifað ansi lengi, ekki síst ef sífellt er vakin athygli á þeim. Og fólk er dæmt hart af þeim. Enginn er syndlaus þegar kemur að því að gera mistök, en samt eru allir tilbúnir að kasta ekki bara fyrsta steininum heldur einnig þeim næsta og þarnæsta. Sumum finnst sem það eigi að varða atvinnumissi, eins og þegar lítilsháttar þýðingarvilla varð að fyndinni en rangri frétt um Excel-skjöl og erlenda söngvara.
+
+Vissulega eru mistök af þessu tagi oft mjög spaugileg og/eða vandræðaleg. Sjálfur hef ég oft og mörgum sinnum hlegið að slíkum ummælum. Ég hef líka margoft sjálfur talað illilega af mér og kasta því reglulega steinum úr grjóthúsi. Þess vegna kemur mér á óvart heiftin og dómharkan sem fólk getur sýnt í þessum efnum. Menn eru ekki sjálfkrafa vanhæfir til að gegna embættum þó að tungan vefjist um tönn eða ræðuskrifarinn sé ekki nógu vel að sér í sögu og landafræði.
+
+Þetta verður þeim mun sérstæðara þegar haft er í huga að tilvitnanasöfn eru sneisafull af visku um það hversu gott sé að gera mistök, af þeim læri menn nú mest. Og þegar horft er yfir þann hóp sem hefur látið eitthvað flakka um mistökin verður ekki sagt annað en að kannski hafi hann eitthvað til síns máls, enda þar samankomnir flestir uppfinningamenn og frumkvöðlar sem sagan hefur að geyma, menn sem breyttu heiminum eins og Steve Jobs, Henry Ford og Edison. Þrátt fyrir það virðist sem speki hins seinheppna Hómers Simpsons falli gagnrýnendum best í geð, en hún er í lauslegri þýðingu: "Aldrei reyna, mistakast aldrei."
+
+Hvaðan ætli þetta umburðarleysi gagnvart sárasaklausum mismælum og minniháttar mistökum komi? Er þetta hluti af þeirri óheillaþróun sem hefur sést hér eftir hrun að enginn virðist ábyrgur orða sinna og hægt er að láta allt flakka í heift sinni gagnvart öðru fólki? Er ekki kominn tími til að slaka aðeins á? Á móti kemur að kannski er upphlaupið nú meira vegna þess að gúrkutíð sumarsins virðist hafa teygt sig yfir á veturinn. Og kannski ættum við að þakka fyrir það að geta hlegið í ládeyðunni að mismælunum um "Kakastan" eftir alla þá býsnavetur sem hér hafa riðið yfir síðustu árin. Líklega orðuðu Rómverjarnir þetta best: Errare humanum est. Eða var það Romanes eunt domus?

@@ -1,0 +1,19 @@
+---
+title: Personal communication
+date: 2013-06-28T14:08:02
+draft: false
+tags: ["neginegi"]
+---
+
+There's a type of citation that we should agree to kill. Come on, let's light torches, strew gasoline on the ground, lock the children in the barn for their protection, and hope that our plan doesn't have any unintended consequences.
+
+I speak of the hated "personal communication":
+
+    ..., which is a consequence of uber fancy dream result [85].
+    [85] McSwanky, M. Personal communication.
+
+This annoys the ever living shit out of me. For one this citation contains no
+information. At least none that is relevant to the subject at hand, for it
+_does_ successfully communicate that the author of the paper knows Mr. McSwanky on a deep and personal level, which seems to be its only imaginable function.
+
+"Personal communication" is the academic equivalent of name-dropping famous people you know at a dinner party. It is crass and vulgar and if asked the famous person won't know who you are. Don't do it.

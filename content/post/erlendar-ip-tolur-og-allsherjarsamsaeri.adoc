@@ -1,0 +1,63 @@
+---
+title: Erlendar IP tölur og allsherjarsamsæri
+date: 2013-10-25T14:40:29
+draft: false
+tags: ["Áhugafólk um almenna skynsemi"]
+---
+
+Þegar rignir, þá hellirignir. Í gær fann ég engar rökvillur sem ég gat hugsað mér að tala um en í dag flæðir á þeirra yfir bakka sína og útbíar okkur upp að hnjám. Skrifum þetta flóð í bili upp á almenna föstudagsstemmingu. Við fáum tvo aðskilda mola í dag:
+
+
+(1) Erlendar IP tölur stela störfum og konum okkar
+
+Fyrst er frétt Vísi.is sem ber fyrirsögnina http://www.visir.is/bjoda-utlendar-ip-tolur-sem-nota-ma-til-ad-hala-nidur-fra-efnisveitum/article/2013710259951[Bjóða útlendar IP tölur sem nota má til að hala niður frá efnisveitum]. Þar er fjallað um þjónustu Tals, sem gengur út á að bjóða "erlendar" IP tölur sem viðskiptavinir Tals geti nýtt til hvers sem þeir vilja.
+
+(Raunveruleikasvigi: Þjónusta Tals gengur væntanlega út á að beina netumferð viðskiptavina gegnum netþjón úti í heimi og blekkja þannig þau föll sem ákvarða staðsetningu viðskiptavinarins. Því misskilja talsmaður Tals og fréttamaður sjálfa sig þegar þeir segja að IP tölurnar sjálfar séu erlendar.)
+
+Rökvillan í þessari frétt er í boði Snæbjörns Steingrímssonar, framkvæmdastjóra SMÁÍS, sem gæti haldið þessu bloggi í góðum holdum einn síns liðs. Það er reyndar örugglega ekki Snæbirni sjálfum að kenna heldur starfi hans, því hann er í þeirri ömurlegu stöðu að vinna við að verja tapaðan málstað, svo ekki er undarlegt að hann beiti þeim tólum sem til séu. Í fréttinni segir:
+
+<blockquote>[Smáís] segja þjónustuna klárt brot á lögum um höfundarrétt. Þjónustan snýst um að útvega íslenskum viðskiptavinum erlendar IP tölur. Ef viðkomandi er með íslenska IP tölu þá getur hann ekki nálgast þjónustu Netflix og Hulu, sem eru erlendar efnisveitur og bjóða upp á kvikmyndir og þætti. Ástæðan fyrir því að ekki er hægt að nálgast slíkar efnisveitur vegna laga um höfundarrétt.
+
+Í svari framkvæmdastjóra Tals, Petreu Ingileifar Guðmundsdóttur, segir að Tal bjóði aðeins upp á tæknilegar lausnir svo viðskiptavinir geti nálgast veiturnar. "Notkun á erlendum efnisveitum og heimasíðum er alltaf á ábyrgð viðskiptavinar," segir Petra og varpar þannig ábyrgðinni af fyrirtækinu.
+
+"Þessi rök halda ekki, hvorki siðferðislega né lagalega að [Smáísar] mati. Í raun eru þetta nákvæmlega sömu röksemdarfærslurnar og við heyrum varðandi torrent-síðurnar."</blockquote>
+
+Mótmæli Smáís eru þessi: Þjónusta Tal gerir fólki kleift að brjóta á höfundarrétti. Því mun fólk brjóta á höfundarrétti.
+
+Þetta er http://en.wikipedia.org/wiki/Appeal_to_probability[líkinda- eða möguleikavilla], þar sem sagt er að því eitthvað sé líklegt eða mögulegt muni það gerast. Það er rangt; lesandi getur sannfært sig um það með að kasta krónu og athuga að þó bæði hafi verið mögulegt að skjaldamerki eða fiskur komi upp gerðist annað þeirra ekki.
+
+Hér má mótmæla og segja "Allt í lagi, en ef við köstum nógu oft þá mun fiskur koma upp. Eins má segja tölfræðilega að á endanum muni einhver brjóta á höfundarrétti gegnum þjónustu Tals."
+
+Hér er í raun sama villa á ferðinni þar sem fjöldi kasta hefur verið látinn stefna á óendanlegt, en við getum svarað svo: Brot á höfundarrétti varða við lög. Samt þarf einhver að brjóta lögin til að eitthvað saknæmt hafi átt sér stað. Undir núverandi lögum ber Smáís að sakast út í einstaklinga sem brjóta á höfundarrétti en ekki Tal. Smáís hefði eitthvað til síns máls ef eina mögulega notkun þjónustu Tals væri að brjóta á höfundarrétti en svo er ekki; að dulbúa IP tölu getur hjálpað við að vernda rétt fólks til einkalífs í samskiptum og viðskiptum (auðvelt er að hugsa sér blaðamenn sem gagnast af slíku nafnleysi) og sjálfur nota ég slíka þjónustu reglulega og löglega til að lesa rannsóknagreinar. Alveg eins má mótmæla fullyrðingum um að torrent megi aðeins nota á ólöglegan hátt; fullt af hugbúnaði er dreift löglega með torrent, sjá til dæmis https://www.archlinux.org/download/[Arch Linux] stýrikerfið.
+
+Sorrí, Smáís.
+
+
+(2) Innihald tengist niðurstöðu ekki beint
+
+Stígur Helgason skrifar um http://visir.is/allsherjarsamsaerid-/article/2013710259961[allsherjarsamsærið] á Vísi.is. Þar telur hann upp hluti sem eru ekki í lagi. Nokkur dæmi:
+
+<blockquote>Í heiminum eru fleiri hungruð börn en kindur, maðurinn er ekki enn búinn að stíga fæti á Mars og Mumford and Sons er ein vinsælasta hljómsveit sem til er.</blockquote>
+
+Eftir fjórar málsgreinar af svipuðum bölmóði get ég ekki annað en minnst http://www.youtube.com/watch?v=l1YmS_VDvMY[Monty Python sketsins] þar sem maður heldur langloku en er truflaður af hrópum um "get on with it!" Það gerir Stígur að lokum:
+
+<blockquote>Ég veit ekki hverju öll þessi dómadagsógæfa er að kenna. En ég veit – ég bara veit – að einhvers staðar í dimmu skúmaskoti sitja Engeyingar og græða á öllu saman. Helvítis Engeyingarnir.</blockquote>
+
+Hér vísar Stígur til meints spillingarmáls þar sem Bjarni Benediktsson fjármálaráðherra á að hafa misnotað stöðu sína sem borgarfulltrúi Garðabæjar til hagnaðar vissra fjölskyldumeðlima sinna (sem eru af Engeyjarætt). Enginn botn er enn kominn í það mál. 
+
+Vegna þess að Stígur kýs að fara óbeint að boðskap sínum er mér ekki ljóst nákvæmlega hver sá boðskapur var. Helst dettur mér tvennt í hug, þar sem annað er rökvilla:
+
+(i) Stígur gæti viljað segja: "Sjáið allt það sem Engeyjingar eru ekki sekir um. Því geta þeir ekki verið sekir um spillingu."
+
+Þetta er http://en.wikipedia.org/wiki/Non_sequitur_(logic)[non sequitur] villa, sem mætti íslenska sem "niðurstaðan tengist staðhæfingum ekki beint". Það er einfaldlega ekkert orsakasamband á milli þess að Engeyjingar hafi enga hönd í bagga með vinsældum Mumford and Sons og að þeir hafi ekki notið góðs af fjölskyldutengslum sínum við hið opinbera.
+
+(ii) Hinn möguleikinn sem ég sé er að Stígur meini að fólk sé saklaust þar til sekt sé sönnuð. Þetta er auðvitað hárrétt og á fullkomlega við hér; þetta mál hefur ekki komið fyrir dómstóla eða verið kært til lögreglu og enginn hefur verið dæmdur fyrir eitt eða neitt. Enn er ekki einu sinni víst nákvæmlega hvað gerðist hér. Því eru fullyrðingar um spillingu Engeyjinga og fjármálaráðherra í þessu máli ómerkar.
+
+
+(3) Meistaramánuður og einræðishugleiðingar
+
+Til tilbreytingar langar mig að benda á tvo pistla sem ég hafði gaman af að lesa, algjörlega óháð rökfræðilegu innihaldi:
+
+Lára Björg Björnsdóttir lýsir hatri sínu á http://www.vb.is/skodun/97525/[meistaramánuði] í Viðskiptablaðinu. Ég hef rosa gaman af almennum bölmóði og Láru tekst vel upp hér.
+
+Á aðeins alvarlegri nótum fjallar Hrafnkell Lárusson um ýmsar http://visir.is/einraedisgaelur-innan-marka-lydraedis/article/2013710259987[birtingamyndir einræðis] í stjórnmálum. Pistill hans er hlutlaus og fræðandi, fyrir alla fjölskylduna.
