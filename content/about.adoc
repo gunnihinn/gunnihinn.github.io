@@ -34,8 +34,8 @@ Riemannian geometry of the Kähler cones of compact manifolds.
 I'm a member of the:
 
 - Association for Computing Machinery (https://www.acm.org/[ACM])
-- The French Mathematical Society (https://smf.emath.fr/[SMF])
-- The Icelandic Mathematical Society (http://stae.is/isf/en[IMS])
+- French Mathematical Society (https://smf.emath.fr/[SMF])
+- Icelandic Mathematical Society (http://stae.is/isf/en[IMS])
 
 I have also supported Amnesty International (https://www.amnesty.org/en/[AI])
 since 2011.
