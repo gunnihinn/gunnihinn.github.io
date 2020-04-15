@@ -5,6 +5,6 @@ draft: false
 tags: ["Ár hinna lifandi dauðu"]
 ---
 
-Jebb, við verðum seint á ferðinni þessa vikuna. Ég ætla að giska á að <em>Cold Prey</em> detti inn á sunnudagskvöldið. Ég var ótrúlega þreyttur í gær, að kenna til sex í dag, og er að fara á mjög nördalegt <em>retreat to move forward</em> á morgun og hinn.
+Jebb, við verðum seint á ferðinni þessa vikuna. Ég ætla að giska á að _Cold Prey_ detti inn á sunnudagskvöldið. Ég var ótrúlega þreyttur í gær, að kenna til sex í dag, og er að fara á mjög nördalegt _retreat to move forward_ á morgun og hinn.
 
 Þannig: sunnudagur. Sennilega. En við verðum á réttum tíma á fimmtudaginn í næstu viku.

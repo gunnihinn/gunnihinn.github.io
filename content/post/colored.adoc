@@ -5,6 +5,6 @@ draft: false
 tags: ["neginegi"]
 ---
 
-The title of a paper I'm working on includes the words "colored Jones polynomial". Every time, <em>every single time</em> I see it a voice in my head goes:
+The title of a paper I'm working on includes the words "colored Jones polynomial". Every time, _every single time_ I see it a voice in my head goes:
 
 <img class="aligncenter" alt="" src="http://www.clevescene.com/binary/3e89/1349813923-thats-racist.gif" width="265" height="236" />
