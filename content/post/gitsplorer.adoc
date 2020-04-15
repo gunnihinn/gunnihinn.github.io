@@ -8,7 +8,6 @@ Have you ever found yourself using Git and thinking "This is great, but I wish
 these filesystem operations were read-only and ten times slower?". Well, friend,
 do I have news for you.
 
-I was thinking about a project the other day that involved comparing the public
 API of a Golang codebase at different times in its history. To do this, I
 figured I'd clone the repo, check out commit A and analyze it, then check out
 commit B and analyze that, and boo! Hiss! That's inelegant and leaves clutter

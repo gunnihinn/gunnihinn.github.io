@@ -1,0 +1,50 @@
+---
+title: Skilvirkari samgöngur
+date: 2013-10-17T19:32:15
+draft: false
+tags: ["Áhugafólk um almenna skynsemi"]
+---
+
+Viðar Guðjohnsen skrifar grein í Morgunblaðið í dag þar sem hann talar um samgöngur í Reykjavík. Þar sem ólíklegt er að allir lesendur hér séu áskrifendur að Morgunblaðinu og mér finnst ósanngjarnt að tala um hluti sem ekki allir geta lesið læt ég grein Viðars fylgja hér fyrir neðan.
+
+Ég held við getum flest verið sammála upphafsorðum Viðars:
+
+____
+Ekki þarf að skoða meira en eins dags mælingu á umferðarþunga í Reykjavík til þess að sannfærast um að skipulag samgangna í borginni sé ekki skilvirkt. Í upphafi vinnudags streymir umferðarþunginn inn í atvinnumiðju borgarinnar, miðbæinn, og aftur þaðan út þegar líða tekur á síðdegið. Að borgarbúar þurfi að sitja í umferðarteppu dag eftir dag er ekki bara tímaþjófnaður, sem hefur verulegan kostnað í för með sér, heldur valda umferðartafir aukinni mengun vegna þess að bíll sem fer bara fetið í umferðarteppu eyðir meira eldsneyti en ef um hefðbundinn akstur væri að ræða. Slík sóun á eldsneyti er engum til góðs.
+____
+
+Umferðaþungi í Reykjavík er fáránlegur. Orsakir þessa eru margar en ég held að ein þeirra mikilvægari sé að Reykjavík er mjög strjálbyggð borg, byggð frekar eftir Amerísku módeli en Evrópsku. Reyndar er misvísandi að halda fram að borgir í hvorri heimsálfunni hafi verið byggðar með sérstakt módel í huga, því lega þeirra ákvarðast helst af hvort það hafi verið pláss til að byggja dreift eða ekki og hvort góðir samgöngumátar hafi verið til staðar þegar byggt var. Á Íslandi er pláss til að bygga og Reykjavík var að mestu reist eftir að bíllinn kom hingað, svo byggðin er strjál.
+
+En hver er hugmynd Viðars til að létta á umferð í Reyjkavík?
+
+____
+Mikilvægustu framkvæmdirnar sem hægt er að fara út í til þess að auka skilvirkni umferðar í Reykjavík er Sundabrautin og fjölgun mislægra gatnamóta, koma þá gatnamót Kringlumýrarbrautar og Miklubrautar fyrst upp í hugann. Til að flýta fyrir Sundabrautinni mætti vel skoða hvort einhverjar útfærslur af einkaframkvæmd væru hentugt fyrirkomulag.
+____
+
+Þessari hugmynd hefur ítrekað verið hampað af ýmsu fólki og á meðan við gætum fundið vankanta á henni (fleiri umferðamannvirki virðast fyrir mér taka á einkennum umferðarþungans en snerta ekki rætur hans) langar mig frekar að benda á að Viðar gefur okkur ekkert val: annað hvort reisum við gatnamót eða gerum ekkert. Ef við ætlum að vera fullkomlega sanngjörn verðum við að athuga að Viðar gefur okkur í raun val milli almennra framkvæmda eða einskis, en ljóst er að eina lausnin sem hann gefur okkur á umferðarvanda Reykjavíkur er að ráðast í byggingu fleiri umferðamannvirkja.
+
+Þetta er einfaldlega ekki rétt - til að draga úr umferðarþunga mætti til dæmis byggja upp nothæft almenningssamgangnakerfi í Reykjavík - en mig grunar að Viðar sé ekki hrifinn af öðrum möguleikum og láti því sem þeir séu ekki til.
+
+Mér sýnast þessi mistök Viðars vera http://en.wikipedia.org/wiki/False_dilemma[valtvennuvilla], sem er nákvæmlega villan að stilla upp tveim möguleikum og segja að aðeins annar hvor þeirra standi til boða á meðan fleiri eru til staðar. Hér eru möguleikar Viðars annars vegar að reisa miðlæg gatnamót eða að sitja áfram föst í bílunum okkar og anda að okkur gufunum; miðlæg gatnamót eða dauði.
+
+Ég held ég taki frekar strætó, þríbölvaður sem hann er.
+
+
+'''
+
+Grein Viðars:
+
+
+Skilvirkari samgöngur
+Viðar Guðjohnsen
+
+
+Ekki þarf að skoða meira en eins dags mælingu á umferðarþunga í Reykjavík til þess að sannfærast um að skipulag samgangna í borginni sé ekki skilvirkt. Í upphafi vinnudags streymir umferðarþunginn inn í atvinnumiðju borgarinnar, miðbæinn, og aftur þaðan út þegar líða tekur á síðdegið. Að borgarbúar þurfi að sitja í umferðarteppu dag eftir dag er ekki bara tímaþjófnaður, sem hefur verulegan kostnað í för með sér, heldur valda umferðartafir aukinni mengun vegna þess að bíll sem fer bara fetið í umferðarteppu eyðir meira eldsneyti en ef um hefðbundinn akstur væri að ræða. Slík sóun á eldsneyti er engum til góðs.
+
+Mikilvægustu framkvæmdirnar sem hægt er að fara út í til þess að auka skilvirkni umferðar í Reykjavík er Sundabrautin og fjölgun mislægra gatnamóta, koma þá gatnamót Kringlumýrarbrautar og Miklubrautar fyrst upp í hugann. Til að flýta fyrir Sundabrautinni mætti vel skoða hvort einhverjar útfærslur af einkaframkvæmd væru hentugt fyrirkomulag.
+
+Skiljanlega súpa menn hveljur þegar þeir lesa um það fjármagn sem þarf til að reisa Sundabrautina og fjölga mislægum gatnamótum. Þó ber að halda því til haga að í öllum þeim ríkjum sem byggja á skilvirkum samgöngum hafa menn séð aukna hagkvæmni í slíkum fjárfestingum, ekki bara í aukinni hagræðingu heldur einnig í sparnaði óbeins kostnaðar, s.s. vegna tjóns á einstaklingum og eignum enda munu skilvirkar samgöngur fækka óþarfa umferðarslysum eins og rannsóknir hafa sýnt fram á. Ofangreind atriði eru mikilvæg, bæði vegna öryggis borgaranna sem og efnahagslega.
+
+Samhliða þessum atriðum þarf að leggja aukna áherslu á atvinnuuppbyggingu í austurhluta borgarinnar. Með því má minnka þá umferð sem streymir í átt að miðbænum og stuðlar að fjölbreyttu lífi borgarbúa. Vel væri hægt að sjá fyrir sér blómlegt líf í austurhlutanum með aukinni verslun og fleiri kaffihúsum með breyttum áherslum í byggingarstíl öllum til hagsbóta.
+
+Þá mætti skoða þá hugmynd að hvetja til aukinnar verslunar og þjónustu á ákveðnum svæðum með markvissum aðgerðum, t.d. með svæðisbundinni lækkun á fasteignagjöldum og öðrum opinberum gjöldum á þá sem taka slaginn.
