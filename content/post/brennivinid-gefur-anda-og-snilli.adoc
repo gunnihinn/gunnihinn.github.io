@@ -25,7 +25,7 @@ ____
 Þeir tala um alkóhólistagen. Og var víst eitt af því sem átti að gera okkur rík í síðustu bólu – að hafa þessi óskaplegu gen. Ég veit það ekki. Ég er ekki nógu vel að mér í líffræði til að vita hvort til sé alkóhólistagen, þjófagen, lygagen, utanviðsig-gen eða kærleiksgen. Held samt ekki
 ____
 
-Þeir<sup>[tilvísun vantar]</sup> tala um A. Ég veit ekkert um A. Því er A rangt.
+Þeir^[tilvísun vantar]^ tala um A. Ég veit ekkert um A. Því er A rangt.
 
 Þetta er ein vinsælasta rökvilla íslenskrar umræðu, alveg lengst uppi með ad hominem. Opinberir aðilar virðast aldrei þreytast á að henda henni upp við ólíklegustu tilefni, en vandamálið við þessa villu ætti öllum að vera ljóst. 
 
