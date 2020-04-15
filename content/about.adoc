@@ -44,7 +44,12 @@ since 2012.
 
 === Professional experience
 
-2019&mdash;now::
+2020&mdash;now::
+Senior developer, http://www.booking.com[Booking.com].
+I am working on Booking.com's MySQL setup, which involves development and
+operations on thousands of physical hosts.
+
+2019::
 Senior software engineer, https://www.independentview.nl/[Independent View].
 Responsible for the operations and development of trading infrastructure at a
 hedge fund. Working on Python, Java and Scala systems deployed on Windows.

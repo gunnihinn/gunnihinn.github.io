@@ -1,0 +1,29 @@
+---
+title: "Bug-fixing checklist"
+date: 2020-04-15T07:04:37+02:00
+draft: false
+---
+
+It is OK not to do all of these things for a given bug. Some bugs are trivial,
+or nontrivial to reproduce or write tests for. But you should explicitly decide
+not to do some of these things for any given bug, and be able to explain why.
+
+. Is there a (possibly old, closed) issue for the bug?
+. Can you reproduce the bug manually?
+. Can you write a regression test for the bug?
+. Did you check that your change actually fixes the problem?
+. Does the fix's commit message explain the bug, the fix, and point to the issue?
+
+It's debatable whether checking for old or closed issues is the responsibility
+of the developer fixing the bug or a project manager who triages the backlog.
+Sometimes the second person doesn't exist, but the job should still be done.
+
+Remember that a bug report is a report of a symptom. A bug fix is directed at
+a cause. A software symptom may have more than one cause, making bug fixes that
+say "This fixes issue X" very optimistic about what they claim to achieve.
+
+Exercise moderation and common sense in all things. Both 0% and 100% test
+coverage are awkward places to live in. Sometimes the information or effort
+needed to write a test make it too expensive to do so. However, when writing a
+test is cheap and easy or can be made so without causing harm, there should be
+a good reason not to do it.
