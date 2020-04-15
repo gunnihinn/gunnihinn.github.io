@@ -13,7 +13,7 @@ In Go, a naive way of handling this is by writing our configuration state to a
 struct and updating it in background goroutines:
 
 [source,go]
-____
+----
 type State struct {
     frobinate bool
 }
@@ -27,7 +27,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintln(w, "Great non-success")
     }
 }
-____
+----
 
 This naive approach has at least two problems:
 
@@ -47,7 +47,7 @@ One way to resolve these problems is to add a mutex and to pass copies of the
 state to the request handlers:
 
 [source,go]
-____
+----
 type State struct {
     frobinate bool
 
@@ -74,7 +74,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintln(w, "Great non-success")
     }
 }
-____
+----
 
 The background goroutine that updates the state then either does so through a
 dedicated method that locks/unlocks the mutex, or does the locking itself.
@@ -85,7 +85,7 @@ concurrency features. We were promised a brave new world, and encouraged to
 two problems that leverages Go’s primitives better:
 
 [source,go]
-____
+----
 type State struct {
     frobinate bool
 }
@@ -121,7 +121,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintln(w, "Great non-success")
     }
 }
-____
+----
 
 A complete working example is 
 https://github.com/gunnihinn/go-state-channel/blob/master/go-state-channel.go[here].
