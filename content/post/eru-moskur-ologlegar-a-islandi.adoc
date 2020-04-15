@@ -25,11 +25,9 @@ ____
 
 Í þessari málsgrein fremur Ásgeir harkalega http://en.wikipedia.org/wiki/Fallacy_of_composition[heildarskekkju]. Almennt gengur þessi villa svona:
 
-<ul>
-<li>A er satt um X.</li>
-<li>X er hluti af hóp Y.</li>
-<li>Því er A satt um allt í Y.</li>
-</ul>
+* A er satt um X.
+* X er hluti af hóp Y.
+* Því er A satt um allt í Y.
 
 Hér segir Ásgeir í raun og veru: Sumir sem eru íslamstrúar eru hryðjuverkamenn, því eru allir íslamstrúar hryðjuverkamenn.
 

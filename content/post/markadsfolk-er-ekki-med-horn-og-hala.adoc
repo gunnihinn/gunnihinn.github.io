@@ -31,12 +31,10 @@ ____
 
 Hér þarf ég nauðsynlega að rökstyðja mál mitt, því að vitna í orð sérfræðings er eitt og sér ekki rökvilla; samanber þegar fólk vitnar í Dawkins, Keynes eða de Beauvoir. Sem röktól byggist vísun í kennivald svona upp:
 
-<ul>
-<li>X segir að A sé rétt.</li>
-<li>X er sérfræðingur um málið.</li>
-<li>Aðrir sérfræðingar um málið eru almennt sammála X.</li>
-<li>Þar af leiðandi er A líklegt til að vera rétt.</li>
-</ul>
+* X segir að A sé rétt.
+* X er sérfræðingur um málið.
+* Aðrir sérfræðingar um málið eru almennt sammála X.
+* Þar af leiðandi er A líklegt til að vera rétt.
 
 Nokkrir veikir hlekkir eru í þessum röksemdafærslum: Aðrir sérfræðingar geta verið sammála X almennt en ekki um A; í besta falli er niðurstaðan að góðar líkur séu á að A sé rétt; og þó X sé sérfræðingur gæti hann einfaldlega haft rangt fyrir sér eða haft hagsmuna að gæta í málinu og þannig verið óhæfur til að tjá sig um það.
 
