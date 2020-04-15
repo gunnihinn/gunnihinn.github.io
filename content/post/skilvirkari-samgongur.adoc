@@ -9,13 +9,17 @@ Viðar Guðjohnsen skrifar grein í Morgunblaðið í dag þar sem hann talar um
 
 Ég held við getum flest verið sammála upphafsorðum Viðars:
 
-<blockquote>Ekki þarf að skoða meira en eins dags mælingu á umferðarþunga í Reykjavík til þess að sannfærast um að skipulag samgangna í borginni sé ekki skilvirkt. Í upphafi vinnudags streymir umferðarþunginn inn í atvinnumiðju borgarinnar, miðbæinn, og aftur þaðan út þegar líða tekur á síðdegið. Að borgarbúar þurfi að sitja í umferðarteppu dag eftir dag er ekki bara tímaþjófnaður, sem hefur verulegan kostnað í för með sér, heldur valda umferðartafir aukinni mengun vegna þess að bíll sem fer bara fetið í umferðarteppu eyðir meira eldsneyti en ef um hefðbundinn akstur væri að ræða. Slík sóun á eldsneyti er engum til góðs.</blockquote>
+____
+Ekki þarf að skoða meira en eins dags mælingu á umferðarþunga í Reykjavík til þess að sannfærast um að skipulag samgangna í borginni sé ekki skilvirkt. Í upphafi vinnudags streymir umferðarþunginn inn í atvinnumiðju borgarinnar, miðbæinn, og aftur þaðan út þegar líða tekur á síðdegið. Að borgarbúar þurfi að sitja í umferðarteppu dag eftir dag er ekki bara tímaþjófnaður, sem hefur verulegan kostnað í för með sér, heldur valda umferðartafir aukinni mengun vegna þess að bíll sem fer bara fetið í umferðarteppu eyðir meira eldsneyti en ef um hefðbundinn akstur væri að ræða. Slík sóun á eldsneyti er engum til góðs.
+____
 
 Umferðaþungi í Reykjavík er fáránlegur. Orsakir þessa eru margar en ég held að ein þeirra mikilvægari sé að Reykjavík er mjög strjálbyggð borg, byggð frekar eftir Amerísku módeli en Evrópsku. Reyndar er misvísandi að halda fram að borgir í hvorri heimsálfunni hafi verið byggðar með sérstakt módel í huga, því lega þeirra ákvarðast helst af hvort það hafi verið pláss til að byggja dreift eða ekki og hvort góðir samgöngumátar hafi verið til staðar þegar byggt var. Á Íslandi er pláss til að bygga og Reykjavík var að mestu reist eftir að bíllinn kom hingað, svo byggðin er strjál.
 
 En hver er hugmynd Viðars til að létta á umferð í Reyjkavík?
 
-<blockquote>Mikilvægustu framkvæmdirnar sem hægt er að fara út í til þess að auka skilvirkni umferðar í Reykjavík er Sundabrautin og fjölgun mislægra gatnamóta, koma þá gatnamót Kringlumýrarbrautar og Miklubrautar fyrst upp í hugann. Til að flýta fyrir Sundabrautinni mætti vel skoða hvort einhverjar útfærslur af einkaframkvæmd væru hentugt fyrirkomulag.</blockquote>
+____
+Mikilvægustu framkvæmdirnar sem hægt er að fara út í til þess að auka skilvirkni umferðar í Reykjavík er Sundabrautin og fjölgun mislægra gatnamóta, koma þá gatnamót Kringlumýrarbrautar og Miklubrautar fyrst upp í hugann. Til að flýta fyrir Sundabrautinni mætti vel skoða hvort einhverjar útfærslur af einkaframkvæmd væru hentugt fyrirkomulag.
+____
 
 Þessari hugmynd hefur ítrekað verið hampað af ýmsu fólki og á meðan við gætum fundið vankanta á henni (fleiri umferðamannvirki virðast fyrir mér taka á einkennum umferðarþungans en snerta ekki rætur hans) langar mig frekar að benda á að Viðar gefur okkur ekkert val: annað hvort reisum við gatnamót eða gerum ekkert. Ef við ætlum að vera fullkomlega sanngjörn verðum við að athuga að Viðar gefur okkur í raun val milli almennra framkvæmda eða einskis, en ljóst er að eina lausnin sem hann gefur okkur á umferðarvanda Reykjavíkur er að ráðast í byggingu fleiri umferðamannvirkja.
 
@@ -26,7 +30,7 @@ Mér sýnast þessi mistök Viðars vera http://en.wikipedia.org/wiki/False_dile
 Ég held ég taki frekar strætó, þríbölvaður sem hann er.
 
 
-------------------
+'''
 
 Grein Viðars:
 

@@ -9,9 +9,11 @@ Guðmundur Andri Thorsson skrifar pistil á vísi.is í dag. Hann má lesa í he
 
 Guðmundur skiptir pistli sínum í þrjá hluta eins og klassískt er. Fyrsti hluti hans kynnir málefnið sem á að tala um, en ekki áður en hann gerir tilraun til að fanga athygli lesenda með skemmtilegri blöndu af íslenskum úrdrætti og innantómu hrósi:
 
-<blockquote>Það er svo margt sem aflaga hefur farið hjá okkur Íslendingum og stundum er talað eins og þessi þjóð sé mestu asnar í heimi, viti ekkert, kunni ekkert, læri ekkert og geti ekkert – nema verið asnar.
+____
+Það er svo margt sem aflaga hefur farið hjá okkur Íslendingum og stundum er talað eins og þessi þjóð sé mestu asnar í heimi, viti ekkert, kunni ekkert, læri ekkert og geti ekkert – nema verið asnar.
 
-Ætli það sé ekki eitthvað orðum aukið.</blockquote>
+Ætli það sé ekki eitthvað orðum aukið.
+____
 
 Hér er á ferðinni sama http://en.wikipedia.org/wiki/Appeal_to_flattery[rökvilla] og felst í að sannfæra einhvern um sannindi með því að segja „Jafn gáfaður maður og þú hlýtur að sjá að A er rétt.“ Engin röksemdafærsla á sér stað. Guðmundur djassar þessa villu upp með því að snúa henni við; hann telur upp lista af hræðilegum eiginleikum Íslendinga áður en hann neitar þeim og skipar þannig sér og lesendum, sem eru væntanlega ósammála því að þeir séu asnar, í sama lið.
 
@@ -19,7 +21,9 @@ Að liðsöfnuðinum loknum kynnir Guðmundur efni pistilsins: Íslendingum hefu
 
 Ég viðurkenni að skilja ekki fullkomlega annan hluta pistilsins. Hann talar um frjálsan vilja, DNA, persónulega ábyrgð, Dani og hvað lífið sé erfitt. Hér eru nokkur brot:
 
-<blockquote>Þeir tala um alkóhólistagen. Og var víst eitt af því sem átti að gera okkur rík í síðustu bólu – að hafa þessi óskaplegu gen. Ég veit það ekki. Ég er ekki nógu vel að mér í líffræði til að vita hvort til sé alkóhólistagen, þjófagen, lygagen, utanviðsig-gen eða kærleiksgen. Held samt ekki</blockquote>
+____
+Þeir tala um alkóhólistagen. Og var víst eitt af því sem átti að gera okkur rík í síðustu bólu – að hafa þessi óskaplegu gen. Ég veit það ekki. Ég er ekki nógu vel að mér í líffræði til að vita hvort til sé alkóhólistagen, þjófagen, lygagen, utanviðsig-gen eða kærleiksgen. Held samt ekki
+____
 
 Þeir<sup>[tilvísun vantar]</sup> tala um A. Ég veit ekkert um A. Því er A rangt.
 
@@ -29,7 +33,9 @@ Hér er einnig á ferðinni mjög vafasöm og blekkjandi delering: Guðmundur by
 
 Áhugasamir lesendur geta athugað afganginn af öðrum hluta pistilsins þar sem sjá má hina sívinsælu klisju „allt Dönum að kenna“ og hugleiðingar um frjálsan vilja. Þessum hluta lýkur á góðum http://en.wikipedia.org/wiki/Straw_man[strámanni]:
 
-<blockquote>Það viðhorf hefur verið landlægt hér að fullkomlega eðlilegt sé að veruleikinn sé óbærilegur, og eina ánægja sem hægt sé að hafa af lífinu sé að flýja inn í óraunveruleika vímunnar.</blockquote>
+____
+Það viðhorf hefur verið landlægt hér að fullkomlega eðlilegt sé að veruleikinn sé óbærilegur, og eina ánægja sem hægt sé að hafa af lífinu sé að flýja inn í óraunveruleika vímunnar.
+____
 
 Er það nú?
 

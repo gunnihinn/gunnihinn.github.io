@@ -10,11 +10,11 @@ Síðan ég byrjaði að lesa leiðara Morgunblaðsins hefur mig langað að sko
 Í dag stíga höfundar seinni tegundar leiðaranna nógu nærri raunverulegum staðhæfingum til að hægt sé að meta orð þeirra af eigin verðleikum. Efni leiðarans eru áhyggjur Ernu Solberg, forsætisráðherra Noregs, af fréttum ríkisútvarps Noregs um að sænsk yfirvöld hafi lagalega heimild til að hlera tölvupóstsamskipti Norðmanna því stór hluti þeirra fari gegnum Svíþjóð. Leiðarahöfundar stökkva á orð Ernu um að ef fullnægjandi útskýringar á málinu fáist ekki munu Norðmenn "fara með málið lengra":
 
 [quote]
-----
+____
 Ekki var tekið fram hvert norski forsætisráðherrann ætlaði með málið. Varla í suðurátt, því þar ná menn ekki upp í nefið á sér vegna hlerana og treysta sér því varla til að vera með nefið niðri í annarra manna hlerunum, þótt þær séu jafnspennandi og hleranir Svía á Norðmönnum hljóta að vera.
 
 Ekki geta þeir farið með málið lengra í austur, því þá lenda þeir í Svíþjóð og fari þeir enn austar, á sléttur Rússlands, er alls ekki víst að Pútín sé sömu megin og Norðmenn, það er að segja í hópi hinna hleruðu, en ekki í hinum hópnum með tól á eyrum.
-----
+____
 
 Allir leiðarar af seinni tegundinni eru í þessum stíl, þar sem útúrsnúningar, einfeldningsháttur og uppnefningar liggja í einum graut. Halda leiðarahöfundar til dæmis í alvöru að ríkisstjórnir Frakklands og Þýskalands, sem eru væntanlega þeir sem ná ekki upp í nefið á sér, geti ekki veitt tveim hlutum athygli í einu? Aðeins lengra vísa höfundar afskiptum Evrópusambandsins af málinu á bug með að uppnefna starfsfólk þess "æðstustrumpana í Brussel", eins og er reglulega gert í þessum leiðurum. Á meðan mér finnist alveg jafn skemmtilegt að uppnefna fólk og leiðarahöfundum verð ég að benda á að fyndin uppnefni eru ekki rök fyrir einu né neinu.
 
@@ -23,11 +23,11 @@ Allir leiðarar af seinni tegundinni eru í þessum stíl, þar sem útúrsnúni
 Höfundar ráðleggja að lokum Norðmönnum að leita til okkar Íslendinga í norðri með vandræði sín (Ísland liggur reyndar til vesturs frá Noregi). Hér virðast þeir nálgast eitthvað sem þeir hafa áhuga á að tala um, sem tengist ásökunum um að sími Jóns Baldvins Hannibaldssonar hafi verið hleraður þegar hann var hann var utanríkisráðherra:
 
 [quote]
-----
+____
 Árni Páll Árnason, sem verið hafði pólitískur lærlingur í utanríkisráðuneytinu á umræddum tíma, sá þarna færi og komst í viðtal á "RÚV", sem stofnunin virtist taka í fullri alvöru, um að lærlingssíminn hans hefði líka verið hleraður á sama tíma. Ekki var upplýst hvort lærlingshlerarinn hefði haft sérstakan koll fyrir sig.
 
 En það breytti ekki því, að 15 mínútna frægðin sem Árni Páll Árnason fékk hjá "RÚV" út á hina meintu hlerun, sem hlýtur þá að hafa verið gerð af manni sem fór númeravillt, dugði honum í yfirstandandi prófkjörsbaráttu!
-----
+____
 
 Reyndar kasta höfundar nokkrum steinum í mótmælendur framkvæmda í Gálgahrauni og Jón Baldvin áður en þeir komast að Árna Páli. Hér finnst mér athyglisverðust fullyrðing höfunda um að Árni hafi komið vel úr prófkjöri því hann hafi sagt að sími sinn hafi einnig verið hleraður. Ég veit ekkert um það, frekar en meintar hleranir á Jóni Baldvini, en finnst líklegt að ýmsir aðrir þættir (eins og kosningabarátta Árna Páls) hafi vegið þyngra til velgengni hans. Höfundar segja hér að vegna þess að atburður B hafi gerst á eftir atburði A þá sé A orsök B. Þetta er mjög vel upp alin rökvilla sem heitir http://en.wikipedia.org/wiki/Post_hoc_ergo_propter_hoc[post hoc ergo propter hoc] á latínu. Hana má finna við hin ýmsu tilefni, allt frá léttvægum (ég fór í lukkuskóna mína svo það ringdi ekki) til háalvarlegra málefna (ég bólusetti barnið mitt svo það varð einhverft), en öll þeirra eiga sameiginlegt að vera ógildar rökfræðilegar hreyfingar.
 
@@ -35,7 +35,7 @@ Reyndar kasta höfundar nokkrum steinum í mótmælendur framkvæmda í Gálgahr
 
 
 [quote]
-----
+____
 Sko Svía
 Ritstjórn Morgunblaðsins (Davíð Oddson og Haraldur Johannessen)
 
@@ -64,4 +64,4 @@ Sem betur fer mun norski forsætisráðherrann ekki koma að tómum kofunum hjá
 Auðvitað var þetta mikil hneisa fyrir þá tugi metnaðarfullra starfsmanna utanríkisráðuneytisins sem skipuðu stöðurnar sem lágu á milli ráðherrans og lærlingsins og enginn virtist nenna að hlera. En það breytti ekki því, að 15 mínútna frægðin sem Árni Páll Árnason fékk hjá "RÚV" út á hina meintu hlerun, sem hlýtur þá að hafa verið gerð af manni sem fór númeravillt, dugði honum í yfirstandandi prófkjörsbaráttu!
 
 Á Íslandi er því kjörlendi fyrir þá sem vilja kafa ofan í hlerunarmál og vilji Solberg fara með sitt hlerunarmál lengra þarf hún ekki að leita annað.
-----
+____

@@ -51,10 +51,10 @@ run Boyter's https://github.com/boyter/scc[scc] line-counting tool, and checkout
 `master` again. We do this both with `gitsplorer` and with ye olde `git
 checkout`. The results speak for themselves:
 
-----
+____
 git checkout: 62 seconds
 gitsplorer: 567 seconds
-----
+____
 
 The `gitsplorer` version is also remarkable for spending all its time using 100%
 of a CPU, which the `git` version does not. (It uses around 90% of a CPU while

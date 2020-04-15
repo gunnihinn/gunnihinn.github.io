@@ -5,7 +5,10 @@ draft: false
 tags: ["Áhugafólk um almenna skynsemi"]
 ---
 
-<blockquote>Hver er vinsælasti kvenrithöfundur heims? Hver er um leið áhrifamesti kvenheimspekingur heims? Hún er rússnesk-bandaríski rithöfundurinn Ayn Rand, en bækur hennar hafa selst í 30 milljónum eintaka um allan heim.</blockquote>
+[quote]
+____
+Hver er vinsælasti kvenrithöfundur heims? Hver er um leið áhrifamesti kvenheimspekingur heims? Hún er rússnesk-bandaríski rithöfundurinn Ayn Rand, en bækur hennar hafa selst í 30 milljónum eintaka um allan heim.
+____
 
 Svo ritar Hannes Hólmsteinn Gissurarson á http://www.pressan.is/pressupennar/Lesa_Hannes/hun-ograr-vidteknum-vidhorfum?Pressandate=200904251+or+1%3d%40%40version%2fleggjumst-oll-a-eitt[Pressunni í dag]. Markmið Hannesar er að auglýsa útkomu íslenskrar þýðingar á skáldsögu Rand http://en.wikipedia.org/wiki/We_the_Living[We the living], sem þýðandi ákvað að kalla Kira Argúnova eftir aðalpersónu bókarinnar, og benda á fyrirlestur um Rand og verk hennar í Öskju seinna í dag.
 
@@ -19,7 +22,9 @@ Eftir öllum hugsanlegum mælikvörðum er Ayn Rand því miður ekki vinsælast
 
 Þetta á að heita rökvillublogg og hingað til hef ég ekki bent á neina rökvillu í texta Hannesar. Lítið er um þær, enda er textinn stutt auglýsingapot. Í hreinskilni sagt langaði mig bara að benda á að Ayn Rand er hvorki vinsælasta né áhrifamesta kona heims. En jæja, til að þessi færsla teljist lögleg skulum við skoða lokaorð Hannesar:
 
-<blockquote>Guðmundur Ólafsson hagfræðingur segir á bókarkápunni um Kíru Argúnovu: „Raunsönn lýsing á rússneskum örlögum.“ Kolbrún Bergþórsdóttir bókmenntaskýrandi segir: „Mesta bókmenntaverkið af sögum Rands.“ Ég vona, að þau Guðmundur og Kolbrún lendi ekki í neinum útistöðum við Egil Helgason sjónvarpsmann, Stefán Ólafsson félagsfræðiprófessor, Stefán Snævarr heimspekiprófessor og fleiri vinstri sinnaða menntamenn, sem hafa keppst við síðustu daga að fordæma verk Ayns Rands. Bandaríski rithöfundurinn H. L. Mencken sagði um þessa bók, að hún væri „frábær“.</blockquote>
+____
+Guðmundur Ólafsson hagfræðingur segir á bókarkápunni um Kíru Argúnovu: „Raunsönn lýsing á rússneskum örlögum.“ Kolbrún Bergþórsdóttir bókmenntaskýrandi segir: „Mesta bókmenntaverkið af sögum Rands.“ Ég vona, að þau Guðmundur og Kolbrún lendi ekki í neinum útistöðum við Egil Helgason sjónvarpsmann, Stefán Ólafsson félagsfræðiprófessor, Stefán Snævarr heimspekiprófessor og fleiri vinstri sinnaða menntamenn, sem hafa keppst við síðustu daga að fordæma verk Ayns Rands. Bandaríski rithöfundurinn H. L. Mencken sagði um þessa bók, að hún væri „frábær“.
+____
 
 Að vísa skoðunum fólks á bug því það er vinstri sinnað er dæmi um hina dásamlega nefndu http://en.wikipedia.org/wiki/Poisoning_the_well[brunnmígsvillu], þar sem reynt er að breiða yfir rök andmælanda með að kynna hann neikvæðan hátt (nú eða kynna hann bara á neikvæðan hátt og sleppa að minnast á rök hans, eins og Hannes gerir hér).
 

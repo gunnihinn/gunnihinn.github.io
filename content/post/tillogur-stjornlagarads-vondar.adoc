@@ -13,17 +13,23 @@ Til að allt sé hér ljóst ætlum við að tala um tillögur stjórnlagaráðs
 
 Við skulum athuga ástæður Brynjars.
 
-<blockquote>Stjórnlagaráð var skipað af pólitískum meirihluta Alþingis og tillögur þess báru keim af því.</blockquote> 
+____
+Stjórnlagaráð var skipað af pólitískum meirihluta Alþingis og tillögur þess báru keim af því.
+____ 
 
 Rétt er að stjórnlagaráð var skipað af Alþingi. Að tillögur þess hafi borið keim af þáverandi pólitískum meirihluta þarf þó að rökstyðja á einhvern hátt. Í núverandi mynd er erfitt að lesa þessa setningu öðruvísi en að hún merki "ég er ósammála tillögunum," sem er svo sem gild persónuleg ástæða til að telja sig ekki bundinn af þeim en ekki rökfræðilega mikils virði.
 
 Svo má nefna að það skiptir eiginlega ekki máli hvort tillögurnar báru keim einhverrar hugmyndafræði, því það var kosið um þær í þjóðaratkvæðagreiðslu. Ef tillögurnar hefðu verið í andstöðu við vilja almennings hefði hann hafnað þeim, sem er nákvæmlega það sem almenningur gerði við tillögu stjórnlagaráðs um http://www.kosning.is/thjodaratkvaedagreidslur2012/frettir/nr/7990[stöðu þjóðkirkjunnar].
 
-<blockquote>Þjóðaratkvæðagreiðslan var ráðgefandi og því ekki skuldbindandi fyrir mig, hvorki af siðferðilegum né pólitískum ástæðum.</blockquote>
+____
+Þjóðaratkvæðagreiðslan var ráðgefandi og því ekki skuldbindandi fyrir mig, hvorki af siðferðilegum né pólitískum ástæðum.
+____
 
 Rétt. Þetta er nákvæmlega það atriði sem gerir Brynjari kleift að neita að fara eftir niðurstöðum atkvæðagreiðslunnar, þó það dekki hann aðeins lagalega og pólitískt séð.
 
-<blockquote>Framkvæmd þjóðaratkvæðagreiðslunnar var ábótavant og þátttaka svo dræm að niðurstaðan telst vart marktæk.</blockquote> 
+____
+Framkvæmd þjóðaratkvæðagreiðslunnar var ábótavant og þátttaka svo dræm að niðurstaðan telst vart marktæk.
+____ 
 
 Ég hefði hér verið til í frekari rökstuðning á meintum vanköntum framkvæmdarinnar; ein og sér gegnir þessi fullyrðing þeim tilgangi að peppa upp það fólk sem er sammála Brynjari og verður að teljast ómerk.
 
@@ -33,17 +39,23 @@ Til samanburðar var minnsta kjörsókn í sögu Íslands í http://www.mbl.is/f
 
 Eins ósammála og ég er Brynjari eru staðreyndirnar hans megin hér. Kjörsókn var dræm.
 
-<blockquote>Svo er ég þeirrar skoðunar að samfélagssáttmála verði að gera í sæmilegri sátt.</blockquote>
+____
+Svo er ég þeirrar skoðunar að samfélagssáttmála verði að gera í sæmilegri sátt.
+____
 
 Í sjálfu sér er ekkert að þessari skoðun, en varast verður að "sæmileg sátt" er gríðarlegt túlkunaratriði, svo þessari klausu má beita til að neita breytingum á stjórnarskrá út í lengstu lög. Hér þarf Brynjar að skilgreina hvað hann á við með sæmilegri sátt til að þessi klausa sé ekki geðþóttaatriði.
 
-<blockquote>Aðalástæðan er þó sú að tillögur stjórnlagaráðs eru heild sinni vondar og til skaða fyrir íslenskt samfélag. Þótt einhverjar hugmyndir stjórnlagaráðs séu þess virði að skoða betur voru tillögur ráðsins svo illa fram settar að þær eru ekki nothæfar með góðu móti. Um það eru stjórnlagafræðingar á einu máli.</blockquote>
+____
+Aðalástæðan er þó sú að tillögur stjórnlagaráðs eru heild sinni vondar og til skaða fyrir íslenskt samfélag. Þótt einhverjar hugmyndir stjórnlagaráðs séu þess virði að skoða betur voru tillögur ráðsins svo illa fram settar að þær eru ekki nothæfar með góðu móti. Um það eru stjórnlagafræðingar á einu máli.
+____
 
 Tillögurnar voru vondar. Af hverju? Þær voru illa fram settar. Hvernig þá? Þar til Brynjar útskýrir það er þetta markleysa.
 
 Ég er heldur ekki viss um að stjórnlagafræðingar séu sammála Brynjari hér. Þar til hann sýnir fram á það er þetta ófullnægjandi http://en.wikipedia.org/wiki/Argument_from_authority[vísun í kennivald], sem er rökvilla.
 
-<blockquote>Svo væri það til góðs að fara eftir þeirri stjórnarskrá sem í gildi er áður farið er að semja nýja með enn óljósari ákvæðum.</blockquote>
+____
+Svo væri það til góðs að fara eftir þeirri stjórnarskrá sem í gildi er áður farið er að semja nýja með enn óljósari ákvæðum.
+____
 
 Þessi setning er dæmi um http://en.wikipedia.org/wiki/Nirvana_fallacy[algleymisvillu]. Hér segir Brynjar: "Það er til einskis að samþykkja nýja stjórnarskrá því við myndum líka brjóta á ákvæðum hennar." 
 
@@ -53,9 +65,13 @@ Eins getur Brynjar hafnað öllum stjórnarskrárbreytingum með þeirri rökvil
 
 Hvað stendur þá eftir í rökum Brynjars þegar við fjarlægjum rökvillur og ónægilega rökstuddar fullyrðingar?
 
-<blockquote>Þjóðaratkvæðagreiðslan var ráðgefandi og því ekki skuldbindandi fyrir mig, hvorki af siðferðilegum né pólitískum ástæðum.</blockquote>
+____
+Þjóðaratkvæðagreiðslan var ráðgefandi og því ekki skuldbindandi fyrir mig, hvorki af siðferðilegum né pólitískum ástæðum.
+____
 
-<blockquote>Þátttaka [í þjóðaratkvæðagreiðslunni var] svo dræm að niðurstaðan telst vart marktæk.</blockquote> 
+____
+Þátttaka [í þjóðaratkvæðagreiðslunni var] svo dræm að niðurstaðan telst vart marktæk.
+____ 
 
 Brynjar hefur rétt til að fara ekki eftir tillögum stjórnlagaráðs. Einu rök hans fyrir að gera það ekki sem halda vatni (án frekari rökstuðnings af hans hálfu) eru að þátttakan hafi ekki verið nógu góð.
 

@@ -7,7 +7,9 @@ tags: ["Áhugafólk um almenna skynsemi"]
 
 Nýlega mistókst utanríkisráðherra vorum að bera fram nafn landsins http://en.wikipedia.org/wiki/Kazakhstan[Kasakstan] við opinbert tilefni. Þetta er neyðarlegt mjög fyrir ráðherrann, sem hefur verið gagnrýndur fyrir reynsluleysi og vanþekkingu á viðfangsefni ráðuneyti síns: útlöndum. Stefán Gunnar Sveinsson tekur upp hanskann fyrir ráðherrann í Morgunblaðinu í dag:
 
-<blockquote>Barack Obama hefur heimsótt öll 58 ríki Bandaríkjanna. Dan Quayle sagði að framtíðin yrði betri á morgun og fólk átti það til að misvanmeta George W. Bush. Og látum nú vera í hvaða firði Jón Sigurðsson fæddist. Nú hefur utanríkisráðherrann okkar bæst í hóp stjórnmálamanna sem hafa talað illilega af sér enda ekki á allra færi að bera fram orðið Kasakstan. Og hvað um það?</blockquote>
+____
+Barack Obama hefur heimsótt öll 58 ríki Bandaríkjanna. Dan Quayle sagði að framtíðin yrði betri á morgun og fólk átti það til að misvanmeta George W. Bush. Og látum nú vera í hvaða firði Jón Sigurðsson fæddist. Nú hefur utanríkisráðherrann okkar bæst í hóp stjórnmálamanna sem hafa talað illilega af sér enda ekki á allra færi að bera fram orðið Kasakstan. Og hvað um það?
+____
 
 Ráðherrann gerði mistök, so fucking what?
 
@@ -15,7 +17,9 @@ Mér finnst reyndar erfitt að vera ósammála Stefáni hér. Fólk mismælir si
 
 Nei, ræða Stefáns verður áhugavert því hann finnur sig knúinn til að halda áfram og heimspekúlera um að maður hafi gert mistök:
 
-<blockquote>Þetta verður þeim mun sérstæðara þegar haft er í huga að tilvitnanasöfn eru sneisafull af visku um það hversu gott sé að gera mistök, af þeim læri menn nú mest. Og þegar horft er yfir þann hóp sem hefur látið eitthvað flakka um mistökin verður ekki sagt annað en að kannski hafi hann eitthvað til síns máls, enda þar samankomnir flestir uppfinningamenn og frumkvöðlar sem sagan hefur að geyma, menn sem breyttu heiminum eins og Steve Jobs, Henry Ford og Edison.</blockquote>
+____
+Þetta verður þeim mun sérstæðara þegar haft er í huga að tilvitnanasöfn eru sneisafull af visku um það hversu gott sé að gera mistök, af þeim læri menn nú mest. Og þegar horft er yfir þann hóp sem hefur látið eitthvað flakka um mistökin verður ekki sagt annað en að kannski hafi hann eitthvað til síns máls, enda þar samankomnir flestir uppfinningamenn og frumkvöðlar sem sagan hefur að geyma, menn sem breyttu heiminum eins og Steve Jobs, Henry Ford og Edison.
+____
 
 Látum okkur nú sjá. Mér sýnist Stefán hér ýja að þessu: Ráðherra er í hópi þeirra manna sem gert hafa mistök. Í þeim hópi eru líka X, Y og Z. Þeir voru allir frábærir. Því er ráðherra frábær.
 
@@ -31,7 +35,7 @@ Látum okkur nú sjá. Mér sýnist Stefán hér ýja að þessu: Ráðherra er 
 Ráðherra hefur gert mistök. Af því leiðir ekki að hann sé jafningi Henry Ford.
 
 
--------------
+'''
 
 
 Frá Kakastan til Dýrafjarðar

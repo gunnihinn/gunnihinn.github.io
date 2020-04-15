@@ -13,15 +13,19 @@ Jæja. Þá er það frá.
 
 Þóranna K. Jónsdóttir heldur fram að http://visir.is/markadsfolk-er-ekki-med-horn-og-hala/article/2013710169923[markaðsfólk sé ekki með horn og hala]. Mig grunar að ég sé ekki sá eini sem hefur nett óþol fyrir markaðsfræði/fræðingum og að Þóranna hafi hitt talsvert af slíku fólki. Það hlýtur að vera leiðinlegt að finnast svo sótt að sér að maður neyðist til að skrifa grein til að réttlæta tilveru sína. Eins og Þóranna segir í upphafi:
 
-<blockquote>Við markaðsfólkið erum eins og iðnaðarmennirnir. Við gleymum að sinna hlutunum heima við. Við eigum við ímyndarvandamál að stríða. Margir virðast halda að við séum bara einhver stoðstarfsemi við fyrirtækið, bara aukaatriði sem eyðir peningum og spanderar.
+____
+Við markaðsfólkið erum eins og iðnaðarmennirnir. Við gleymum að sinna hlutunum heima við. Við eigum við ímyndarvandamál að stríða. Margir virðast halda að við séum bara einhver stoðstarfsemi við fyrirtækið, bara aukaatriði sem eyðir peningum og spanderar.
 
-[...] Þetta er hins vegar byggt á miklum misskilningi. Misskilningi sem við markaðsfólkið þurfum að fara að leiðrétta.</blockquote>
+[...] Þetta er hins vegar byggt á miklum misskilningi. Misskilningi sem við markaðsfólkið þurfum að fara að leiðrétta.
+____
 
 Ef titillinn gerði það ekki ljóst er markmiðið hér því að rétta hlut markaðsfólks í samfélaginu. Hvernig rökstyðjum við mikilvægi þeirra?
 
-<blockquote>Stjórnunargúrúinn Peter Drucker sagði að markaðsstarf og nýsköpun væru það sem skipti mestu máli hjá fyrirtækinu. Markaðsstarf og nýsköpun sköpuðu tekjur, hitt væri kostnaður. Það er nefnilega þannig að ef markaðsstarfið er ekki að gera sitt þá eru engir viðskiptavinir. 
+____
+Stjórnunargúrúinn Peter Drucker sagði að markaðsstarf og nýsköpun væru það sem skipti mestu máli hjá fyrirtækinu. Markaðsstarf og nýsköpun sköpuðu tekjur, hitt væri kostnaður. Það er nefnilega þannig að ef markaðsstarfið er ekki að gera sitt þá eru engir viðskiptavinir. 
 
-Og ef það eru engir viðskiptavinir skiptir engu máli hversu góður fjármálastjórinn er, eða framleiðslustjórinn, eða starfsfólkið eða nokkuð annað. Fyrirtækið einfaldlega lifir ekki án viðskiptavina.</blockquote>
+Og ef það eru engir viðskiptavinir skiptir engu máli hversu góður fjármálastjórinn er, eða framleiðslustjórinn, eða starfsfólkið eða nokkuð annað. Fyrirtækið einfaldlega lifir ekki án viðskiptavina.
+____
 
 Ég þakka Þórönnu fyrir okkar fyrstu http://en.wikipedia.org/wiki/Argument_from_authority[vísun í kennivald].
 
@@ -46,7 +50,9 @@ Nokkrir veikir hlekkir eru í þessum röksemdafærslum: Aðrir sérfræðingar 
 
 Ein og sér eru þessi mótmæli mín frekar bragðlaus sósa, en ofan á þau bætist undarlegur viðsnúningur Þórunnar í næstu málsgrein:
 
-<blockquote>Drucker hitti þarna naglann á höfuðið en svo fataðist honum flugið. Hann sagði að tilgangur fyrirtækisins væri að búa til viðskiptavini. Markaðsfólk veit að það er ekki svo.</blockquote>
+____
+Drucker hitti þarna naglann á höfuðið en svo fataðist honum flugið. Hann sagði að tilgangur fyrirtækisins væri að búa til viðskiptavini. Markaðsfólk veit að það er ekki svo.
+____
 
 Því miður getum við ekki vitnað í Drucker sem kennivald þegar það hentar okkur og hundsað hann þegar það hentar okkur ekki. Að velja þær staðreyndir sem henta okkur og hundsa aðrar er rökvilla sem ber ekkert hentugt nafn á íslensku; ég sting upp á http://en.wikipedia.org/wiki/Cherry_picking_(fallacy)[berjatínslu]. Þetta er ótrúlega algeng og freistandi villa og leynist á bakvið nær allar persónulegar frásagnir sem eiga að rökstyða einhvern málstað, til dæmis þénar http://www.newstatesman.com/2013/10/malcolm-gladwell-backlash-pseudo-profundity[Malcolm Gladwell] ágætan pening við að fremja þessa rökvillu ítrekað.
 
@@ -54,6 +60,8 @@ Ef Þóranna hefði aðeins vitnað í jákvæða hluta Drucker eða hinn neikv�
 
 Þóranna lýkur máli sínu á að segja að:
 
-<blockquote>Það er kominn tími á að við markaðsfólkið förum að bæta ímynd okkar og að stjórnendur geri sér grein fyrir því út á hvað þetta gengur allt saman.</blockquote>
+____
+Það er kominn tími á að við markaðsfólkið förum að bæta ímynd okkar og að stjórnendur geri sér grein fyrir því út á hvað þetta gengur allt saman.
+____
 
 Að markaðsfólk vilji bæta ímynd sína er ágætt mál, en mikið yrði ég ánægður ef það gerði það án þess að stytta sér leið gegnum rökvillukviksyndið og draga okkur með í leiðinni

@@ -11,21 +11,27 @@ Góðvinur minn og fyrirmynd Björn Bjarnason skrifaði í gær http://evropuvak
 
 Þetta myndband Láru, eða frekar tilvist þess, hafa vakið athygli fleiri en Bjarnar, til dæmis sá http://visir.is/stjornarmadur-ruv-hakkar-thatt-gisla-marteins-i-sig/article/2013131028940[Fréttablaðið] ástæðu til að benda á það og Hannes Hólmsteinn Gissurarson sagði á Facebook síðu sinni:
 
-<blockquote>Þessi kona er einhver furðufugl. Hún hefur gert myndbönd um marga. Ég botna ekki í, hvers vegna henni eru falin einhver trúnaðarstörf. En því miður gat ég ekki horft á þátt Gísla Marteins, þar sem ég var (og er) erlendis í fyrirlestraferð.</blockquote>
+____
+Þessi kona er einhver furðufugl. Hún hefur gert myndbönd um marga. Ég botna ekki í, hvers vegna henni eru falin einhver trúnaðarstörf. En því miður gat ég ekki horft á þátt Gísla Marteins, þar sem ég var (og er) erlendis í fyrirlestraferð.
+____
 
 Ég fel lesendum það verk að meta ummæli HHG (Ath: ekki Helgi Hrafn Gunnarsson, þingmaður Pírata) á rökfræðilegum nótum.
 
 En hvað finnst Birni Bjarnasyni? Af pistli hans að dæma er þetta pólitískt mál í hans augum. Björn byrjar á að rifja upp að nýlega var lögum um skipan í stjórn RÚV breytt svo að nú ákveður Alþingi hver situr þar:
 
-<blockquote>Þá rákum [<a href="http://en.wikipedia.org/wiki/Sic">sic<a>] vinstrisinnar upp ramakvein og töldu að pólitík hefði hafið innreið sína í stjórn ríkisútvarpsins, var látið eins og stjórn undir formennsku Bjargar Evu Erlendsdóttur, fulltrúa vinstri-grænna hefði verið ópólitísk.</blockquote>
+____
+Þá rákum [http://en.wikipedia.org/wiki/Sic"[sic]] vinstrisinnar upp ramakvein og töldu að pólitík hefði hafið innreið sína í stjórn ríkisútvarpsins, var látið eins og stjórn undir formennsku Bjargar Evu Erlendsdóttur, fulltrúa vinstri-grænna hefði verið ópólitísk.
+____
 
 Ég held að þetta sé http://en.wikipedia.org/wiki/Straw_man[strámaður] hjá Birni, það er að hann geri andstæðingum sínum upp skoðun sem þeir höfðu ekki: Meintir vinstrimenn (var bara fólk frá þeim væng kaldastríðsstjórnmála á móti að Alþingi skipaði stjórn RÚV?) héldu ekki fram að stjórn RÚV hefði verið laus við pólitík heldur að ríkisstjórnir Íslands gæti í framtíðinni, gegnum þingmeirihluta, haft áhrif á fréttaflutning stofnunarinnar; sjá http://www.althingi.is/altext/raeda/142/rad20130621T174943.html[ræðu HHG] (ekki Hannesar Hólmsteins Gissurarsonar) á Alþingi og http://www.dv.is/blogg/ingi-freyr-vilhjalmsson/2013/7/4/politiskt-astand/[pistil Inga Freys Vilhjálmssonar], blaðamanns DV.
 
 Hvað sem því líður er ljóst að ef stjórn RÚV var ekki pólitísk áður þá er hún það núna. Leyfum Birni því að eiga þann punkt. Undir þeim formerkjum er Björn viss um hvað býr að baki myndbandi Láru:
 
-<blockquote>Lára Hanna er varamaður í stjórn útvarpsins á vegum Píata [http://en.wikipedia.org/wiki/Sic[sic]]. Við hið furðulega kjör í stjórn útvarpsins á alþingi sl. sumar var upphaflega ætlun Pírata að Lára Hanna yrði aðalmaður en fallið var frá því og sagði Birgitta Jónsdóttir, þingmaður Pírata, í samtali við Fréttablaðið að líklega væri Lára Hanna „illa séð af valdamönnum“ og þess vegna hefði hún orðið varamaður en ekki aðalmaður!
+____
+Lára Hanna er varamaður í stjórn útvarpsins á vegum Píata [http://en.wikipedia.org/wiki/Sic[sic]]. Við hið furðulega kjör í stjórn útvarpsins á alþingi sl. sumar var upphaflega ætlun Pírata að Lára Hanna yrði aðalmaður en fallið var frá því og sagði Birgitta Jónsdóttir, þingmaður Pírata, í samtali við Fréttablaðið að líklega væri Lára Hanna „illa séð af valdamönnum“ og þess vegna hefði hún orðið varamaður en ekki aðalmaður!
 
-Heift Láru Hönnu, sem var (og er) í uppáhaldi hjá Agli Helgasyni, í garð Gísla Marteins einkennist að sjálfsögðu af flokkspólitík. Ber að líta á hana sem slíka, tilgangurinn er einfaldlega að skemma sem mest fyrir Gísla Marteini af pólitískum ástæðum.</blockquote>
+Heift Láru Hönnu, sem var (og er) í uppáhaldi hjá Agli Helgasyni, í garð Gísla Marteins einkennist að sjálfsögðu af flokkspólitík. Ber að líta á hana sem slíka, tilgangurinn er einfaldlega að skemma sem mest fyrir Gísla Marteini af pólitískum ástæðum.
+____
 
 Hér sé ég vankanta á tvennu í málflutningi Björns.
 
@@ -39,6 +45,8 @@ Næst er fullyrðing Bjarnar um að markmið Láru sé að eyðileggja fyrir Gí
 
 Björn lýkur svo máli sýnu á þessum orðum:
 
-<blockquote>Viðbrögð dagskrárstjórans um að varamaður í stjórn ríkisútvarpsins megi ekki segja opinberlega skoðun á efni stofnunarinnar eru dapurleg. Það er greinilega litið þannig á stjórnarmenn ríkisútvarpsins innan veggja þess að þeir séu hluti af hópnum í Efstaleiti en ekki fulltrúar almennings með sjálfstæða, gagnrýna rödd. Verði frumhlaup Láru Hönnu til að virkja stjórnarmenn ríkisútvarpsins í opinberum umræðum um dagskrá þess og efnistök ber að taka því fagnandi þótt efnistökum hennar sé mótmælt sem óvinsamlegum og hlutdrægum.</blockquote>
+____
+Viðbrögð dagskrárstjórans um að varamaður í stjórn ríkisútvarpsins megi ekki segja opinberlega skoðun á efni stofnunarinnar eru dapurleg. Það er greinilega litið þannig á stjórnarmenn ríkisútvarpsins innan veggja þess að þeir séu hluti af hópnum í Efstaleiti en ekki fulltrúar almennings með sjálfstæða, gagnrýna rödd. Verði frumhlaup Láru Hönnu til að virkja stjórnarmenn ríkisútvarpsins í opinberum umræðum um dagskrá þess og efnistök ber að taka því fagnandi þótt efnistökum hennar sé mótmælt sem óvinsamlegum og hlutdrægum.
+____
 
 Þannig starfsmenn RÚV mega tjá sig eins og þeir vilja, svo lengi sem þeir tjá sig rétt?

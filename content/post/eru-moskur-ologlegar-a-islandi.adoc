@@ -11,13 +11,17 @@ Undanfarið hef ég fylgst með hryllingi með umræðu um áætlanir íslenskra
 
 Ásgeir hefur mál sitt svo:
 
-<blockquote>Samkvæmt stjórnarskrá Íslands er trúfrelsi háð því að ekki sé kennt eða framið neitt sem er gagnstætt góðu siðferði eða allsherjarreglu eins og það er orðað. Gott siðferði hlýtur að teljast það að ekki megi hvetja til morða og manndrápa, að ekki megi safna fé til hryðjuverkastarfsemi, að ekki megi ala á fordómum og að ekki megi mismuna fólki eftir kyni, trú, skoðunum, kynhneigð o.s.frv., en allt þetta kenna trúartextar og lögmál íslams. Og sá boðskapur kemur fram í þeim hluta Kóransins sem telst nýjastur og hefur meira vægi en eldri textar sem oft virðast friðsamir við fyrstu sýn</blockquote>
+____
+Samkvæmt stjórnarskrá Íslands er trúfrelsi háð því að ekki sé kennt eða framið neitt sem er gagnstætt góðu siðferði eða allsherjarreglu eins og það er orðað. Gott siðferði hlýtur að teljast það að ekki megi hvetja til morða og manndrápa, að ekki megi safna fé til hryðjuverkastarfsemi, að ekki megi ala á fordómum og að ekki megi mismuna fólki eftir kyni, trú, skoðunum, kynhneigð o.s.frv., en allt þetta kenna trúartextar og lögmál íslams. Og sá boðskapur kemur fram í þeim hluta Kóransins sem telst nýjastur og hefur meira vægi en eldri textar sem oft virðast friðsamir við fyrstu sýn
+____
 
 Hér brýtur Ásgeir þá allsherjarreglu sem hann vitnar til, því orð hans eru einmitt fallin til að ala á fordómum á íslamstrúarfólki. Hann heldur því uppi gildum fordómaleysis á sama tíma og hann fellir þau niður. Þetta er einfaldlega http://en.wikipedia.org/wiki/Contradiction[mótsögn]; stundum kallað að misskilja sjálfan sig í daglegu tali.
 
 Á mótsögn má allt byggja og Ásgeir heldur áfram:
 
-<blockquote>Yfirlýst markmið Bræðralags múslima er eyðing Vesturlanda og yfirtaka alls heimsins undir stjórn sharía, eins fáránlegt og það nú hljómar. Margir múslimaklerkar í Mið-Austurlöndum fara ekki leynt með þann boðskap. Slíkur boðskapur og starfsemi flokkast sem landráð samkvæmt íslenskum lögum. [...] Samkvæmt ofangreindu eru íslömsk trúfélög brot á ákvæðum stjórnarskrárinnar og framkvæmdavaldinu er ekki heimilt að samþykkja og skrá félög múslima sem viðurkennd trúfélög og styðja þau með skattaívilnun og styrkjum. Stuðningur sveitarstjórna, eins og nú gerist í Reykjavík, við félagsskap með slíkan boðskap er að sjálfsögðu á móti góðu siðferði og allsherjarreglu.</blockquote>
+____
+Yfirlýst markmið Bræðralags múslima er eyðing Vesturlanda og yfirtaka alls heimsins undir stjórn sharía, eins fáránlegt og það nú hljómar. Margir múslimaklerkar í Mið-Austurlöndum fara ekki leynt með þann boðskap. Slíkur boðskapur og starfsemi flokkast sem landráð samkvæmt íslenskum lögum. [...] Samkvæmt ofangreindu eru íslömsk trúfélög brot á ákvæðum stjórnarskrárinnar og framkvæmdavaldinu er ekki heimilt að samþykkja og skrá félög múslima sem viðurkennd trúfélög og styðja þau með skattaívilnun og styrkjum. Stuðningur sveitarstjórna, eins og nú gerist í Reykjavík, við félagsskap með slíkan boðskap er að sjálfsögðu á móti góðu siðferði og allsherjarreglu.
+____
 
 Í þessari málsgrein fremur Ásgeir harkalega http://en.wikipedia.org/wiki/Fallacy_of_composition[heildarskekkju]. Almennt gengur þessi villa svona:
 
@@ -33,7 +37,9 @@ Hér segir Ásgeir í raun og veru: Sumir sem eru íslamstrúar eru hryðjuverka
 
 Ég verð að viðurkenna að ég hef lúmskt gaman af þessari næstu hugsun Ásgeirs:
 
-<blockquote>Ég hvet þingmenn Íslendinga til að skoða leiðir og setja lög sem verja málfrelsi fólks á Íslandi á ótvíræðan hátt og að fella úr gildi lög sem setja trú og trúfélög ofar málfrelsi hver svo sem guðsmynd þeirra kann að vera. Trú sem ekki þolir gagnrýni á ekki rétt á sér.</blockquote>
+____
+Ég hvet þingmenn Íslendinga til að skoða leiðir og setja lög sem verja málfrelsi fólks á Íslandi á ótvíræðan hátt og að fella úr gildi lög sem setja trú og trúfélög ofar málfrelsi hver svo sem guðsmynd þeirra kann að vera. Trú sem ekki þolir gagnrýni á ekki rétt á sér.
+____
 
 Vill Ásgeir sem sagt fella úr gildi 125. grein almennra hegningarlaga númer http://www.althingi.is/lagas/nuna/1940019.html[19/1940], sem gera kleift að lögsækja almenning fyrir guðlast? Þessum lögum hefur meðal annars http://is.wikipedia.org/wiki/Gu%C3%B0last_%C3%A1_%C3%8Dslandi[verið beitt] að frumkvæði þáverandi biskups Íslands til að rannsaka Spaugstofuna. Sami biskup fékk Sjónvarpið líka til að hætta við sýningu á "Síðasta freisting Krists" eftir Martin Scorsese. Í þessum tilvikum vóg kristin kirkja gróflega að tjáningafrelsi Íslendinga. Vill Ásgeir að jafnt falli yfir alla og að kristin félög verði gerð ólögleg um leið og íslömsk frændsystkini sín?
 
@@ -41,9 +47,12 @@ Vill Ásgeir sem sagt fella úr gildi 125. grein almennra hegningarlaga númer h
 
 Allt sem ég gæti sagt gegn þessum pistli bliknar þó í samanburði við lokaorð hans. Mér er gjörsamlega fyrirmunað að skilja hvað ritstjórn Morgunblaðsins gekk til þegar hún ákvað að birta þetta sorp:
 
-<blockquote>Og við skulum átta okkur á því að íslam kemur ekki frá Guði. Íslam kemur frá villimönnum af eyðimörkum Arabíu. Frumstæð hugmyndafræði með frumstæð gildi: stríð, heiður og hefnd.</blockquote>
+____
+Og við skulum átta okkur á því að íslam kemur ekki frá Guði. Íslam kemur frá villimönnum af eyðimörkum Arabíu. Frumstæð hugmyndafræði með frumstæð gildi: stríð, heiður og hefnd.
+____
 
-------------------
+
+'''
 
 Grein Ásgeirs:
 

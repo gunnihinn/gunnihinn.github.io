@@ -16,11 +16,13 @@ Fyrst er frétt Vísi.is sem ber fyrirsögnina http://www.visir.is/bjoda-utlenda
 
 Rökvillan í þessari frétt er í boði Snæbjörns Steingrímssonar, framkvæmdastjóra SMÁÍS, sem gæti haldið þessu bloggi í góðum holdum einn síns liðs. Það er reyndar örugglega ekki Snæbirni sjálfum að kenna heldur starfi hans, því hann er í þeirri ömurlegu stöðu að vinna við að verja tapaðan málstað, svo ekki er undarlegt að hann beiti þeim tólum sem til séu. Í fréttinni segir:
 
-<blockquote>[Smáís] segja þjónustuna klárt brot á lögum um höfundarrétt. Þjónustan snýst um að útvega íslenskum viðskiptavinum erlendar IP tölur. Ef viðkomandi er með íslenska IP tölu þá getur hann ekki nálgast þjónustu Netflix og Hulu, sem eru erlendar efnisveitur og bjóða upp á kvikmyndir og þætti. Ástæðan fyrir því að ekki er hægt að nálgast slíkar efnisveitur vegna laga um höfundarrétt.
+____
+[Smáís] segja þjónustuna klárt brot á lögum um höfundarrétt. Þjónustan snýst um að útvega íslenskum viðskiptavinum erlendar IP tölur. Ef viðkomandi er með íslenska IP tölu þá getur hann ekki nálgast þjónustu Netflix og Hulu, sem eru erlendar efnisveitur og bjóða upp á kvikmyndir og þætti. Ástæðan fyrir því að ekki er hægt að nálgast slíkar efnisveitur vegna laga um höfundarrétt.
 
 Í svari framkvæmdastjóra Tals, Petreu Ingileifar Guðmundsdóttur, segir að Tal bjóði aðeins upp á tæknilegar lausnir svo viðskiptavinir geti nálgast veiturnar. "Notkun á erlendum efnisveitum og heimasíðum er alltaf á ábyrgð viðskiptavinar," segir Petra og varpar þannig ábyrgðinni af fyrirtækinu.
 
-"Þessi rök halda ekki, hvorki siðferðislega né lagalega að [Smáísar] mati. Í raun eru þetta nákvæmlega sömu röksemdarfærslurnar og við heyrum varðandi torrent-síðurnar."</blockquote>
+"Þessi rök halda ekki, hvorki siðferðislega né lagalega að [Smáísar] mati. Í raun eru þetta nákvæmlega sömu röksemdarfærslurnar og við heyrum varðandi torrent-síðurnar."
+____
 
 Mótmæli Smáís eru þessi: Þjónusta Tal gerir fólki kleift að brjóta á höfundarrétti. Því mun fólk brjóta á höfundarrétti.
 
@@ -37,11 +39,15 @@ Sorrí, Smáís.
 
 Stígur Helgason skrifar um http://visir.is/allsherjarsamsaerid-/article/2013710259961[allsherjarsamsærið] á Vísi.is. Þar telur hann upp hluti sem eru ekki í lagi. Nokkur dæmi:
 
-<blockquote>Í heiminum eru fleiri hungruð börn en kindur, maðurinn er ekki enn búinn að stíga fæti á Mars og Mumford and Sons er ein vinsælasta hljómsveit sem til er.</blockquote>
+____
+Í heiminum eru fleiri hungruð börn en kindur, maðurinn er ekki enn búinn að stíga fæti á Mars og Mumford and Sons er ein vinsælasta hljómsveit sem til er.
+____
 
 Eftir fjórar málsgreinar af svipuðum bölmóði get ég ekki annað en minnst http://www.youtube.com/watch?v=l1YmS_VDvMY[Monty Python sketsins] þar sem maður heldur langloku en er truflaður af hrópum um "get on with it!" Það gerir Stígur að lokum:
 
-<blockquote>Ég veit ekki hverju öll þessi dómadagsógæfa er að kenna. En ég veit – ég bara veit – að einhvers staðar í dimmu skúmaskoti sitja Engeyingar og græða á öllu saman. Helvítis Engeyingarnir.</blockquote>
+____
+Ég veit ekki hverju öll þessi dómadagsógæfa er að kenna. En ég veit – ég bara veit – að einhvers staðar í dimmu skúmaskoti sitja Engeyingar og græða á öllu saman. Helvítis Engeyingarnir.
+____
 
 Hér vísar Stígur til meints spillingarmáls þar sem Bjarni Benediktsson fjármálaráðherra á að hafa misnotað stöðu sína sem borgarfulltrúi Garðabæjar til hagnaðar vissra fjölskyldumeðlima sinna (sem eru af Engeyjarætt). Enginn botn er enn kominn í það mál. 
 
