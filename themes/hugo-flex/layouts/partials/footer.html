@@ -1,0 +1,12 @@
+{{ with site.Params.footer }}
+<footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+      {{ . | safeHTML }}
+    </div>
+  </div>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</footer>
+{{ end }}

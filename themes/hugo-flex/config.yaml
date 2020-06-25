@@ -1,0 +1,27 @@
+params:
+  color: "#cc0000"  # Any color in CSS syntax
+  width: 42rem  # Any length in CSS syntax
+  rss: To subscribe to this RSS feed, copy its address and paste it into your
+    favorite feed reader.
+  footer: "Copyright 2018-2019 :: Gunnar Þór Magnússon"
+  summaries: false
+  schema: false
+  opengraph: false
+  twittercards: false
+  utterances:
+    enabled: false
+    repo:
+    issueterm: pathname
+    theme: github-light
+
+menu:
+  nav:
+  - name: About
+    url: about/
+    weight: 1
+  - name: Posts
+    url: post/
+    weight: 2
+  - name: RSS
+    url: index.xml
+    weight: 3
