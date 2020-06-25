@@ -1,6 +1,0 @@
-[submodule "themes/pixyll"]
-	path = themes/pixyll
-	url = https://github.com/azmelanar/hugo-theme-pixyll
-[submodule "themes/hugo-flex"]
-	path = themes/hugo-flex
-	url = https://github.com/de-souza/hugo-flex.git
