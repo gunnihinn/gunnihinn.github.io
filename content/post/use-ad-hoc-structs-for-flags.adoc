@@ -1,0 +1,52 @@
+---
+title: "Use ad hoc structs for command-line flags in Go"
+date: 2020-06-29T09:15:48+02:00
+draft: false
+---
+
+The path of least resistance to commandline flag parsing in Go is to use the https://golang.org/pkg/flag/[flag] package from the standard library. A lot of times the result looks like this:
+
+[source,go]
+----
+func main() {
+  help := flags.Bool("help", false, "HALP")
+  frobinate := flags.Int("frobinate", 0, "Amount to frobinate by")
+  blargalarg := flags.String("blargalarg", "", "Social media comment")
+  // [713 variables later]
+  flag.Parse()
+
+  // Much later
+  if *blargalarg != "" {
+    // Do things. We may or may not remember what this variable is.
+  }
+}
+----
+
+That is, we have a bunch of variables lying around we don't really care about and take up perfectly good names. If we see one of them later in the program, we don't have any context on where it comes from, so we have to start jumping around in the source.
+
+In my projects I've used a little accounting trick to hold these flags. I find it helps me deal with them. We just define an anonymous struct to hold the flags:
+
+[source,go]
+----
+func main() {
+  flags := struct{
+    help *bool
+    frobinate *int
+    blargalarg *string
+    // [713 field definitions]
+  }{
+    help: flags.Bool("help", false, "HALP"),
+    frobinate: flags.Int("frobinate", 0, "Amount to frobinate by"),
+    blargalarg: flags.String("blargalarg", "", "Social media comment"),
+    // [713 field instantiations]
+  }
+  flag.Parse()
+
+  // Much later
+  if *flags.blargalarg != "" {
+    // AAAAAH YES IT'S A FLAG
+  }
+}
+----
+
+If I really need to, I can pull the anonymous struct out into its own global variable or type definition or whatever, and pass it around as arguments to functions that deal with its contents. That is not as handy with a litter of flag variables. But really I just find that defining all these flags clearly in one place makes the program easier to read later once I've forgotten what it does.
