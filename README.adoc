@@ -2,10 +2,12 @@
 
 Currently served at https://magnusson.io[magnusson.io].
 
-Setup:
+== Setup
+
+Install nix, lorri, direnv and niv. Then run:
 
 ----
-$ git clone --recursive https://www.github.com/gunnihinn/blog.git
+$ lorri shell
 ----
 
 Create new post:
