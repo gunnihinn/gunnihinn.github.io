@@ -3,7 +3,7 @@ params:
   width: 42rem  # Any length in CSS syntax
   rss: To subscribe to this RSS feed, copy its address and paste it into your
     favorite feed reader.
-  footer: "Copyright 2018-2019 :: Gunnar Þór Magnússon"
+  footer: "Copyright 2018-2020 :: Gunnar Þór Magnússon"
   summaries: false
   schema: false
   opengraph: false
