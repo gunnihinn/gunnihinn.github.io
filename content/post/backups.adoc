@@ -1,0 +1,48 @@
+---
+title: "Backing up data like the adult I supposedly am"
+date: 2020-09-18T10:47:47+02:00
+draft: false
+---
+
+Like so many things I'm supposed to do but don't -- getting exercise, eating right, sleeping well, standing up for women and minorities in public spaces -- backing up my data has always been something I've half-assed at best.
+
+I've lugged around an external hard drive with a few hundred gigabytes of data for the last 10 years, and made backups to it once every three or four years or so. Every time I've tried restoring anything from those backups I've regretted it, because of course I just bought the drive, plugged it in and copied stuff to it, so it is a FAT32 drive while I have mostly had EXT4 filesystems, which means all my file permissions get lost during the process.
+
+I've written shameful little shell scripts to set file permissions to 0644 and directory permissions to 0755, recursively, many many times.
+
+Part of my problem was that I both know just enough rsync to be dangerous and have a credit card so I can provision cloud VMs, so forever just around the corner was my perfect backup solution that I'd write myself and maintain and actually do instead of dealing with whatever I had going on in my life. I've come to accept that this will never happen, or perhaps more definitively, that I'd rather cut myself than write and maintain another piece of ad-hoc software for myself.
+
+Luckily I recently found two things that have solved this whole problem for me: https://borgbackup.readthedocs.io/en/stable/[borg] and https://www.rsync.net/[rsync.net].
+
+Borg is backup software. It compresses and deduplicates data at the block level, and strongly encourages (but does not force) you to encrypt data before backing it up. It is everything I'd want from my half-assed rsync and shell script abomination.
+
+I read its documentation a couple of times and was impressed. I then set about comparing different VM hosts to see which one would give me the cheapest block storage option, when the result of some https://github.com/scotte/borgsnap[random google search] led me to rsync.net. They are a company that stores backups, pretty cheaply, and http://www.rsync.net/products/attic.html[even more cheaply] if you use borg to take them. I guess they just really love borg and want us to love it too.
+
+I signed up for their cheapest plan, which starts at 100GB stored for $18 per year. They have no network in- or egress costs, and the storage amount can be adjusted at any time. Once my account had been activated, I did a little password reset dance, and uploaded a public SSH key.
+
+I wanted to back up my `$HOME` directory, so after installing borg I ran:
+----
+export BORG_REMOTE_PATH="borg1"
+borg init --encryption repokey-blake2 UID@ch-s011.rsync.net:home
+----
+This created a remote borg repository called "home" on rsync.net's servers. The environment variable is so we use a more recent version of borg on the remote server (version 1.1.11 at the time of writing), as the default version is rather old (version 0.29.0).
+
+When choosing what encryption method to use, one can choose between a "repokey" or a "keyfile". They both create a private key locked with a passphrase; the difference is that with "repokey" the key is stored in the borg repo, while with "keyfile" it is stored outside of it. This boils down to whether we think a passphrase is enough security for our data, or whether we think having a secret keyfile is necessary. I figured my password manager could create a strong enough passphrase for my needs, and I didn't want to think about losing the keyfile, so I chose "repokey-blake2".
+
+To create my first backup, I ran
+----
+borg create --exclude "$HOME/.cache" UID@ch-s011.rsync.net:home::backup-1 "$HOME"
+----
+which created the archive "backup-1" in my "home" borg repository. I didn't change the compression algorithm from the default one.
+
+By default borg compresses data with lz4. It can use other compression methods (xz, zlib, zstd). I compared their compression ratios on some binary files I had and found no difference between them. I think this is because the large binary files I have are mostly audio and video files in lossy formats, which don't seem to benefit very much from further compression. I have a lot of text files as well, but text takes up so little relative space on today's hardware that it makes no sense to spend CPU cycles on compressing it better than lz4 does.
+
+This backup command hummed along for a good while, and through a couple of reboot cycles. Doing a second backup right after it finished (or the day after) took a lot less time because of the deduplication:
+----
+borg create --exclude "$HOME/.cache" UID@ch-s011.rsync.net:home::backup-2 "$HOME"
+----
+Restoring from backup is also easy:
+----
+borg extract UID@ch-s011.rsync.net:home::backup-2
+----
+I set this up to run as a daily timed systemd service at noon (very easy on NixOS, which every Linux user should be using unless they hate themselves), and will never, ever think about this again. For a handful of bucks a year, that is a good deal.

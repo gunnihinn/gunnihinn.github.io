@@ -5,7 +5,7 @@ dev:
 	hugo server -D
 
 deploy: blog
-	rsync -avz public gthmcloud:
+	rsync -avz public janitor@gthm:
 
 .PHONY: clean
 clean:
