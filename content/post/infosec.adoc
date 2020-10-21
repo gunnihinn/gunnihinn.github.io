@@ -1,6 +1,6 @@
 ---
 title: "Infosec: A board game"
-date: 2020-09-18T20:19:05+02:00
+date: 2020-10-21T08:19:05+02:00
 draft: false
 ---
 
