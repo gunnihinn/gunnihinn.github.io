@@ -1,0 +1,25 @@
+---
+title: "How Silicon Valley will solve the trolley problem"
+date: 2020-10-21T14:24:29+02:00
+draft: false
+---
+
+= How Silicon Valley will solve the trolley problem
+
+The https://en.wikipedia.org/wiki/Trolley_problem[trolley problem] asks how to decide between the lives of people in two groups. At the moment, it comes up in our industry in discussions around self-driving cars: Suppose a car gets into a situation where it must risk injuring either its passengers or pedestrians; which ones should it prioritize saving?
+
+Always choosing one group leads to suboptimal outcomes. If we always save the pedestrians, they may perform attacks on car riders by willfully stepping into traffic. If we always save the passengers, we may run over a pedestrian whose life happens to be of greater worth than that of the passengers.
+
+The crux of the trolley problem is how we should make the choice of what lives to save. As with all hard problems without clear metrics for success, it's best to solve this by having the participants decide this for themselves.
+
+Every time we view a website, our friendly ad networks must decide what ads we should see. This is done by having our user profile put up on auction for prospective advertisers. During a handful of milliseconds, participants may inspect our profile and place a bid for our attention according to what they see.
+
+The same technology could be trivially repurposed for deciding the trolley problem in the context of self-driving cars.
+
+Assume the identity of every participant in the trolley scenario is known. Practically, we know the identity of the passengers; that of the pedestrians could be known if their phones broadcast a special short-range identification signal. An incentive for broadcasting such a signal could be that we would have to assume that a person without one were one of no means.
+
+Given this information, a car about to be involved in a collision could take a few milliseconds to send the identities of the people involved to an auction service. Participants who had the foresight of purchasing accident insurance would have agents bidding on their behalf. The winner of the bid would be safe from the forthcoming accident, and their insurance would pay some sum to the car manufacturer post-hoc as a reward for conforming to the rules.
+
+The greater a person's individual wealth, the better insurance coverage and latencies they could purchase, and the more accidents they could expect to survive. This aligns nicely with the values of societies like the United States, where the worth of a person's life is proportional to their wealth.
+
+As this system lets self-driving car manufacturers off the hook for any decisions taken, and would need coordinated ethical action on the behalf of software engineers to not be implemented, we expect to see this system in action in the world in short order.

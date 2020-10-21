@@ -1,0 +1,29 @@
+---
+title: "Infosec: A board game"
+date: 2020-09-18T20:19:05+02:00
+draft: false
+---
+
+I'm pleased to announce the release of my new card-drawing game _Infosec_.
+
+The rules of the game are simple. It is for two or more players. The player with the fewest friends is the Infosec Expert; the other players are the Coworkers.
+
+To start, the Infosec Expert deals three cards face down from a standard deck of cards. The Coworker on the Infosec Expert's right hand should draw one card.
+
+"Which card?" the Coworker may ask.
+
+"This is a simple phishing exercise," the Infosec Expert should reply. "Just pick a card."
+
+"But they all look the same," the Coworker may object.
+
+"Draw one. And get it right."
+
+This exchange should go on in increasingly hostile tones until the Coworker agrees to draw a card. It will have been the wrong card. The Infosec Expert should inform the Coworker:
+
+"You got phished. You moron. You fucking idiot. You're such a goddamn waste of space and time. How could you have gotten this so wrong? Were you even trying? Answer me. What the fuck was that?"
+
+Feel free to ad-lib along these lines, or draw as many cards as you want from the accompanying Admonishment Deck (expansion packs available). Include ad-hominem attacks and use as many personal details as you know. Interrupt the Coworker if they try to reply. Don't hold back.
+
+Once the Coworker is silent, the Infosec Expert should collect the cards, deal new ones, and proceed to the next Coworker in line.
+
+The game ends with the Infosec Expert's victory when all the Coworkers have left.
