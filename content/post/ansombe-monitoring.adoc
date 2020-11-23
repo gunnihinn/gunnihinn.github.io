@@ -6,7 +6,7 @@ draft: false
 
 https://en.wikipedia.org/wiki/Anscombe%27s_quartet[Anscombe's quartet] is a collection of four data sets of points in the plane. When graphed the data sets are obviously very different, but they have identical sets of descriptive statistics. Newer variations on the same theme include the delightful https://www.autodesk.com/research/publications/same-stats-different-graphs[Datasaurus dozen], which includes animations of deformations from one step into another where the descriptive statistics are kept identical during the animation.
 
-image::files/datasaurus-dozen.png[The datasaurus dozen]
+image::https://www.magnusson.io/files/datasaurus-dozen.png[The datasaurus dozen]
 
 I've seen Anscombe's quartet cited in discussions around monitoring and
 observability to assert that the average and standard deviation (two of the
