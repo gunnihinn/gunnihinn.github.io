@@ -4,8 +4,12 @@ blog: clean
 dev:
 	hugo server -D
 
-deploy: blog
-	rsync -avz public janitor@gthm:
+magnusson.io.tar.gz: blog
+	pushd public && tar -cvf $@ *
+	mv public/$@ .
+
+deploy: magnusson.io.tar.gz
+	rsync -avz $< janitor@gthm:
 
 .PHONY: clean
 clean:
