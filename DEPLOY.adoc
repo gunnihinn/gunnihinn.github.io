@@ -1,0 +1,10 @@
+= Deploy
+
+Deploys happen like this:
+
+- User on localhost creates a TAR archive with the new site
+- User uploads TAR archive to remote
+- Watcher on remote checks TAR for content hash
+- When hash changes, it extracts the archive directory and does a symlink dance
+
+Keep current hash in a file `current`.

@@ -1,0 +1,18 @@
+#+TITLE: Post ideas
+
+* Every sequential program is secretly asynchronous
+
+Because the OS can send signals to a running program, there's a hidden event loop in every sequential program. Not dealing with it results in programs that are incorrect.
+
+Moral: Correctness is *very* expensive to achieve.
+
+* Category theory in mathematics and programming
+
+Discuss how Grothendieck used category theory to take compass bearings in various fields. Category-theoretic properties guided him to the definitions and concepts he should look at. Contrast this with the use of category theory in programming, where it usually does not inform system design at all.
+
+See https://en.wikipedia.org/wiki/Adjoint_functors#Ubiquity for quote on compass bearings.
+
+Compare with Pijul and its use of category theory to design a system.
+
+- https://jneem.github.io/merging/
+- https://arxiv.org/abs/1311.3903
