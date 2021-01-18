@@ -1,0 +1,11 @@
+---
+title: "Emacs is my favorite Emacs package"
+date: 2021-01-18T09:54:06+01:00
+draft: false
+---
+
+In the category of "people whose work ethic and output I can only envy from afar
+while failing to do anything of value", Protesilaos Stavrou takes the lead with
+his video https://www.youtube.com/watch?v=RiXK7NALgRs[Emacs is my "favourite
+Emacs package"] in which he demonstrates how bananas well he has come to
+understand Emacs in the single year (!!!) he has used it.

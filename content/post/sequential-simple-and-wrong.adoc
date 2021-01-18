@@ -1,0 +1,9 @@
+---
+title: "Sequential Simple and Wrong"
+date: 2020-10-21T13:49:18+02:00
+draft: true
+---
+
+Every sequential program is secrectly asyncronous and likely incorrect.
+
+A program runs on an operating system. The OS can send it signals it must respond to. This introduces a hidden event loop into every program we write. If we don't deal with it, our programs, however simple they may look, may be incorrect.
