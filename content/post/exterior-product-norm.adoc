@@ -1,0 +1,106 @@
+---
+title: "Estimating the norm of the exterior product"
+date: 2021-03-02T15:02:39+01:00
+draft: true
+---
+
+Let \(V\) be a real finite-dimensional vector space, and let \(\bigwedge^\bullet V\) be the exterior algebra of \(V\).
+An inner product on \(V\) induces inner products on each component \(\bigwedge^k V\) of the exterior algebra.
+Recall that we have the exterior product
+\[
+\bigwedge{}^{p} V \times \bigwedge{}^{q} V \to \bigwedge{}^{p+q} V,
+\quad
+(u, v) \mapsto u \wedge v.
+\]
+Since all the spaces here are finite-dimensional, there exist constants \(C = C(p,q,n)\) such that
+\[
+|u \wedge v| \leq C |u| \, |v|
+\]
+for all \(u \in \bigwedge{}^ p V\) and \(v \in \bigwedge{}^ q V\). Can we estimate these constants?
+
+The answer apparently has applications to physics.
+I don't understand the connection to physics or the physical
+motivation, but in a
+https://aip.scitation.org/doi/10.1063/1.1703969[1961 paper] the
+physicist https://en.wikipedia.org/wiki/Yang_Chen-Ning[Yang
+Chen-Ning] conjectured that for even-dimensional spaces the optimal
+bound is achieved on powers of the standard symplectic form. As
+
+\[
+\frac{\omega^p}{p!} \wedge \frac{\omega^q}{q!} = \binom{p+q}p \frac{\omega^{p+q}}{(p+q)!},
+\]
+where \(\omega = \sum_{i=1}^n dx_{2i-1} \wedge dx_{2i}\) and \(|\omega^p / p!|^2 = \binom np\), the conjecture is that
+\[
+C(2p,2q,2n) = \tbinom{p+q}p\sqrt{\frac{\binom{n}{p+q}}{\binom np \binom nq}}.
+\]
+Yang claims to prove this for the case of \(p = 1\) in his 1961 paper, though I don't understand his proof.
+A https://arxiv.org/abs/1409.3931[preprint from 2014] claims to prove more cases of the conjecture; again the details of the proof defeat me.
+
+There are two ways of getting rather brutal estimates for these constants.
+Let \((v_1, \ldots, v_n)\) be an orthonormal basis of \(V\).
+Then \( (v_I) \) where \(I \subset \{1, \ldots, n\}\) with \(|I| = p\) is an orthonormal basis of \(\bigwedge^p V\), and similar for \( (v_J) \) with \(|J| = q\).
+If \(u\) and \(v\) are elements of these bases, then \(u \wedge v\) is either 0 or has norm 1.
+
+For our first attempt, let \(x = \sum_{|I|=p} x_I v_I\) and \(y = \sum_{|J|=q} y_J v_J\) be elements of \(\bigwedge^p V\) and \(\bigwedge^q V\).
+Then
+\[
+|x \wedge y|
+=
+\biggl|
+\sum_{|I|=p, |J|=q} x_I y_J v_I \wedge v_J
+\biggr|
+\leq
+\sum_{|I|=p, |J|=q} |x_I y_J|
+= \sum_{|I|=p} |x_I| \cdot \sum_{|J|=q} |y_J|.
+\]
+By taking the inner product of \(x\) and the vector whose elements are the signs of each \(x_I\) and applying Cauchy--Schwarz, we get
+\[
+\sum_{|I|=p} |x_I| \leq \sqrt{\tbinom np} |x|.
+\]
+This gives
+\[
+|x \wedge y| \leq \sqrt{\tbinom np \tbinom nq} |x| |y|.
+\]
+Our first estimate is thus \(C(p,q,n) \leq \sqrt{\binom np \binom nq}\).
+This is likely to be a bad estimate, because when applying the triangle inequality above we assigned equal weight to all expressions \(|v_I \wedge v_J|\), even though many of them were zero.
+We also applied the Cauchy--Schwarz inequality on top of the triangle one.
+The conditions for those inequalities to be exact are orthogonal -- the triangle one is exact when all the vectors lie on a straight line, while Cauchy--Schwarz is exact when all the vectors are orthogonal -- which should yield suboptimal bounds.
+
+For our second attempt, we consider the bilinear map
+\[
+b : \bigwedge{}^ p V \otimes \bigwedge{}^ q V \to \bigwedge{}^ {p+q} V,
+\quad
+u \otimes v \mapsto u \wedge v.
+\]
+Its operator norms satisfy \(\|b\|^2 \leq |b|^2\), where
+\[
+\| b \|^2
+= \sup_{x,y} \frac{ |b(x,y)|^2 }{ |x|^2 |y|^2 }
+\]
+and where \(|b|\) is the Hilbert--Schmidt norm. We can calculate that norm by counting the number of non-zero entries in the matrix for \(b\).
+
+Let then \(I = (i_1, \ldots, i_p)\) be a multiindex. We can choose \(\binom{n-p}{q}\) indices \(J = (j_1, \ldots, j_q)\) such that the corresponding basis elements \(v_I\) and \(v_J\) satisfy \(b(v_I \otimes v_J) = v_I \wedge v_J \not= 0\). As there are \(\binom np\) ways of picking \(I\), we conclude that the Hilbert--Schmidt norm of \(b\) is
+\[
+|b|^2 = \tbinom np \tbinom {n-p}q = \tbinom n{n-p} \tbinom {n-p}q.
+\]
+We then get a slightly better estimate
+\[
+C(p,q,n)
+\leq \sqrt{\tbinom n{n-p} \tbinom {n-p}q}
+\leq \sqrt{\tbinom np \tbinom nq}
+\]
+with equality in the second place if and only if \(p = 0\) or \(p = n\).
+
+A fun fact is that these estimates are arbitrarily bad.
+When \(p + q = n\), the Hodge star operator gives an isometry \(\bigwedge^q V \cong \bigwedge^p V\) and the Cauchy--Schwarz inequality gives
+\[
+|u \wedge v| \leq |u| |v|,
+\]
+so \(C(p,n-p,n) = 1\), which agrees with Yang's conjectured value when \(p\) and \(n\) are even.
+Our best estimate in this case is
+\[
+C(2p,2n-2p,2n) \leq \sqrt{\tbinom {2n-2p}{2p}},
+\]
+which goes to infinity as \(n\) grows.
+
+I think this is a very fun instance of a problem that's easy to state and whose solution is somewhat difficult. The simple attempts at a solution run into basic problems with the optimal conditions for different inequalities on the one hand, and the fact that the things we can easily calculate are not the things we're interested in on the other hand.
