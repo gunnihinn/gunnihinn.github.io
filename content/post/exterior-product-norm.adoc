@@ -1,7 +1,7 @@
 ---
 title: "Estimating the norm of the exterior product"
 date: 2021-03-02T15:02:39+01:00
-draft: true
+draft: false
 ---
 
 Let \(V\) be a real finite-dimensional vector space, and let \(\bigwedge^\bullet V\) be the exterior algebra of \(V\).

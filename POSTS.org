@@ -16,3 +16,14 @@ Compare with Pijul and its use of category theory to design a system.
 
 - https://jneem.github.io/merging/
 - https://arxiv.org/abs/1311.3903
+
+* Write a lisp vs. Write some lisp
+
+Alan Kay: Lisp are Maxwell's equations of software.
+Counterpoint: People actually use Maxwell's equations and do not just endlessly rederive them.
+
+There are N lisp implemenatations around. (Find huge list.)
+
+Writing your own lisp is a popular thing to do.
+
+Actually writing anything in lisp is much, much rarer.
