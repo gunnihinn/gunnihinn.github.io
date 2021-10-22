@@ -8,7 +8,8 @@ Suppose our job is to design a rate limiting system. It could be embedded in a
 service or be a service of its own. Given some details about a request from
 which we build a source identifier (an IP address is popular and we may assume
 that in what follows) our system should check how many requests have been made
-from that identifier and allow or deny the request based on that information.
+from that identifier in some interval of time and allow or deny the request
+based on that information.
 
 I've seen a handful of such systems implemented at work. More precisely, I've
 read outage reports on a handful of such systems. A common theme in their design
