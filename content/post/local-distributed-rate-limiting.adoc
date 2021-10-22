@@ -1,0 +1,47 @@
+---
+title: "Local distributed rate limiting"
+date: 2021-10-22T19:22:54+02:00
+draft: false
+---
+
+Suppose our job is to design a rate limiting system. It could be embedded in a
+service or be a service of its own. Given some details about a request from
+which we build a source identifier (an IP address is popular and we may assume
+that in what follows) our system should check how many requests have been made
+from that identifier and allow or deny the request based on that information.
+
+I've seen a handful of such systems implemented at work. More precisely, I've
+read outage reports on a handful of such systems. A common theme in their design
+seems to be that the system keeps the request count per identifier in some
+central database, like Cassandra or MySQL. I can only assume this is done to
+ensure the system is in some way _fair_ or _correct_, where those terms are
+taken to mean that as far as we know the rate limits we impose are global across
+all requests to a given availability zone or data center or unit of compute
+area.
+
+I am but a simple country developer, and am probably missing something obvious,
+but it has never been clear to me why we care about fairness or correctness in
+these systems. Those come at the price of coordination, which is 
+https://hillelwayne.com/post/formally-modeling-migrations/[evil and we
+hate it]. But we should also be able to do without it. Each node in our system
+can keep its own count of requests per identifier, and make its decisions based
+on that local information only.
+
+There are a couple of reasons we can do this. The first is that requests are
+presumably load-balanced across our nodes. That load balancing is either done in
+as uniform a way as possible, or in a "sticky" way where each request identifier
+gets sent to the same node (or small group of nodes, then again as uniformly as
+possible). In either case each node sees either zero requests per identifier or
+a representative sample of them. So having the nodes make local decisions about
+identifiers will in aggregate reflect the global behavior of the system.
+
+The second is that source behavior is usually binary. A given source is either
+well-behaved at a given moment, or completely batshit insane. Either behavior is
+perfectly visible at the local level and needs no coordination to figure out. If
+we need correctness for later accounting or observability, the nodes can report
+their local counts to a central authority on their own time.
+
+So the next time you need distributed rate limiting, think locally. Reach for an
+in-memory SQLite database, or something horrifying like a ring buffer you roll
+yourself and definitely test no part of before shipping. Have fun with it. But
+don't coordinate when you don't have to.
