@@ -46,8 +46,14 @@ since 2012.
 
 2020&mdash;now::
 Senior developer, http://www.booking.com[Booking.com].
-I am working on Booking.com's MySQL setup, which involves development and
-operations on thousands of physical hosts.
+I am working on the API modernization effort in the Accommodations Business Unit.
+The project I've been running involves automatic conversion between legacy message formats and new ones on the edge of our network.
+Its purpose is to enable developer velocity during the department's modernization efforts.
+
+- Defined the project scope during conversations with leadership, chose technical tools, and wrote and deployed a reusable base upon which future work by different teams can be done.
+- Collaborated with stakeholders across other teams to ensure the smooth adoption of the API adapters in a production environment.
+- Delivered a working first implementation, complete with user and developer documentation that detail how a new instance of the project can be set up and the reasons behind technical choices.
+
 
 2019::
 Senior software engineer, https://www.independentview.nl/[Independent View].
@@ -163,7 +169,7 @@ B.Sc. in Mathematics, University of Iceland, Reykjavík, Iceland.
 
 === Academic
 
-- _Cohomological expression of the curvature of Kähler moduli_, 2019, 
+- _Cohomological expression of the curvature of Kähler moduli_, 2019,
 https://magnusson.io/files/kahler-cone-geometry.pdf[preprint].
 
 - _Automorphisms and examples of compact non-Kähler manifolds_,
@@ -210,4 +216,3 @@ https://www.visindavefur.is/hofundur/1140/gunnar-thor-magnusson/[Link].
 
 - _Popular music reviews_,
 Rjóminn, 2005&mdash;2006.
-
