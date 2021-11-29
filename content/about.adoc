@@ -20,6 +20,27 @@ I don't do a lot of research anymore, but keep meaning to finish a manuscript
 on an interesting, but ultimately disappointing, cohomological approach to the
 Riemannian geometry of the Kähler cones of compact manifolds.
 
+== Skills
+
+=== Things I know
+
+- Go, Java, Python, Perl, LaTeX
+- Linux, FreeBSD, Nix, Puppet, Git
+- Sqlite, MySQL, Kafka, Zookeeper
+- HTTP, JSON, Protocol buffers, gRPC
+- Graphite, Grafana, Pagerduty, ElasticSearch
+- Concurrency, parallelism, distributed systems
+- Debugging, optimization, high scalability
+
+=== Things I'd like to learn more about
+
+- Rust, Alloy, TLA+, Erlang, Lean
+
+=== Things I don't want to work with
+
+- Windows on production hosts
+- Cryptocurrencies/NFTs
+
 == Online presence
 
 - mailto:gunnar.thor.magnusson@gmail.com[Email]
