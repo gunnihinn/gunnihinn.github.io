@@ -192,8 +192,11 @@ B.Sc. in Mathematics, University of Iceland, Reykjavík, Iceland.
 
 === Academic
 
-- _Cohomological expression of the curvature of Kähler moduli_, 2019,
-https://magnusson.io/files/kahler-cone-geometry.pdf[preprint].
+- _Degenerate Hermitian geometry and curvatures of holomorphic fibrations_, 2022,
+https://arxiv.org/abs/2210.01885[arXiv].
+
+- _Cohomological expression of the curvature of Kähler moduli_, 2020,
+https://arxiv.org/abs/2004.06881[arXiv].
 
 - _Automorphisms and examples of compact non-Kähler manifolds_,
 Mathematica Scandinavica *Volume 121*, 2017, 49&mdash;56.
