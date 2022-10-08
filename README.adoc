@@ -1,13 +1,13 @@
 = Gunnar's blog
 
-Currently served at https://magnusson.io[magnusson.io].
+Currently served at https://www.magnusson.io[magnusson.io].
 
 == Setup
 
-Install nix, lorri, direnv and niv. Then run:
+Install nix and enable flakes. Then run:
 
 ----
-$ lorri shell
+$ nix develop
 ----
 
 Create new post:
@@ -22,8 +22,4 @@ Serve locally:
 $ make dev
 ----
 
-Publish:
-
-----
-$ make deploy
-----
+To publish, commit the changes and push to Github.
