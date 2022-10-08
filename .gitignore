@@ -2,3 +2,5 @@ public/
 *~
 *.tar.gz
 *.html
+.direnv/
+.hugo_build.lock

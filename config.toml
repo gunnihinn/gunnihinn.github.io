@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "Gunnar Þór Magnússon"
 author = "Gunnar Þór Magnússon"
 theme = "hugo-flex"
+
+[security.exec]
+allow = [ "^asciidoctor" ]
