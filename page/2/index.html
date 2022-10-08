@@ -1,0 +1,233 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.104.3"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://gunnihinn.github.io/><link rel=alternate type=application/rss+xml href=https://gunnihinn.github.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://gunnihinn.github.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://gunnihinn.github.io>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/bug-checklist/ rel=bookmark>Bug-fixing checklist</a></h2><time datetime=2020-04-15T07:04:37+02:00>15 April, 2020</time></header><div class=paragraph><p>It is OK not to do all of these things for a given bug. Some bugs are trivial,
+or nontrivial to reproduce or write tests for. But you should explicitly decide
+not to do some of these things for any given bug, and be able to explain why.</p></div><div class="olist arabic"><ol class=arabic><li><p>Is there a (possibly old, closed) issue for the bug?</p></li><li><p>Can you reproduce the bug manually?</p></li><li><p>Can you write a regression test for the bug?</p></li><li><p>Did you check that your change actually fixes the problem?</p></li><li><p>Does the fix’s commit message explain the bug, the fix, and point to the issue?</p></li></ol></div><div class=paragraph><p>It’s debatable whether checking for old or closed issues is the responsibility
+of the developer fixing the bug or a project manager who triages the backlog.
+Sometimes the second person doesn’t exist, but the job should still be done.</p></div><div class=paragraph><p>Remember that a bug report is a report of a symptom. A bug fix is directed at
+a cause. A software symptom may have more than one cause, making bug fixes that
+say "This fixes issue X" very optimistic about what they claim to achieve.</p></div><div class=paragraph><p>Exercise moderation and common sense in all things. Both 0% and 100% test
+coverage are awkward places to live in. Sometimes the information or effort
+needed to write a test make it too expensive to do so. However, when writing a
+test is cheap and easy or can be made so without causing harm, there should be
+a good reason not to do it.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/gitsplorer/ rel=bookmark>Gitsplorer</a></h2><time datetime=2019-10-20T16:49:02+02:00>20 October, 2019</time></header><div class=paragraph><p>Have you ever found yourself using Git and thinking "This is great, but I wish
+these filesystem operations were read-only and ten times slower?". Well, friend,
+do I have news for you.</p></div><div class=paragraph><p>API of a Golang codebase at different times in its history. To do this, I
+figured I’d clone the repo, check out commit A and analyze it, then check out
+commit B and analyze that, and boo! Hiss! That’s inelegant and leaves clutter
+that needs to be cleaned up all around the disk. There has got to be a better
+way!</p></div><div class=paragraph><p>Once I made a <a href=https://github.com/gunnihinn/git-commit-mine>Git commit hash
+miner</a> because I wanted to race it against a coworker to see who could get a
+commit with more leading zeros into a frequently used repository at work. That
+had the side effect of teaching me some about Git’s internals, like what its
+objects are (blobs, trees, commits, tags) and how they fit together. I figured
+that if I could convince the Golang AST parser to read the Git database instead
+of the filesystem, I could do what I wanted in a much better way.</p></div><div class=paragraph><p>Alas, doing that would have required monkey-patching the Go standard library,
+and I don’t want to hunt down every system call it ends up making to be sure I
+got them all. However, Git is famously a content-addressable filesystem, so what
+if we just made a filesystem that points to a given commit in a repo and pointed
+the parser at that?</p></div><div class=paragraph><p>This turns out to be pretty easy to do by combining <code>libgit2</code> and <code>libfuse</code>. We
+use the former to read objects in the Git repository. (The objects are easy to
+read by hand, until you have to read packed objects. That’s doable, but a bit
+of a distraction in what is already quite the distraction.) We then use the
+latter to create a very basic read-only filesystem. In the end, we have a
+read-only version of <code>git checkout</code> that writes nothing to disk.</p></div><div class=paragraph><p>I put a prototype of this together in Python, because I’m lazy. It’s called
+<a href=https://github.com/gunnihinn/gitsplorer/><code>gitsplorer</code></a> and you should absolutely
+not use it anywhere near a production system. It scratches my itch pretty well,
+though. In addition to my API comparisons (which I still haven’t got to), I do
+sometimes want to poke around the state of a repository at a given commit and
+this saves me doing a stash-checkout dance or reading the <code>git worktree</code> manpage
+again.</p></div><div class=paragraph><p>For fun, and to see how bad of an idea this was, I came up with a very
+unscientific benchmark: We checkout the Linux kernel repository at a randomly
+selected
+<a href=https://github.com/torvalds/linux/commit/29c7f1f53bfb3770bdb65a9e79064a963dd40621>commit</a>,
+run Boyter’s <a href=https://github.com/boyter/scc>scc</a> line-counting tool, and checkout
+<code>master</code> again. We do this both with <code>gitsplorer</code> and with ye olde <code>git
+checkout</code>. The results speak for themselves:</p></div><div class=listingblock><div class=content><pre>git checkout: 62 seconds
+gitsplorer: 567 seconds</pre></div></div><div class=paragraph><p>The <code>gitsplorer</code> version is also remarkable for spending all its time using 100%
+of a CPU, which the <code>git</code> version does not. (It uses around 90% of a CPU while
+doing the checkouts, then all of my CPUs while counting lines. The Python FUSE
+filesystem is single-threaded, so beyond Python being slow it must also be a
+point of congestion for the line counting.) I did some basic profiling of this
+with the wonderful profiler <a href=https://github.com/P403n1x87/austin>Austin</a>, and saw
+that the Python process spends most of its time reading Git blobs. I think, but
+did not verify, that this is because <code>libgit2</code> decompresses the contents of the
+blobs on every such call, while most of the reads we make are in the FUSE
+<code>getattr</code> call where we are only interested in metadata about the blob. I made
+no attempts to optimize any of this.</p></div><div class=paragraph><p>So, friends, if you’ve ever wished <code>git checkout</code> was read-only and 10 times
+slower than it is, today is your lucky day.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/lyttle-lytton-2020/ rel=bookmark>Lyttle Lytton 2020</a></h2><time datetime=2019-10-06T11:07:55+02:00>6 October, 2019</time></header><div class=paragraph><p>My <a href=http://adamcadre.ac/lyttle.html>Lyttle Lytton</a> entry for 2020:</p></div><div class=quoteblock><blockquote><div class=paragraph><p>"Actually, you do like this," maverick CEO Eric Davies, Ph.D., insisted as he
+pulled my foreskin back and cunnilingussed my pee hole.</p></div></blockquote></div><div class=paragraph><p>I’m not exactly proud of it, but I’m glad it’s no longer in my head.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/not-this-world/ rel=bookmark>Not made for this world</a></h2><time datetime=2019-07-31T07:38:25+02:00>31 July, 2019</time></header><div class=paragraph><p>It’s hot tonight, and this is going to be mostly the whiskey talking while I
+wait for it to get cool enough to sleep. I’ve killed the mosquitos I’ve seen,
+however, so until then I have only Haskell to keep me company.</p></div><div class=paragraph><p>This morning, tef tweeted about
+<a href=https://twitter.com/tef_ebooks/status/1155705690947805184>monads</a>,
+which sent the Haskell pack his way with
+barks of not getting it. Just now, pinboard was reminded of some guy’s rage
+against
+<a href=https://twitter.com/Pinboard/status/1156288764345348096>Esperanto</a>,
+from back in the 90’s when the web was fun and mostly devoted
+to things like explaining how "The Downward Spiral" is a concept album or
+destroying Unix instead of each other’s mental health.</p></div><div class=paragraph><p>For the Haskell pack, I did a PhD in the type of math that necessitates a lot of
+category theory, and I have looked at your use of category theory, and judged it
+to be unnecessary and pretentious and mainly focused on making you look smart
+while being entirely trivial. But this is not that kind of blog post, one that
+gets too tangled up in whether category theory is useful to get to the point.
+(If nothing else,
+<a href=https://jneem.github.io/merging/>Pijul</a>
+proves that category theory is useful.) We’re here to discuss how Haskell as a
+whole is nonsense if you’re not an academic. Our claim is that Haskell is a
+useless language for writing software that has users.</p></div><div class=paragraph><p>Our point is simple, and focused on IO. We propose that you can measure how
+user-facing a program or language is by measuring how much of its time it spends
+or worries about doing IO. That is, after all, the medium through which anyone
+who is not a program’s author (of which there may be many) will interact with
+the program. The time spent doing IO can be on the command line, via a GUI, over
+a network, or wherever; but to be a serious contender for user-facing programs,
+a language has to make IO be easy.</p></div><div class=paragraph><p>C is a terrible language for most new things today. Anyone writing new software
+in C, that they expect to be used by other than thouroughly vetted people, needs
+to be able to explain why they’ve chosen C. At the same time, a lot of us are
+still exposed to C through the BSD or Linux kernels and syscalls, the undying
+popularity of K&R, random software on the internet, or other vectors. The
+culture around C invented the modern language textbook, K&R, and the modern
+user-facing program, "Hello world", both of which spend most or all of their
+time dealing with IO to talk to you or other users.</p></div><div class=paragraph><p>I claim making IO as simple as possible, which C does for all its faults, to do
+is analogous to trying to making it as simple as possible for other people to
+talk to you in designed languages as you can.<sup class=footnote>[<a id=_footnoteref_1 class=footnote href=#_footnotedef_1 title="View footnote.">1</a>]</sup>. Esperanto shows you can fail
+at that goal, if you even had it, for it favors sounds native to European
+languages above others. Likewise, Haskell shows you can fail at the goal of
+making IO easy, if you even had it, for it does not.</p></div><div class=paragraph><p>Haskell is a purely functional, lazily evaluated language, with a type system.
+Like tef explains, that is great, until you run into IO. Up until that point,
+you could rearrange computations in any order you liked, if they needed to be
+done at all. As soon as you need to do IO, though, you need something to happen
+before another thing, which makes you very unhappy if you’re Haskell. It in fact
+makes you so unhappy that you’ll drag the entire lost-at-sea community of
+category theorists into the orbit of your language just so you can have an
+abstraction for doing IO that fits into your model of the world. This
+abstraction, monoids, then comes with the added benefit of being abstract enough
+that all of your programmers can spend their time explaining it to each other
+instead of writing programs that use the abstraction to do IO, and therefore
+deal with any actual users.</p></div><div class=paragraph><p>Haskell is where programmers go to not have users.</p></div><div id=footnotes><hr><div class=footnote id=_footnotedef_1><a href=#_footnoteref_1>1</a>. One could say that what I mean is something more like making FFI as easy as possible, but that’s missing the point and would just move this discussion to some other, less inflammatory, level that we’re keen to avoid.</div></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/curvature/ rel=bookmark>Curvature as a bilinear form</a></h2><time datetime=2019-05-15T07:36:52+02:00>15 May, 2019</time></header><div class=paragraph><p>Here’s something I thought of when I couldn’t sleep last night.</p></div><div class=paragraph><p>The curvature tensor of a Kähler metric can be viewed as a Hermitian form on
+\(\bigwedge^{1,1} T_X^*\) by mapping \(\operatorname{End} T_X \to \bigwedge^{1,1}
+T_X^*\) via the metric.</p></div><div class=paragraph><p>If we’re on a compact Kähler manifold with zero first Chern class, then for each
+Kähler class \(\omega\) and \((1,1)\)-classes \(u, v\), we can pick the Ricci-flat
+metric in \(\omega\) and the harmonic representatives of \(u, v\). If \(R\) is the
+curvature tensor of the metric, viewed as a Hermitian form, we can then set
+\[
+b(u,v)(\omega) := \int_X R(u, v) \, dV_{\omega}.
+\]
+This defines a smooth bilinear form \(b\) on the tangent space of the Kähler cone
+of \(X\).</p></div><div class=paragraph><p>Besides being fun times, can we say anything interesting about \(b\)? For example,
+what is its norm with respect to the Riemannian metric on the Kähler cone, or
+its trace with respect to that metric? Can we integrate it over some subset of
+the cone?</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/choices/ rel=bookmark>Choices</a></h2><time datetime=2019-03-09T07:32:23+02:00>9 March, 2019</time></header><div class=paragraph><p>I only have time to work on the arXiv project so often, so I’m taking a lot of
+time between sessions to think about what I’m doing. When I look at my system
+design notes, I feel like all the decisions I’m making are the obvious choices,
+but they also were not at all obvious when I started thinking about them. It’s a
+good feeling.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/queuesim/ rel=bookmark>Queuesim</a></h2><time datetime=2019-03-08T07:33:20+02:00>8 March, 2019</time></header><div class=paragraph><p>I haven’t made a lot of progress on my projects. I <em>did</em> create a Scaleway VM
+and shoved an OAI harvester on there that’s happily downloading the arXiv’s
+backlog of metadata. I can also parse the XML it fetches, and have some ideas
+about how I’m going to store it.</p></div><div class=paragraph><p>This lack of progress mostly comes from me being nerd-sniped into thinking
+about bounded queues under load. My
+<a href=https://github.com/bookingcom/carbonapi/issues/35>old work project</a>
+wanted to use a FIFO queue to hold its requests. That is a bad idea, because
+FIFO queues perform very poorly under load, as I
+<a href=https://github.com/gunnihinn/queuesim>went a little overboard</a>
+in demonstrating.</p></div><div class=paragraph><p>Funnily enough, that very simple thing is one of my most popular Github
+projects ever.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/ignore-mastodon/ rel=bookmark>Ignore Mastodon</a></h2><time datetime=2019-03-05T07:33:59+02:00>5 March, 2019</time></header><div class=paragraph><p>Point: <a href=https://carlchenet.com/do-not-ignore-the-mastodon-social-network/>You should not ignore the Mastodon social network any more</a>.</p></div><div class=paragraph><p>Counterpoint: I truly, madly, deeply want to ignore all new and existing social
+networks.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/shame/ rel=bookmark>Shame</a></h2><time datetime=2019-03-04T07:34:40+02:00>4 March, 2019</time></header><div class=paragraph><p>To motivate me to actually finish some of the projects I start, I’m going to
+try announcing them to the world. Shame me into finishing these:</p></div><div class=ulist><ul><li><p>A nicer arXiv frontend of daily new additions.</p></li><li><p>A modern typesetting of Beauville’s <em>Surfaces algebriques complexes</em>.</p></li></ul></div><div class=paragraph><p>Shame. Shame. Shame.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/golang-state-channels/ rel=bookmark>Request-level configuration invariance in Go</a></h2><time datetime=2018-09-12T07:44:22+02:00>12 September, 2018</time></header><div class=paragraph><p>Suppose we have an HTTP service. The behaviour of service depends on some
+configuration that may change at runtime; it may reload a static configuration
+file on <code>SIGHUP</code>, need to react to changes in its service discovery mechanism,
+or have A/B test state or features toggled on and off.</p></div><div class=paragraph><p>In Go, a naive way of handling this is by writing our configuration state to a
+struct and updating it in background goroutines:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
+    frobinate bool
+}
+
+var state State{}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    if s.frobinate {
+        fmt.Fprintln(w, &#34;Great success&#34;)
+    } else {
+        fmt.Fprintln(w, &#34;Great non-success&#34;)
+    }
+}</code></pre></div></div><div class=paragraph><p>This naive approach has at least two problems:</p></div><div class="olist arabic"><ol class=arabic><li><p>The state may change while we’re processing a request, causing us to process
+part of the request with one state, and another part with another. This isn’t a
+big deal in our example, but becomes more of a problem as the time needed to
+handle a request increases.</p></li><li><p>There are no synchronization primitives in play, so updating the state has data
+race conditions.</p></li></ol></div><div class=paragraph><p>Check out the working example in
+<a href=https://github.com/gunnihinn/go-state-channel/tree/ecb5ac180cdcd31f1f1885a1b82d7ca57a9195f4:>this
+commit</a>
+to see the first problem in action.</p></div><div class=paragraph><p>One way to resolve these problems is to add a mutex and to pass copies of the
+state to the request handlers:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
+    frobinate bool
+
+    *sync.Mutex
+}
+
+// Copy may be arbitrarily complicated if State contains slices, maps,
+// pointers, or other structs.
+func (s *State) Copy() State {
+    s.Lock()
+    defer s.Unlock()
+
+    return *s
+}
+
+var state &amp;State{}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    s := state.Copy()
+
+    if s.frobinate {
+        fmt.Fprintln(w, &#34;Great success&#34;)
+    } else {
+        fmt.Fprintln(w, &#34;Great non-success&#34;)
+    }
+}</code></pre></div></div><div class=paragraph><p>The background goroutine that updates the state then either does so through a
+dedicated method that locks/unlocks the mutex, or does the locking itself.</p></div><div class=paragraph><p>While this works fine, it relies on global state and uses none of Go’s built-in
+concurrency features. We were promised a brave new world, and encouraged to
+"share memory by communicating". This points the way to another solution to our
+two problems that leverages Go’s primitives better:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
+    frobinate bool
+}
+
+// Copy may be arbitrarily complicated if State contains slices, maps,
+// pointers, or other structs.
+func (s State) Copy() State {
+    return s
+}
+
+var stateCh chan State
+var toggle chan struct{}
+
+func stateManager() {
+    state := State{}
+
+    for {
+        select {
+        case stateCh &lt;- state.Copy():
+
+        case &lt;-toggle:
+            state.frobinate = !state.frobinate
+        }
+    }
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    s := &lt;-stateCh
+
+    if s.frobinate {
+        fmt.Fprintln(w, &#34;Great success&#34;)
+    } else {
+        fmt.Fprintln(w, &#34;Great non-success&#34;)
+    }
+}</code></pre></div></div><div class=paragraph><p>A complete working example is
+<a href=https://github.com/gunnihinn/go-state-channel/blob/master/go-state-channel.go>here</a>.
+Note that the working example doesn’t rely
+on any global state to pass state to the handler functions, using closures
+instead. Modifying the state is also only possible within the <code>stateManager</code>
+function. The working example could also be extended to have middleware copy the
+state to each request processing function instead of the ad-hoc way done there.</p></div><div class=paragraph><p>It is still up to the developers to ensure the <code>Copy</code> method doesn’t pass mutable
+state around, but they no longer need to deal with mutexes and locks themselves.
+This also means that any future additions to the program that use the same
+pattern won’t need to worry about those locks either.</p></div><div class=paragraph><p>There are no silver bullets in heavily concurrent systems, but in Go we can
+choose to not deal with some of the footguns we would need to handle in C, Java
+or other similar languages.</p></div></article><nav><a class="Pagination u-clickable" href=https://gunnihinn.github.io/page/3/ rel=prev>« Previous</a>
+<a class="Pagination Pagination--right u-clickable" href=https://gunnihinn.github.io/ rel=next>Next »</a></nav></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>

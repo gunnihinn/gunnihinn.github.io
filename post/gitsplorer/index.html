@@ -1,0 +1,46 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.104.3"><title>Gitsplorer | Gunnar Þór Magnússon</title><link rel=canonical href=https://gunnihinn.github.io/post/gitsplorer/><link rel=stylesheet href=https://gunnihinn.github.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://gunnihinn.github.io>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/gitsplorer/ rel=bookmark>Gitsplorer</a></h2><time datetime=2019-10-20T16:49:02+02:00>20 October, 2019</time></header><div class=paragraph><p>Have you ever found yourself using Git and thinking "This is great, but I wish
+these filesystem operations were read-only and ten times slower?". Well, friend,
+do I have news for you.</p></div><div class=paragraph><p>API of a Golang codebase at different times in its history. To do this, I
+figured I’d clone the repo, check out commit A and analyze it, then check out
+commit B and analyze that, and boo! Hiss! That’s inelegant and leaves clutter
+that needs to be cleaned up all around the disk. There has got to be a better
+way!</p></div><div class=paragraph><p>Once I made a <a href=https://github.com/gunnihinn/git-commit-mine>Git commit hash
+miner</a> because I wanted to race it against a coworker to see who could get a
+commit with more leading zeros into a frequently used repository at work. That
+had the side effect of teaching me some about Git’s internals, like what its
+objects are (blobs, trees, commits, tags) and how they fit together. I figured
+that if I could convince the Golang AST parser to read the Git database instead
+of the filesystem, I could do what I wanted in a much better way.</p></div><div class=paragraph><p>Alas, doing that would have required monkey-patching the Go standard library,
+and I don’t want to hunt down every system call it ends up making to be sure I
+got them all. However, Git is famously a content-addressable filesystem, so what
+if we just made a filesystem that points to a given commit in a repo and pointed
+the parser at that?</p></div><div class=paragraph><p>This turns out to be pretty easy to do by combining <code>libgit2</code> and <code>libfuse</code>. We
+use the former to read objects in the Git repository. (The objects are easy to
+read by hand, until you have to read packed objects. That’s doable, but a bit
+of a distraction in what is already quite the distraction.) We then use the
+latter to create a very basic read-only filesystem. In the end, we have a
+read-only version of <code>git checkout</code> that writes nothing to disk.</p></div><div class=paragraph><p>I put a prototype of this together in Python, because I’m lazy. It’s called
+<a href=https://github.com/gunnihinn/gitsplorer/><code>gitsplorer</code></a> and you should absolutely
+not use it anywhere near a production system. It scratches my itch pretty well,
+though. In addition to my API comparisons (which I still haven’t got to), I do
+sometimes want to poke around the state of a repository at a given commit and
+this saves me doing a stash-checkout dance or reading the <code>git worktree</code> manpage
+again.</p></div><div class=paragraph><p>For fun, and to see how bad of an idea this was, I came up with a very
+unscientific benchmark: We checkout the Linux kernel repository at a randomly
+selected
+<a href=https://github.com/torvalds/linux/commit/29c7f1f53bfb3770bdb65a9e79064a963dd40621>commit</a>,
+run Boyter’s <a href=https://github.com/boyter/scc>scc</a> line-counting tool, and checkout
+<code>master</code> again. We do this both with <code>gitsplorer</code> and with ye olde <code>git
+checkout</code>. The results speak for themselves:</p></div><div class=listingblock><div class=content><pre>git checkout: 62 seconds
+gitsplorer: 567 seconds</pre></div></div><div class=paragraph><p>The <code>gitsplorer</code> version is also remarkable for spending all its time using 100%
+of a CPU, which the <code>git</code> version does not. (It uses around 90% of a CPU while
+doing the checkouts, then all of my CPUs while counting lines. The Python FUSE
+filesystem is single-threaded, so beyond Python being slow it must also be a
+point of congestion for the line counting.) I did some basic profiling of this
+with the wonderful profiler <a href=https://github.com/P403n1x87/austin>Austin</a>, and saw
+that the Python process spends most of its time reading Git blobs. I think, but
+did not verify, that this is because <code>libgit2</code> decompresses the contents of the
+blobs on every such call, while most of the reads we make are in the FUSE
+<code>getattr</code> call where we are only interested in metadata about the blob. I made
+no attempts to optimize any of this.</p></div><div class=paragraph><p>So, friends, if you’ve ever wished <code>git checkout</code> was read-only and 10 times
+slower than it is, today is your lucky day.</p></div></article></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>

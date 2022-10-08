@@ -1,0 +1,298 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.104.3"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://gunnihinn.github.io/><link rel=alternate type=application/rss+xml href=https://gunnihinn.github.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://gunnihinn.github.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://gunnihinn.github.io>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/local-distributed-rate-limiting/ rel=bookmark>Local distributed rate limiting</a></h2><time datetime=2021-10-22T19:22:54+02:00>22 October, 2021</time></header><div class=paragraph><p>Suppose our job is to design a rate limiting system. It could be embedded in a
+service or be a service of its own. Given some details about a request from
+which we build a source identifier (an IP address is popular and we may assume
+that in what follows) our system should check how many requests have been made
+from that identifier in some interval of time and allow or deny the request
+based on that information.</p></div><div class=paragraph><p>I’ve seen a handful of such systems implemented at work. More precisely, I’ve
+read outage reports on a handful of such systems. A common theme in their design
+seems to be that the system keeps the request count per identifier in some
+central database, like Cassandra or MySQL. I can only assume this is done to
+ensure the system is in some way <em>fair</em> or <em>correct</em>, where those terms are
+taken to mean that as far as we know the rate limits we impose are global across
+all requests to a given availability zone or data center or unit of compute
+area.</p></div><div class=paragraph><p>I am but a simple country developer, and am probably missing something obvious,
+but it has never been clear to me why we care about fairness or correctness in
+these systems. Those come at the price of coordination, which is
+<a href=https://hillelwayne.com/post/formally-modeling-migrations/>evil and we
+hate it</a>. But we should also be able to do without it. Each node in our system
+can keep its own count of requests per identifier, and make its decisions based
+on that local information only.</p></div><div class=paragraph><p>There are a couple of reasons we can do this. The first is that requests are
+presumably load-balanced across our nodes. That load balancing is either done in
+as uniform a way as possible, or in a "sticky" way where each request identifier
+gets sent to the same node (or small group of nodes, then again as uniformly as
+possible). In either case each node sees either zero requests per identifier or
+a representative sample of them. So having the nodes make local decisions about
+identifiers will in aggregate reflect the global behavior of the system.</p></div><div class=paragraph><p>The second is that source behavior is usually binary. A given source is either
+well-behaved at a given moment, or completely batshit insane. Either behavior is
+perfectly visible at the local level and needs no coordination to figure out. If
+we need correctness for later accounting or observability, the nodes can report
+their local counts to a central authority on their own time.</p></div><div class=paragraph><p>So the next time you need distributed rate limiting, think locally. Reach for an
+in-memory SQLite database, or something horrifying like a ring buffer you roll
+yourself and definitely test no part of before shipping. Have fun with it. But
+don’t coordinate when you don’t have to.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/exterior-product-norm/ rel=bookmark>Estimating the norm of the exterior product</a></h2><time datetime=2021-03-02T15:02:39+01:00>2 March, 2021</time></header><div class=paragraph><p>Let \(V\) be a real finite-dimensional vector space, and let \(\bigwedge^\bullet V\) be the exterior algebra of \(V\).
+An inner product on \(V\) induces inner products on each component \(\bigwedge^k V\) of the exterior algebra.
+Recall that we have the exterior product
+\[
+\bigwedge{}^{p} V \times \bigwedge{}^{q} V \to \bigwedge{}^{p+q} V,
+\quad
+(u, v) \mapsto u \wedge v.
+\]
+Since all the spaces here are finite-dimensional, there exist constants \(C = C(p,q,n)\) such that
+\[
+|u \wedge v| \leq C |u| \, |v|
+\]
+for all \(u \in \bigwedge{}^ p V\) and \(v \in \bigwedge{}^ q V\). Can we estimate these constants?</p></div><div class=paragraph><p>The answer apparently has applications to physics.
+I don’t understand the connection to physics or the physical
+motivation, but in a
+<a href=https://aip.scitation.org/doi/10.1063/1.1703969>1961 paper</a> the
+physicist <a href=https://en.wikipedia.org/wiki/Yang_Chen-Ning>Yang
+Chen-Ning</a> conjectured that for even-dimensional spaces the optimal
+bound is achieved on powers of the standard symplectic form. As</p></div><div class=paragraph><p>\[
+\frac{\omega^p}{p!} \wedge \frac{\omega^q}{q!} = \binom{p+q}p \frac{\omega^{p+q}}{(p+q)!},
+\]
+where \(\omega = \sum_{i=1}^n dx_{2i-1} \wedge dx_{2i}\) and \(|\omega^p / p!|^2 = \binom np\), the conjecture is that
+\[
+C(2p,2q,2n) = \tbinom{p+q}p\sqrt{\frac{\binom{n}{p+q}}{\binom np \binom nq}}.
+\]
+Yang claims to prove this for the case of \(p = 1\) in his 1961 paper, though I don’t understand his proof.
+A <a href=https://arxiv.org/abs/1409.3931>preprint from 2014</a> claims to prove more cases of the conjecture; again the details of the proof defeat me.</p></div><div class=paragraph><p>There are two ways of getting rather brutal estimates for these constants.
+Let \((v_1, \ldots, v_n)\) be an orthonormal basis of \(V\).
+Then \( (v_I) \) where \(I \subset \{1, \ldots, n\}\) with \(|I| = p\) is an orthonormal basis of \(\bigwedge^p V\), and similar for \( (v_J) \) with \(|J| = q\).
+If \(u\) and \(v\) are elements of these bases, then \(u \wedge v\) is either 0 or has norm 1.</p></div><div class=paragraph><p>For our first attempt, let \(x = \sum_{|I|=p} x_I v_I\) and \(y = \sum_{|J|=q} y_J v_J\) be elements of \(\bigwedge^p V\) and \(\bigwedge^q V\).
+Then
+\[
+|x \wedge y|
+=
+\biggl|
+\sum_{|I|=p, |J|=q} x_I y_J v_I \wedge v_J
+\biggr|
+\leq
+\sum_{|I|=p, |J|=q} |x_I y_J|
+= \sum_{|I|=p} |x_I| \cdot \sum_{|J|=q} |y_J|.
+\]
+By taking the inner product of \(x\) and the vector whose elements are the signs of each \(x_I\) and applying Cauchy—​Schwarz, we get
+\[
+\sum_{|I|=p} |x_I| \leq \sqrt{\tbinom np} |x|.
+\]
+This gives
+\[
+|x \wedge y| \leq \sqrt{\tbinom np \tbinom nq} |x| |y|.
+\]
+Our first estimate is thus \(C(p,q,n) \leq \sqrt{\binom np \binom nq}\).
+This is likely to be a bad estimate, because when applying the triangle inequality above we assigned equal weight to all expressions \(|v_I \wedge v_J|\), even though many of them were zero.
+We also applied the Cauchy—​Schwarz inequality on top of the triangle one.
+The conditions for those inequalities to be exact are orthogonal — the triangle one is exact when all the vectors lie on a straight line, while Cauchy—​Schwarz is exact when all the vectors are orthogonal — which should yield suboptimal bounds.</p></div><div class=paragraph><p>For our second attempt, we consider the bilinear map
+\[
+b : \bigwedge{}^ p V \otimes \bigwedge{}^ q V \to \bigwedge{}^ {p+q} V,
+\quad
+u \otimes v \mapsto u \wedge v.
+\]
+Its operator norms satisfy \(\|b\|^2 \leq |b|^2\), where
+\[
+\| b \|^2
+= \sup_{x,y} \frac{ |b(x,y)|^2 }{ |x|^2 |y|^2 }
+\]
+and where \(|b|\) is the Hilbert—​Schmidt norm. We can calculate that norm by counting the number of non-zero entries in the matrix for \(b\).</p></div><div class=paragraph><p>Let then \(I = (i_1, \ldots, i_p)\) be a multiindex. We can choose \(\binom{n-p}{q}\) indices \(J = (j_1, \ldots, j_q)\) such that the corresponding basis elements \(v_I\) and \(v_J\) satisfy \(b(v_I \otimes v_J) = v_I \wedge v_J \not= 0\). As there are \(\binom np\) ways of picking \(I\), we conclude that the Hilbert—​Schmidt norm of \(b\) is
+\[
+|b|^2 = \tbinom np \tbinom {n-p}q = \tbinom n{n-p} \tbinom {n-p}q.
+\]
+We then get a slightly better estimate
+\[
+C(p,q,n)
+\leq \sqrt{\tbinom n{n-p} \tbinom {n-p}q}
+\leq \sqrt{\tbinom np \tbinom nq}
+\]
+with equality in the second place if and only if \(p = 0\) or \(p = n\).</p></div><div class=paragraph><p>A fun fact is that these estimates are arbitrarily bad.
+When \(p + q = n\), the Hodge star operator gives an isometry \(\bigwedge^q V \cong \bigwedge^p V\) and the Cauchy—​Schwarz inequality gives
+\[
+|u \wedge v| \leq |u| |v|,
+\]
+so \(C(p,n-p,n) = 1\), which agrees with Yang’s conjectured value when \(p\) and \(n\) are even.
+Our best estimate in this case is
+\[
+C(2p,2n-2p,2n) \leq \sqrt{\tbinom {2n-2p}{2p}},
+\]
+which goes to infinity as \(n\) grows.</p></div><div class=paragraph><p>I think this is a very fun instance of a problem that’s easy to state and whose solution is somewhat difficult. The simple attempts at a solution run into basic problems with the optimal conditions for different inequalities on the one hand, and the fact that the things we can easily calculate are not the things we’re interested in on the other hand.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/emacs-is-my-favorite/ rel=bookmark>Emacs is my favorite Emacs package</a></h2><time datetime=2021-01-18T09:54:06+01:00>18 January, 2021</time></header><div class=paragraph><p>In the category of "people whose work ethic and output I can only envy from afar
+while failing to do anything of value", Protesilaos Stavrou takes the lead with
+his video <a href="https://www.youtube.com/watch?v=RiXK7NALgRs">Emacs is my "favourite
+Emacs package"</a> in which he demonstrates how bananas well he has come to
+understand Emacs in the single year (!!!) he has used it.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/ansombe-monitoring/ rel=bookmark>Anscombe's quartet and monitoring</a></h2><time datetime=2020-11-23T11:10:47+01:00>23 November, 2020</time></header><div class=paragraph><p><a href=https://en.wikipedia.org/wiki/Anscombe%27s_quartet>Anscombe’s quartet</a> is a collection of four data sets of points in the plane. When graphed the data sets are obviously very different, but they have identical sets of descriptive statistics. Newer variations on the same theme include the delightful <a href=https://www.autodesk.com/research/publications/same-stats-different-graphs>Datasaurus dozen</a>, which includes animations of deformations from one step into another where the descriptive statistics are kept identical during the animation.</p></div><div class=imageblock><div class=content><img src=https://www.magnusson.io/files/datasaurus-dozen.png alt="The datasaurus dozen"></div></div><div class=paragraph><p>I’ve seen Anscombe’s quartet cited in discussions around monitoring and
+observability to assert that the average and standard deviation (two of the
+statistical tools used in the quartet) are not useful for monitoring and
+alerting; instead one should use percentiles. I agree with the conclusion but
+think it does not follow from the premise, and would like to offer some thoughts on the theme from the perspective of a reformed geometer.</p></div><div class=paragraph><p>To do so, I’d like to work out some examples involving the average and standard deviation. The data sets above involve collections of points in the plane but I’d like us to discuss data modeled on timeseries instead. The difference isn’t important, everything we say applies to both theaters, but the geometry we want to point out is easier to see in the latter.</p></div><div class=sect1><h2 id=_setup>Setup</h2><div class=sectionbody><div class=paragraph><p>We’ll model a portion of a timeseries as a tuple of \(n\) real numbers \((x_1, \ldots, x_n)\). We can think of these as \(n\) measurements recorded at one-second (or minute, hour, …​) intervals. The set of all possible such timeseries is familiar; it is the real vector space \(\mathbb{R}^n\) of dimension \(n\). (Timeseries can be added and subtracted, there is a zero-timeseries that serves as an identity, and we can multiply a timeseries by a real number.)</p></div><div class=paragraph><p>The main characters of our story are the average and standard deviation. If \(x = (x_1, \ldots, x_n)\) is a timeseries, its <a href=https://en.wikipedia.org/wiki/Arithmetic_mean>average</a> is
+\[
+\mu(x) = (x_1 + \cdots + x_n) / n
+\]
+and its <a href=https://en.wikipedia.org/wiki/Standard_deviation>standard deviation</a> is defined by the scary formula<sup class=footnote>[<a id=_footnoteref_1 class=footnote href=#_footnotedef_1 title="View footnote.">1</a>]</sup>
+\[
+\sigma(x) = \sqrt{ ( (x_1 - \mu(x) )^2 + \cdots + (x_n - \mu(x) )^2 ) / n }.
+\]</p></div><div class=paragraph><p>We can now look at some examples. In every one of these, we’ll fix the average and standard deviation to some values and look at the collection of timeseries that have those values. The first couple of examples are just warm-up.</p></div></div></div><div class=sect1><h2 id=_n_1>n = 1</h2><div class=sectionbody><div class=paragraph><p>We first look at \(n = 1\), that is, timeseries that just have one value \(x = (x_1)\). For such a timeseries we have \(\mu(x) = x_1\) and \(\sigma(x) = 0\) so each timeseries is uniquely determined by its average and they all have the same standard deviation.</p></div></div></div><div class=sect1><h2 id=_n_2>n = 2</h2><div class=sectionbody><div class=paragraph><p>The next case is \(n = 2\), of timeseries with two values \(x = (x_1, x_2)\). This is slightly more interesting; we have the average \(\mu(x) = (x_1 + x_2) / 2\) and the standard deviation
+\[
+\begin{align}
+\sigma(x)
+&= \sqrt{( (x_1 - \mu(x) )^2 + (x_2 - \mu(x) )^2 )/2}
+\\
+&= \sqrt{((x_1 - x_2)^2 + (x_2 - x_1)^2)/8}
+= |x_1 - x_2|/2.
+\end{align}
+\]
+The second equality here is by substituting the definition of \(\mu(x)\).</p></div><div class=paragraph><p>This is more interesting because different timeseries can have different
+averages and standard deviations. However, I claim that if we fix both the
+values of the average and standard deviations, say to \(\mu\) and \(\sigma\),
+there is at most one timeseries that has those values.</p></div><div class=paragraph><p>To see this, observe that the formula for the average implies that \(x_2 = 2 \mu - x_1\), so if we fix the value of the average the value of \(x_2\) is determined by the choice of \(x_1\). If we substitute this into the formula for the standard deviation we get
+\[
+\sigma(x) = |x_1 - 2 \mu + x_1|/2
+= |x_1 - \mu|.
+\]
+We can solve this equation by splitting into cases where \(x_1 > \mu\) and \(x_1
+&lt; \mu\). In the former we get \(x_1 = \sigma + \mu\) and in the latter we get
+\(x_1 = \mu - \sigma\). Notice that in both cases, the value of \(x_1\) is
+determined by the values of the average and standard deviations, and the value
+of \(x_2\) is determined by that of \(x_1\) and the average, so both \(x_1\) and
+\(x_2\) are determined once we fix the others.</p></div></div></div><div class=sect1><h2 id=_n_3>n = 3</h2><div class=sectionbody><div class=paragraph><p>We now get into the first case that has a hint of the general picture. Our timeseries have three points, \(x = (x_1, x_2, x_3)\). We <em>could</em> write down equations like in the previous case and calculate, but it’s worth it to take a step back and think about what’s going on.</p></div><div class=paragraph><p>Let’s say we have fixed the value of the average of our timeseries to a constant \(\mu\). The formula for the standard deviation of our series is then
+\[
+\sigma(x) = \sqrt{((x_1 - \mu)^2 + (x_2 - \mu)^2 + (x_3 - \mu)^2)/2}.
+\]
+If we form the point \((\mu, \mu, \mu)\), we see that
+\[
+\sigma(x) = \|(x_1, x_2, x_3) - (\mu, \mu, \mu)\|/\sqrt{2}
+\]
+is just a multiple of the Euclidean distance between our timeseries and the fixed point \((\mu, \mu, \mu)\). If we also fix \(\sigma(x) = \sigma\), the set of points that satisfy this equation is
+\[
+S := \{ (x_1, x_2, x_3) \mid \|(x_1, x_2, x_3) - (\mu, \mu, \mu)\| = \sqrt{2} \sigma \}.
+\]
+This should look familiar, it is the sphere whose center is \((\mu, \mu, \mu)\) and whose radius is \(\sqrt{2}\sigma\).</p></div><div class=paragraph><p>Similarly, the set of timeseries whose average is equal to \(\mu\) is
+\[
+P := \{ (x_1, x_2, x_3) \mid (x_1 + x_2 + x_3)/2 = \mu \}.
+\]
+For those who know a little linear algebra, we can write the condition as being that \((x_1, x_2, x_3) \cdot (1, 1, 1) = 2 \mu\), that is, that the <a href=https://en.wikipedia.org/wiki/Dot_product>inner product</a> with \((1, 1, 1)\) must be equal to \(2 \mu\). The set of points that satisfies such a condition is a <em>plane</em>; a flat two-dimensional space.</p></div><div class=paragraph><p>We’re interested in the set of points where both of these conditions are true,
+which is the intersection \(S \cap P\). We could work out what that is by
+calculation, but it’s easiest to visualize it. The intersection of a sphere and
+a plane in three dimensions is either empty (when they don’t meet), a single
+point (when the plane is tangent to the sphere), or a circle that lies on the
+sphere.</p></div><div class=paragraph><p>In three dimensions, if we pick our values for the average and standard deviations right, there is thus a whole circle of timeseries that have that average and standard deviation. They form a kind of Anscombe set.</p></div></div></div><div class=sect1><h2 id=_higher_dimensions>Higher dimensions</h2><div class=sectionbody><div class=paragraph><p>In higher dimensions, basically the same thing happens as in dimension 3. The set of timeseries that have a fixed average is a hyperplane and the set of timeseries that have a fixed standard deviation and average is a sphere. Their intersection, when it is not empty or a single point, is not as easily described but it is a subspace of dimension \(n-2\). As \(n\) grows higher, this space grows as well, and in general the space of timeseries that have a fixed average and standard deviation is enormous.</p></div></div></div><div class=sect1><h2 id=_other_prescriptive_statistics>Other prescriptive statistics</h2><div class=sectionbody><div class=paragraph><p>The final point I’d like to make, and one you’ll have to take my word for to some extent, is that there is nothing special about the average or standard deviation here. Very similar things will happen for every collection of statistical tools we pick.</p></div><div class=paragraph><p>Every statistical tool can be viewed as a function that takes a timeseries (or perhaps a couple of timeseries, which complicates things a little but not a lot) and returns a real number. These functions are very well behaved (continuous, differentiable, and so on).</p></div><div class=paragraph><p>Given a collection of such functions \(f_1, \ldots, f_k\) on the space of timeseries of \(n\) points, we can ask whether there is an Anscombe set of fixed values of these functions? That is, if we fix values \(y_1, \ldots, y_k\), can we say anything about the set \(\{x = (x_1, \ldots, x_n) \mid f_1(x) = y_1, \ldots, f_k(x) = y_k \}\)?</p></div><div class=paragraph><p>With some hand waving, we can actually say this: Fixing the value of a single
+tool \(f_j\) creates a hypersurface \(X_j = \{x \mid f_j(x) = y_j\}\) inside the
+space of timeseries, that is, a subspace of dimension one less than the ambient
+space. All timeseries in \(X_j\) will have the same value with respect to this tool. If the intersection of all of these \(X_1 \cap \cdots \cap X_k\) is not empty, it will generally be a subspace of dimension \(n - k\). If \(n\) is much bigger than \(k\), the dimension of this space, the space of timeseries that all have the same statistical values with respect to our tools, is enormous.</p></div><div class=paragraph><p>Making the hand waving precise and figuring out when this intersection will be non-empty is the domain of <a href=https://en.wikipedia.org/wiki/Algebraic_geometry>algebraic geometry</a> over the real numbers. Saying anything at all about that is beyond our scope here.</p></div></div></div><div class=sect1><h2 id=_outro>Outro</h2><div class=sectionbody><div class=paragraph><p>I hope I have convinced you that the statement "the average and standard deviation are useless for monitoring because of Anscombe’s quartet" is not true. The moral of Anscombe’s quartet, which boils down to intersection theory in algebraic geometry, is that the space of data that fits any given collection of statistical instruments (including any collection of percentiles) is gigantic and we have to look at the data to make sense of it.</p></div><div class=paragraph><p>In general, percentiles <em>are</em> more valuable for analyzing performance or traffic data than the average and standard deviation. The reason is not Anscombe’s quartet, the <a href=https://en.wikipedia.org/wiki/Robust_statistics>robustness</a> of percentiles, or anything to do with normal distributions, but that the average and standard deviation are fundamentally tools for answering the questions "what would this be if it were constant?" and "how far away is this from being constant?".<sup class=footnote>[<a id=_footnoteref_2 class=footnote href=#_footnotedef_2 title="View footnote.">2</a>]</sup> For performance and traffic analysis, we don’t care about either of those questions, but about peaks in demand and how we can handle them. We should pick tools that can help with that, but other tools have their place.</p></div></div></div><div id=footnotes><hr><div class=footnote id=_footnotedef_1><a href=#_footnoteref_1>1</a>. Some people divide by \(n-1\) in the formula for the standard deviation. I’m sure they have their reasons, but the factor of \(n\) is more natural for geometers. The reason involves interpreting timeseries as functions and is a bit of a detour from what we really care about.</div><div class=footnote id=_footnotedef_2><a href=#_footnoteref_2>2</a>. Exactly how involves some linear algebra and this post was already long. If people care, I can write another one explaining how.</div></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/solving-the-trolley-problem/ rel=bookmark>How Silicon Valley will solve the trolley problem</a></h2><time datetime=2020-10-21T14:24:29+02:00>21 October, 2020</time></header><div class=paragraph><p>The <a href=https://en.wikipedia.org/wiki/Trolley_problem>trolley problem</a> asks how to decide between the lives of people in two groups. At the moment, it comes up in our industry in discussions around self-driving cars: Suppose a car gets into a situation where it must risk injuring either its passengers or pedestrians; which ones should it prioritize saving?</p></div><div class=paragraph><p>Always choosing one group leads to suboptimal outcomes. If we always save the pedestrians, they may perform attacks on car riders by willfully stepping into traffic. If we always save the passengers, we may run over a pedestrian whose life happens to be of greater worth than that of the passengers.</p></div><div class=paragraph><p>The crux of the trolley problem is how we should make the choice of what lives to save. As with all hard problems without clear metrics for success, it’s best to solve this by having the participants decide this for themselves.</p></div><div class=paragraph><p>Every time we view a website, our friendly ad networks must decide what ads we should see. This is done by having our user profile put up on auction for prospective advertisers. During a handful of milliseconds, participants may inspect our profile and place a bid for our attention according to what they see.</p></div><div class=paragraph><p>The same technology could be trivially repurposed for deciding the trolley problem in the context of self-driving cars.</p></div><div class=paragraph><p>Assume the identity of every participant in the trolley scenario is known. Practically, we know the identity of the passengers; that of the pedestrians could be known if their phones broadcast a special short-range identification signal. An incentive for broadcasting such a signal could be that we would have to assume that a person without one were one of no means.</p></div><div class=paragraph><p>Given this information, a car about to be involved in a collision could take a few milliseconds to send the identities of the people involved to an auction service. Participants who had the foresight of purchasing accident insurance would have agents bidding on their behalf. The winner of the bid would be safe from the forthcoming accident, and their insurance would pay some sum to the car manufacturer post-hoc as a reward for conforming to the rules.</p></div><div class=paragraph><p>The greater a person’s individual wealth, the better insurance coverage and latencies they could purchase, and the more accidents they could expect to survive. This aligns nicely with the values of societies like the United States, where the worth of a person’s life is proportional to their wealth.</p></div><div class=paragraph><p>As this system lets self-driving car manufacturers off the hook for any decisions taken, and would need coordinated ethical action on the behalf of software engineers to not be implemented, we expect to see this system in action in the world in short order.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/infosec/ rel=bookmark>Infosec: A board game</a></h2><time datetime=2020-10-21T08:19:05+02:00>21 October, 2020</time></header><div class=paragraph><p>I’m pleased to announce the release of my new card-drawing game <em>Infosec</em>.</p></div><div class=paragraph><p>The rules of the game are simple. It is for two or more players. The player with the fewest friends is the Infosec Expert; the other players are the Coworkers.</p></div><div class=paragraph><p>To start, the Infosec Expert deals three cards face down from a standard deck of cards. The Coworker on the Infosec Expert’s right hand should draw one card.</p></div><div class=paragraph><p>"Which card?" the Coworker may ask.</p></div><div class=paragraph><p>"This is a simple phishing exercise," the Infosec Expert should reply. "Just pick a card."</p></div><div class=paragraph><p>"But they all look the same," the Coworker may object.</p></div><div class=paragraph><p>"Draw one. And get it right."</p></div><div class=paragraph><p>This exchange should go on in increasingly hostile tones until the Coworker agrees to draw a card. It will have been the wrong card. The Infosec Expert should inform the Coworker:</p></div><div class=paragraph><p>"You got phished. You moron. You fucking idiot. You’re such a goddamn waste of space and time. How could you have gotten this so wrong? Were you even trying? Answer me. What the fuck was that?"</p></div><div class=paragraph><p>Feel free to ad-lib along these lines, or draw as many cards as you want from the accompanying Admonishment Deck (expansion packs available). Include ad-hominem attacks and use as many personal details as you know. Interrupt the Coworker if they try to reply. Don’t hold back.</p></div><div class=paragraph><p>Once the Coworker is silent, the Infosec Expert should collect the cards, deal new ones, and proceed to the next Coworker in line.</p></div><div class=paragraph><p>The game ends with the Infosec Expert’s victory when all the Coworkers have left.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/backups/ rel=bookmark>Backing up data like the adult I supposedly am</a></h2><time datetime=2020-09-18T10:47:47+02:00>18 September, 2020</time></header><div class=paragraph><p>Like so many things I’m supposed to do but don’t — getting exercise, eating right, sleeping well, standing up for women and minorities in public spaces — backing up my data has always been something I’ve half-assed at best.</p></div><div class=paragraph><p>I’ve lugged around an external hard drive with a few hundred gigabytes of data for the last 10 years, and made backups to it once every three or four years or so. Every time I’ve tried restoring anything from those backups I’ve regretted it, because of course I just bought the drive, plugged it in and copied stuff to it, so it is a FAT32 drive while I have mostly had EXT4 filesystems, which means all my file permissions get lost during the process.</p></div><div class=paragraph><p>I’ve written shameful little shell scripts to set file permissions to 0644 and directory permissions to 0755, recursively, many many times.</p></div><div class=paragraph><p>Part of my problem was that I both know just enough rsync to be dangerous and have a credit card so I can provision cloud VMs, so forever just around the corner was my perfect backup solution that I’d write myself and maintain and actually do instead of dealing with whatever I had going on in my life. I’ve come to accept that this will never happen, or perhaps more definitively, that I’d rather cut myself than write and maintain another piece of ad-hoc software for myself.</p></div><div class=paragraph><p>Luckily I recently found two things that have solved this whole problem for me: <a href=https://borgbackup.readthedocs.io/en/stable/>borg</a> and <a href=https://www.rsync.net/>rsync.net</a>.</p></div><div class=paragraph><p>Borg is backup software. It compresses and deduplicates data at the block level, and strongly encourages (but does not force) you to encrypt data before backing it up. It is everything I’d want from my half-assed rsync and shell script abomination.</p></div><div class=paragraph><p>I read its documentation a couple of times and was impressed. I then set about comparing different VM hosts to see which one would give me the cheapest block storage option, when the result of some <a href=https://github.com/scotte/borgsnap>random google search</a> led me to rsync.net. They are a company that stores backups, pretty cheaply, and <a href=http://www.rsync.net/products/attic.html>even more cheaply</a> if you use borg to take them. I guess they just really love borg and want us to love it too.</p></div><div class=paragraph><p>I signed up for their cheapest plan, which starts at 100GB stored for $18 per year. They have no network in- or egress costs, and the storage amount can be adjusted at any time. Once my account had been activated, I did a little password reset dance, and uploaded a public SSH key.</p></div><div class=paragraph><p>I wanted to back up my <code>$HOME</code> directory, so after installing borg I ran:</p></div><div class=listingblock><div class=content><pre>export BORG_REMOTE_PATH=&#34;borg1&#34;
+borg init --encryption repokey-blake2 UID@ch-s011.rsync.net:home</pre></div></div><div class=paragraph><p>This created a remote borg repository called "home" on rsync.net’s servers. The environment variable is so we use a more recent version of borg on the remote server (version 1.1.11 at the time of writing), as the default version is rather old (version 0.29.0).</p></div><div class=paragraph><p>When choosing what encryption method to use, one can choose between a "repokey" or a "keyfile". They both create a private key locked with a passphrase; the difference is that with "repokey" the key is stored in the borg repo, while with "keyfile" it is stored outside of it. This boils down to whether we think a passphrase is enough security for our data, or whether we think having a secret keyfile is necessary. I figured my password manager could create a strong enough passphrase for my needs, and I didn’t want to think about losing the keyfile, so I chose "repokey-blake2".</p></div><div class=paragraph><p>To create my first backup, I ran</p></div><div class=listingblock><div class=content><pre>borg create --exclude &#34;$HOME/.cache&#34; UID@ch-s011.rsync.net:home::backup-1 &#34;$HOME&#34;</pre></div></div><div class=paragraph><p>which created the archive "backup-1" in my "home" borg repository. I didn’t change the compression algorithm from the default one.</p></div><div class=paragraph><p>By default borg compresses data with lz4. It can use other compression methods (xz, zlib, zstd). I compared their compression ratios on some binary files I had and found no difference between them. I think this is because the large binary files I have are mostly audio and video files in lossy formats, which don’t seem to benefit very much from further compression. I have a lot of text files as well, but text takes up so little relative space on today’s hardware that it makes no sense to spend CPU cycles on compressing it better than lz4 does.</p></div><div class=paragraph><p>This backup command hummed along for a good while, and through a couple of reboot cycles. Doing a second backup right after it finished (or the day after) took a lot less time because of the deduplication:</p></div><div class=listingblock><div class=content><pre>borg create --exclude &#34;$HOME/.cache&#34; UID@ch-s011.rsync.net:home::backup-2 &#34;$HOME&#34;</pre></div></div><div class=paragraph><p>Restoring from backup is also easy:</p></div><div class=listingblock><div class=content><pre>borg extract UID@ch-s011.rsync.net:home::backup-2</pre></div></div><div class=paragraph><p>I set this up to run as a daily timed systemd service at noon (very easy on NixOS, which every Linux user should be using unless they hate themselves), and will never, ever think about this again. For a handful of bucks a year, that is a good deal.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/home-manager-review/ rel=bookmark>Review of home manager</a></h2><time datetime=2020-09-17T15:14:16+02:00>17 September, 2020</time></header><div class=paragraph><p>A common theme among the people who fall in love with Nix (or its cousin
+<a href=https://nixos.org/>NixOS</a>) is that they want it to manage everything for them. Finding
+out the limits of that capability and where it breaks down is part of
+each’s journey.</p></div><div class=paragraph><p>An obvious enough limit to Nix’s reach is secret management. It can
+easily handle public keys, SSH or cryptographic ones, but the private
+keys cannot be managed by its store as it is readable by all.</p></div><div class=paragraph><p>The promise of Nix is that we will never break our system by updating
+it. We can always roll back to a previous working version, once we have
+a working version at all. This is in contrast to, say, every other Linux
+distribution. I have borked Ubuntu, Arch, Fedora and others during system
+updates. Often the safest way to update the system is to back up <code>/home</code>
+and reinstall the OS.</p></div><div class=paragraph><p>From somewhere comes the idea that a user on a Linux system should be able
+to install their own programs and manage their own system services. (See
+<a href=https://nullprogram.com/blog/2017/06/19/>Chris Wellons</a> for where you can run
+with this idea to if your sysadmin gives you a C compiler.) This
+seems odd from a historical perspective. In a true multi-user system, the
+system administrators normally do not want users to be able to install
+arbitrary software or run services. On a modern "multi"-user system,
+where there is a only single user, avoiding system packages and services
+seems like some kind of theater.</p></div><div class=paragraph><p>Yet we do it anyway. An argument I sometimes make to myself is that this
+is a cleaner separation between what I need the system to do versus what
+I do on it. I may want to be able to run traceroute as root, but I don’t
+care about root being able to run the Go compiler.</p></div><div class=paragraph><p>NixOS has facilities to enforce this separation. It happily creates
+users and their home directories, and can fill in some of the bits that
+go there, like public SSH keys. It can install packages for specific
+users, and allow them to define systemd services. It will not manage
+the configuration of specific user packages (like dotfiles) without
+some coercing. One can presumably create custom derivations of, say,
+ZSH with all the configuration one wants, but who has the time?</p></div><div class=paragraph><p><a href=https://github.com/rycee/home-manager>Home manager</a> wants to fill this
+gap and bring the power of Nix to user environment and configuration
+management. It lets individual users say what packages they want
+installed; what services they want run; and what configuration files
+should go where. On the surface it seems like something I should love,
+but after using it for a month I wrote it out of my system and now use
+plain NixOS.</p></div><div class=paragraph><p>I used Home manager for three things:</p></div><div class="olist arabic"><ol class=arabic><li><p>Installing packages for my user.</p></li><li><p>Scheduling services for my user.</p></li><li><p>Installing configuration files for my software.</p></li></ol></div><div class=paragraph><p>The first one was never a big attraction. Home manager lets us define
+a list of packages in <code>home.packages</code> of packages to install. If we
+control the system configuration, we can acheive the same by defining
+those packages in <code>users.users.$username.packages</code>.</p></div><div class=paragraph><p>If a user controls the system configuration (directly or through
+a sysadmin), they can also define their own user services via
+<code>systemd.user</code>. Home manager’s selling point is that it comes with a
+large list of already defined services that we can enable with a boolean
+flag, instead of having to write our own service configuration. This is
+admittedly nice. In the end, I found that learning the idiosyncrazies
+of each home manager service definition was a less useful use of my time
+than learning how to define NixOS systemd services once and for all. The
+latter is after all where the former end up.</p></div><div class=paragraph><p>As a long-time sufferer of dotfile management, I had high hopes for the
+third point. And indeed, home manager will manage dotfiles just fine. It
+can do this in two modes: it can generate a config file from various
+options we fill out if someone has written a home manager module for
+the program we’re trying to configure, or it can plomp a file on the
+system verbatim from a source. I used the latter, as I didn’t feel like
+learning a configuration language to be able to partially configure
+program dotfiles was a good idea.</p></div><div class=paragraph><p>This works well, until we want to change anything in a dotfile. This
+experiment with home manager coincided with a regular low point in my life
+in which I try to use emacs. This comes with quite a lot of .emacs changes
+as I use Lisp for the only thing it’s ever been good for; configuring
+a text editor in the most complicated way imaginable. Now, the dotfiles
+that home manager (or Nix) puts on our systems are read-only, so every
+change would involve changing the source file and running <code>home-manager
+switch</code>. This seems like unnecessarily many steps, especially after I
+saw this brilliant <a href="https://news.ycombinator.com/item?id=11071754">Hacker news</a>
+comment, which after a week of use is a much better solution for this problem.</p></div><div class=paragraph><p>All in all home manager is nice software. I can see it being useful for
+people who either don’t control the system they run on but want to use
+Nix in user mode to run their corner of it, or for those Nix users who
+gamers (a well-adjusted group of humans if there ever was one) would call
+"filthy casuals", that is, people who just want things to work and don’t
+care very much about learning how to write enough Nix to make that happen.</p></div><div class=paragraph><p>I’m not included in those groups, as I run this system and explicitly
+want to learn to use Nix in anger so I can try and fail to convince
+people to run it in production at work. Home manager is fine software and if it
+makes you happy, then please use it.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/use-ad-hoc-structs-for-flags/ rel=bookmark>Use ad hoc structs for command-line flags in Go</a></h2><time datetime=2020-06-29T09:15:48+02:00>29 June, 2020</time></header><div class=paragraph><p>The path of least resistance to commandline flag parsing in Go is to use the <a href=https://golang.org/pkg/flag/>flag</a> package from the standard library. A lot of times the result looks like this:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>func main() {
+  help := flags.Bool(&#34;help&#34;, false, &#34;HALP&#34;)
+  frobinate := flags.Int(&#34;frobinate&#34;, 0, &#34;Amount to frobinate by&#34;)
+  blargalarg := flags.String(&#34;blargalarg&#34;, &#34;&#34;, &#34;Social media comment&#34;)
+  // [713 variables later]
+  flag.Parse()
+
+  // Much later
+  if *blargalarg != &#34;&#34; {
+    // Do things. We may or may not remember what this variable is.
+  }
+}</code></pre></div></div><div class=paragraph><p>That is, we have a bunch of variables lying around we don’t really care about and take up perfectly good names. If we see one of them later in the program, we don’t have any context on where it comes from, so we have to start jumping around in the source.</p></div><div class=paragraph><p>In my projects I’ve used a little accounting trick to hold these flags. I find it helps me deal with them. We just define an anonymous struct to hold the flags:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>func main() {
+  flags := struct{
+    help *bool
+    frobinate *int
+    blargalarg *string
+    // [713 field definitions]
+  }{
+    help: flags.Bool(&#34;help&#34;, false, &#34;HALP&#34;),
+    frobinate: flags.Int(&#34;frobinate&#34;, 0, &#34;Amount to frobinate by&#34;),
+    blargalarg: flags.String(&#34;blargalarg&#34;, &#34;&#34;, &#34;Social media comment&#34;),
+    // [713 field instantiations]
+  }
+  flag.Parse()
+
+  // Much later
+  if *flags.blargalarg != &#34;&#34; {
+    // AAAAAH YES IT&#39;S A FLAG
+  }
+}</code></pre></div></div><div class=paragraph><p>If I really need to, I can pull the anonymous struct out into its own global variable or type definition or whatever, and pass it around as arguments to functions that deal with its contents. That is not as handy with a litter of flag variables. But really I just find that defining all these flags clearly in one place makes the program easier to read later once I’ve forgotten what it does.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/kleroteria/ rel=bookmark>Kleroteria</a></h2><time datetime=2020-04-15T08:51:31+02:00>15 April, 2020</time></header><div class=paragraph><p>I got picked in
+<a href=https://www.kleroteria.org/>Kleroteria</a>
+a couple of months ago. This is my contribution.</p></div><hr><div class=paragraph><p>Three years ago, my wife and I moved to Amsterdam. We wanted to have kids, and
+thought the Netherlands was a better place to do that than Mexico, where my wife
+is from and we lived.</p></div><div class=paragraph><p>We’ve both moved around a lot, and have picked up the languages of the places
+we’ve lived. That’s how we speak French and Spanish, along with English.
+Learning those was always a necessity; no one in France is going to speak
+English voluntarily, and my in-laws don’t speak the best English so I had to
+learn Spanish.</p></div><div class=paragraph><p>So it was a change to come to the Netherlands. Everyone here speaks perfect
+English. They also have no patience for your attempts at Dutch pronunciation or
+verb conjugation. The second they hear you’re not from here, they switch. On
+paper this is great, but it means that after three years here I still don’t
+speak Dutch. I can never get anyone to have a whole conversation with me in it.</p></div><div class=paragraph><p>A couple of weeks after we came here, we got pregnant. We had a boy, who has
+grown up into a little man who loves cars and trains, makes funny faces at the
+dinner table, and keeps trying to show our dog his books. ("Pancho! See!", but
+Pancho doesn’t care.)</p></div><div class=paragraph><p>We speak to him each in our own language, and by now he understands what we say.
+He’s been going to daycare here since he was five months old, where they speak
+Dutch, so he understands that as well. Kids who grow up with more than one
+language start speaking later, which is can be frustrating for everyone. He
+knows what he wants to say, but can’t figure out what words to use, and we have
+to keep guessing at sounds while other parents don’t.</p></div><div class=paragraph><p>He’s finally speaking now. He tells us everything he wants and knows. In Dutch.
+Every time. Every word comes out in Dutch. And we still don’t really speak it.
+It’s not really any less frustrating for anyone. There’s a lot of guessing at
+pronunciation and Google translate.</p></div><div class=paragraph><p>But what do you know. I did finally get someone to speak Dutch to me.</p></div></article><nav><a class="Pagination u-clickable" href=https://gunnihinn.github.io/page/2/ rel=prev>« Previous</a></nav></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>

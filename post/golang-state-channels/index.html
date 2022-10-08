@@ -1,0 +1,99 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.104.3"><title>Request-level configuration invariance in Go | Gunnar Þór Magnússon</title><link rel=canonical href=https://gunnihinn.github.io/post/golang-state-channels/><link rel=stylesheet href=https://gunnihinn.github.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://gunnihinn.github.io>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/golang-state-channels/ rel=bookmark>Request-level configuration invariance in Go</a></h2><time datetime=2018-09-12T07:44:22+02:00>12 September, 2018</time></header><div class=paragraph><p>Suppose we have an HTTP service. The behaviour of service depends on some
+configuration that may change at runtime; it may reload a static configuration
+file on <code>SIGHUP</code>, need to react to changes in its service discovery mechanism,
+or have A/B test state or features toggled on and off.</p></div><div class=paragraph><p>In Go, a naive way of handling this is by writing our configuration state to a
+struct and updating it in background goroutines:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
+    frobinate bool
+}
+
+var state State{}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    if s.frobinate {
+        fmt.Fprintln(w, &#34;Great success&#34;)
+    } else {
+        fmt.Fprintln(w, &#34;Great non-success&#34;)
+    }
+}</code></pre></div></div><div class=paragraph><p>This naive approach has at least two problems:</p></div><div class="olist arabic"><ol class=arabic><li><p>The state may change while we’re processing a request, causing us to process
+part of the request with one state, and another part with another. This isn’t a
+big deal in our example, but becomes more of a problem as the time needed to
+handle a request increases.</p></li><li><p>There are no synchronization primitives in play, so updating the state has data
+race conditions.</p></li></ol></div><div class=paragraph><p>Check out the working example in
+<a href=https://github.com/gunnihinn/go-state-channel/tree/ecb5ac180cdcd31f1f1885a1b82d7ca57a9195f4:>this
+commit</a>
+to see the first problem in action.</p></div><div class=paragraph><p>One way to resolve these problems is to add a mutex and to pass copies of the
+state to the request handlers:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
+    frobinate bool
+
+    *sync.Mutex
+}
+
+// Copy may be arbitrarily complicated if State contains slices, maps,
+// pointers, or other structs.
+func (s *State) Copy() State {
+    s.Lock()
+    defer s.Unlock()
+
+    return *s
+}
+
+var state &amp;State{}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    s := state.Copy()
+
+    if s.frobinate {
+        fmt.Fprintln(w, &#34;Great success&#34;)
+    } else {
+        fmt.Fprintln(w, &#34;Great non-success&#34;)
+    }
+}</code></pre></div></div><div class=paragraph><p>The background goroutine that updates the state then either does so through a
+dedicated method that locks/unlocks the mutex, or does the locking itself.</p></div><div class=paragraph><p>While this works fine, it relies on global state and uses none of Go’s built-in
+concurrency features. We were promised a brave new world, and encouraged to
+"share memory by communicating". This points the way to another solution to our
+two problems that leverages Go’s primitives better:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
+    frobinate bool
+}
+
+// Copy may be arbitrarily complicated if State contains slices, maps,
+// pointers, or other structs.
+func (s State) Copy() State {
+    return s
+}
+
+var stateCh chan State
+var toggle chan struct{}
+
+func stateManager() {
+    state := State{}
+
+    for {
+        select {
+        case stateCh &lt;- state.Copy():
+
+        case &lt;-toggle:
+            state.frobinate = !state.frobinate
+        }
+    }
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    s := &lt;-stateCh
+
+    if s.frobinate {
+        fmt.Fprintln(w, &#34;Great success&#34;)
+    } else {
+        fmt.Fprintln(w, &#34;Great non-success&#34;)
+    }
+}</code></pre></div></div><div class=paragraph><p>A complete working example is
+<a href=https://github.com/gunnihinn/go-state-channel/blob/master/go-state-channel.go>here</a>.
+Note that the working example doesn’t rely
+on any global state to pass state to the handler functions, using closures
+instead. Modifying the state is also only possible within the <code>stateManager</code>
+function. The working example could also be extended to have middleware copy the
+state to each request processing function instead of the ad-hoc way done there.</p></div><div class=paragraph><p>It is still up to the developers to ensure the <code>Copy</code> method doesn’t pass mutable
+state around, but they no longer need to deal with mutexes and locks themselves.
+This also means that any future additions to the program that use the same
+pattern won’t need to worry about those locks either.</p></div><div class=paragraph><p>There are no silver bullets in heavily concurrent systems, but in Go we can
+choose to not deal with some of the footguns we would need to handle in C, Java
+or other similar languages.</p></div></article></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>

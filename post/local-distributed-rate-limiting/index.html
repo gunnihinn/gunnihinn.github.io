@@ -1,0 +1,32 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.104.3"><title>Local distributed rate limiting | Gunnar Þór Magnússon</title><link rel=canonical href=https://gunnihinn.github.io/post/local-distributed-rate-limiting/><link rel=stylesheet href=https://gunnihinn.github.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://gunnihinn.github.io>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://gunnihinn.github.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://gunnihinn.github.io/post/local-distributed-rate-limiting/ rel=bookmark>Local distributed rate limiting</a></h2><time datetime=2021-10-22T19:22:54+02:00>22 October, 2021</time></header><div class=paragraph><p>Suppose our job is to design a rate limiting system. It could be embedded in a
+service or be a service of its own. Given some details about a request from
+which we build a source identifier (an IP address is popular and we may assume
+that in what follows) our system should check how many requests have been made
+from that identifier in some interval of time and allow or deny the request
+based on that information.</p></div><div class=paragraph><p>I’ve seen a handful of such systems implemented at work. More precisely, I’ve
+read outage reports on a handful of such systems. A common theme in their design
+seems to be that the system keeps the request count per identifier in some
+central database, like Cassandra or MySQL. I can only assume this is done to
+ensure the system is in some way <em>fair</em> or <em>correct</em>, where those terms are
+taken to mean that as far as we know the rate limits we impose are global across
+all requests to a given availability zone or data center or unit of compute
+area.</p></div><div class=paragraph><p>I am but a simple country developer, and am probably missing something obvious,
+but it has never been clear to me why we care about fairness or correctness in
+these systems. Those come at the price of coordination, which is
+<a href=https://hillelwayne.com/post/formally-modeling-migrations/>evil and we
+hate it</a>. But we should also be able to do without it. Each node in our system
+can keep its own count of requests per identifier, and make its decisions based
+on that local information only.</p></div><div class=paragraph><p>There are a couple of reasons we can do this. The first is that requests are
+presumably load-balanced across our nodes. That load balancing is either done in
+as uniform a way as possible, or in a "sticky" way where each request identifier
+gets sent to the same node (or small group of nodes, then again as uniformly as
+possible). In either case each node sees either zero requests per identifier or
+a representative sample of them. So having the nodes make local decisions about
+identifiers will in aggregate reflect the global behavior of the system.</p></div><div class=paragraph><p>The second is that source behavior is usually binary. A given source is either
+well-behaved at a given moment, or completely batshit insane. Either behavior is
+perfectly visible at the local level and needs no coordination to figure out. If
+we need correctness for later accounting or observability, the nodes can report
+their local counts to a central authority on their own time.</p></div><div class=paragraph><p>So the next time you need distributed rate limiting, think locally. Reach for an
+in-memory SQLite database, or something horrifying like a ring buffer you roll
+yourself and definitely test no part of before shipping. Have fun with it. But
+don’t coordinate when you don’t have to.</p></div></article></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>
