@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://gunnihinn.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gunnar Þór Magnússon</title><link>https://gunnihinn.github.io/</link><description>Recent content on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 Oct 2021 19:22:54 +0200</lastBuildDate><atom:link href="https://gunnihinn.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Local distributed rate limiting</title><link>https://gunnihinn.github.io/post/local-distributed-rate-limiting/</link><pubDate>Fri, 22 Oct 2021 19:22:54 +0200</pubDate><guid>https://gunnihinn.github.io/post/local-distributed-rate-limiting/</guid><description>&lt;div class="paragraph">
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://www.magnusson.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gunnar Þór Magnússon</title><link>https://www.magnusson.io/</link><description>Recent content on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 22 Oct 2021 19:22:54 +0200</lastBuildDate><atom:link href="https://www.magnusson.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Local distributed rate limiting</title><link>https://www.magnusson.io/post/local-distributed-rate-limiting/</link><pubDate>Fri, 22 Oct 2021 19:22:54 +0200</pubDate><guid>https://www.magnusson.io/post/local-distributed-rate-limiting/</guid><description>&lt;div class="paragraph">
 &lt;p>Suppose our job is to design a rate limiting system. It could be embedded in a
 service or be a service of its own. Given some details about a request from
 which we build a source identifier (an IP address is popular and we may assume
@@ -46,7 +46,7 @@ their local counts to a central authority on their own time.&lt;/p>
 in-memory SQLite database, or something horrifying like a ring buffer you roll
 yourself and definitely test no part of before shipping. Have fun with it. But
 don’t coordinate when you don’t have to.&lt;/p>
-&lt;/div></description></item><item><title>Estimating the norm of the exterior product</title><link>https://gunnihinn.github.io/post/exterior-product-norm/</link><pubDate>Tue, 02 Mar 2021 15:02:39 +0100</pubDate><guid>https://gunnihinn.github.io/post/exterior-product-norm/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Estimating the norm of the exterior product</title><link>https://www.magnusson.io/post/exterior-product-norm/</link><pubDate>Tue, 02 Mar 2021 15:02:39 +0100</pubDate><guid>https://www.magnusson.io/post/exterior-product-norm/</guid><description>&lt;div class="paragraph">
 &lt;p>Let \(V\) be a real finite-dimensional vector space, and let \(\bigwedge^\bullet V\) be the exterior algebra of \(V\).
 An inner product on \(V\) induces inner products on each component \(\bigwedge^k V\) of the exterior algebra.
 Recall that we have the exterior product
@@ -155,13 +155,13 @@ which goes to infinity as \(n\) grows.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>I think this is a very fun instance of a problem that’s easy to state and whose solution is somewhat difficult. The simple attempts at a solution run into basic problems with the optimal conditions for different inequalities on the one hand, and the fact that the things we can easily calculate are not the things we’re interested in on the other hand.&lt;/p>
-&lt;/div></description></item><item><title>Emacs is my favorite Emacs package</title><link>https://gunnihinn.github.io/post/emacs-is-my-favorite/</link><pubDate>Mon, 18 Jan 2021 09:54:06 +0100</pubDate><guid>https://gunnihinn.github.io/post/emacs-is-my-favorite/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Emacs is my favorite Emacs package</title><link>https://www.magnusson.io/post/emacs-is-my-favorite/</link><pubDate>Mon, 18 Jan 2021 09:54:06 +0100</pubDate><guid>https://www.magnusson.io/post/emacs-is-my-favorite/</guid><description>&lt;div class="paragraph">
 &lt;p>In the category of &amp;#34;people whose work ethic and output I can only envy from afar
 while failing to do anything of value&amp;#34;, Protesilaos Stavrou takes the lead with
 his video &lt;a href="https://www.youtube.com/watch?v=RiXK7NALgRs">Emacs is my &amp;#34;favourite
 Emacs package&amp;#34;&lt;/a> in which he demonstrates how bananas well he has come to
 understand Emacs in the single year (!!!) he has used it.&lt;/p>
-&lt;/div></description></item><item><title>Anscombe's quartet and monitoring</title><link>https://gunnihinn.github.io/post/ansombe-monitoring/</link><pubDate>Mon, 23 Nov 2020 11:10:47 +0100</pubDate><guid>https://gunnihinn.github.io/post/ansombe-monitoring/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Anscombe's quartet and monitoring</title><link>https://www.magnusson.io/post/ansombe-monitoring/</link><pubDate>Mon, 23 Nov 2020 11:10:47 +0100</pubDate><guid>https://www.magnusson.io/post/ansombe-monitoring/</guid><description>&lt;div class="paragraph">
 &lt;p>&lt;a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s quartet&lt;/a> is a collection of four data sets of points in the plane. When graphed the data sets are obviously very different, but they have identical sets of descriptive statistics. Newer variations on the same theme include the delightful &lt;a href="https://www.autodesk.com/research/publications/same-stats-different-graphs">Datasaurus dozen&lt;/a>, which includes animations of deformations from one step into another where the descriptive statistics are kept identical during the animation.&lt;/p>
 &lt;/div>
 &lt;div class="imageblock">
@@ -336,7 +336,7 @@ space. All timeseries in \(X_j\) will have the same value with respect to this t
 &lt;div class="footnote" id="_footnotedef_2">
 &lt;a href="#_footnoteref_2">2&lt;/a>. Exactly how involves some linear algebra and this post was already long. If people care, I can write another one explaining how.
 &lt;/div>
-&lt;/div></description></item><item><title>How Silicon Valley will solve the trolley problem</title><link>https://gunnihinn.github.io/post/solving-the-trolley-problem/</link><pubDate>Wed, 21 Oct 2020 14:24:29 +0200</pubDate><guid>https://gunnihinn.github.io/post/solving-the-trolley-problem/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>How Silicon Valley will solve the trolley problem</title><link>https://www.magnusson.io/post/solving-the-trolley-problem/</link><pubDate>Wed, 21 Oct 2020 14:24:29 +0200</pubDate><guid>https://www.magnusson.io/post/solving-the-trolley-problem/</guid><description>&lt;div class="paragraph">
 &lt;p>The &lt;a href="https://en.wikipedia.org/wiki/Trolley_problem">trolley problem&lt;/a> asks how to decide between the lives of people in two groups. At the moment, it comes up in our industry in discussions around self-driving cars: Suppose a car gets into a situation where it must risk injuring either its passengers or pedestrians; which ones should it prioritize saving?&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -362,7 +362,7 @@ space. All timeseries in \(X_j\) will have the same value with respect to this t
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>As this system lets self-driving car manufacturers off the hook for any decisions taken, and would need coordinated ethical action on the behalf of software engineers to not be implemented, we expect to see this system in action in the world in short order.&lt;/p>
-&lt;/div></description></item><item><title>Infosec: A board game</title><link>https://gunnihinn.github.io/post/infosec/</link><pubDate>Wed, 21 Oct 2020 08:19:05 +0200</pubDate><guid>https://gunnihinn.github.io/post/infosec/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Infosec: A board game</title><link>https://www.magnusson.io/post/infosec/</link><pubDate>Wed, 21 Oct 2020 08:19:05 +0200</pubDate><guid>https://www.magnusson.io/post/infosec/</guid><description>&lt;div class="paragraph">
 &lt;p>I’m pleased to announce the release of my new card-drawing game &lt;em>Infosec&lt;/em>.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -397,7 +397,7 @@ space. All timeseries in \(X_j\) will have the same value with respect to this t
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>The game ends with the Infosec Expert’s victory when all the Coworkers have left.&lt;/p>
-&lt;/div></description></item><item><title>Backing up data like the adult I supposedly am</title><link>https://gunnihinn.github.io/post/backups/</link><pubDate>Fri, 18 Sep 2020 10:47:47 +0200</pubDate><guid>https://gunnihinn.github.io/post/backups/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Backing up data like the adult I supposedly am</title><link>https://www.magnusson.io/post/backups/</link><pubDate>Fri, 18 Sep 2020 10:47:47 +0200</pubDate><guid>https://www.magnusson.io/post/backups/</guid><description>&lt;div class="paragraph">
 &lt;p>Like so many things I’m supposed to do but don’t — getting exercise, eating right, sleeping well, standing up for women and minorities in public spaces — backing up my data has always been something I’ve half-assed at best.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -468,7 +468,7 @@ borg init --encryption repokey-blake2 UID@ch-s011.rsync.net:home&lt;/pre>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>I set this up to run as a daily timed systemd service at noon (very easy on NixOS, which every Linux user should be using unless they hate themselves), and will never, ever think about this again. For a handful of bucks a year, that is a good deal.&lt;/p>
-&lt;/div></description></item><item><title>Review of home manager</title><link>https://gunnihinn.github.io/post/home-manager-review/</link><pubDate>Thu, 17 Sep 2020 15:14:16 +0200</pubDate><guid>https://gunnihinn.github.io/post/home-manager-review/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Review of home manager</title><link>https://www.magnusson.io/post/home-manager-review/</link><pubDate>Thu, 17 Sep 2020 15:14:16 +0200</pubDate><guid>https://www.magnusson.io/post/home-manager-review/</guid><description>&lt;div class="paragraph">
 &lt;p>A common theme among the people who fall in love with Nix (or its cousin
 &lt;a href="https://nixos.org/">NixOS&lt;/a>) is that they want it to manage everything for them. Finding
 out the limits of that capability and where it breaks down is part of
@@ -590,7 +590,7 @@ care very much about learning how to write enough Nix to make that happen.&lt;/p
 want to learn to use Nix in anger so I can try and fail to convince
 people to run it in production at work. Home manager is fine software and if it
 makes you happy, then please use it.&lt;/p>
-&lt;/div></description></item><item><title>Use ad hoc structs for command-line flags in Go</title><link>https://gunnihinn.github.io/post/use-ad-hoc-structs-for-flags/</link><pubDate>Mon, 29 Jun 2020 09:15:48 +0200</pubDate><guid>https://gunnihinn.github.io/post/use-ad-hoc-structs-for-flags/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Use ad hoc structs for command-line flags in Go</title><link>https://www.magnusson.io/post/use-ad-hoc-structs-for-flags/</link><pubDate>Mon, 29 Jun 2020 09:15:48 +0200</pubDate><guid>https://www.magnusson.io/post/use-ad-hoc-structs-for-flags/</guid><description>&lt;div class="paragraph">
 &lt;p>The path of least resistance to commandline flag parsing in Go is to use the &lt;a href="https://golang.org/pkg/flag/">flag&lt;/a> package from the standard library. A lot of times the result looks like this:&lt;/p>
 &lt;/div>
 &lt;div class="listingblock">
@@ -638,7 +638,7 @@ if *flags.blargalarg != &amp;#34;&amp;#34; {
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>If I really need to, I can pull the anonymous struct out into its own global variable or type definition or whatever, and pass it around as arguments to functions that deal with its contents. That is not as handy with a litter of flag variables. But really I just find that defining all these flags clearly in one place makes the program easier to read later once I’ve forgotten what it does.&lt;/p>
-&lt;/div></description></item><item><title>Kleroteria</title><link>https://gunnihinn.github.io/post/kleroteria/</link><pubDate>Wed, 15 Apr 2020 08:51:31 +0200</pubDate><guid>https://gunnihinn.github.io/post/kleroteria/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Kleroteria</title><link>https://www.magnusson.io/post/kleroteria/</link><pubDate>Wed, 15 Apr 2020 08:51:31 +0200</pubDate><guid>https://www.magnusson.io/post/kleroteria/</guid><description>&lt;div class="paragraph">
 &lt;p>I got picked in
 &lt;a href="https://www.kleroteria.org/">Kleroteria&lt;/a>
 a couple of months ago. This is my contribution.&lt;/p>
@@ -685,7 +685,7 @@ pronunciation and Google translate.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>But what do you know. I did finally get someone to speak Dutch to me.&lt;/p>
-&lt;/div></description></item><item><title>Bug-fixing checklist</title><link>https://gunnihinn.github.io/post/bug-checklist/</link><pubDate>Wed, 15 Apr 2020 07:04:37 +0200</pubDate><guid>https://gunnihinn.github.io/post/bug-checklist/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Bug-fixing checklist</title><link>https://www.magnusson.io/post/bug-checklist/</link><pubDate>Wed, 15 Apr 2020 07:04:37 +0200</pubDate><guid>https://www.magnusson.io/post/bug-checklist/</guid><description>&lt;div class="paragraph">
 &lt;p>It is OK not to do all of these things for a given bug. Some bugs are trivial,
 or nontrivial to reproduce or write tests for. But you should explicitly decide
 not to do some of these things for any given bug, and be able to explain why.&lt;/p>
@@ -725,7 +725,7 @@ coverage are awkward places to live in. Sometimes the information or effort
 needed to write a test make it too expensive to do so. However, when writing a
 test is cheap and easy or can be made so without causing harm, there should be
 a good reason not to do it.&lt;/p>
-&lt;/div></description></item><item><title>Gitsplorer</title><link>https://gunnihinn.github.io/post/gitsplorer/</link><pubDate>Sun, 20 Oct 2019 16:49:02 +0200</pubDate><guid>https://gunnihinn.github.io/post/gitsplorer/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Gitsplorer</title><link>https://www.magnusson.io/post/gitsplorer/</link><pubDate>Sun, 20 Oct 2019 16:49:02 +0200</pubDate><guid>https://www.magnusson.io/post/gitsplorer/</guid><description>&lt;div class="paragraph">
 &lt;p>Have you ever found yourself using Git and thinking &amp;#34;This is great, but I wish
 these filesystem operations were read-only and ten times slower?&amp;#34;. Well, friend,
 do I have news for you.&lt;/p>
@@ -801,7 +801,7 @@ no attempts to optimize any of this.&lt;/p>
 &lt;div class="paragraph">
 &lt;p>So, friends, if you’ve ever wished &lt;code>git checkout&lt;/code> was read-only and 10 times
 slower than it is, today is your lucky day.&lt;/p>
-&lt;/div></description></item><item><title>Lyttle Lytton 2020</title><link>https://gunnihinn.github.io/post/lyttle-lytton-2020/</link><pubDate>Sun, 06 Oct 2019 11:07:55 +0200</pubDate><guid>https://gunnihinn.github.io/post/lyttle-lytton-2020/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Lyttle Lytton 2020</title><link>https://www.magnusson.io/post/lyttle-lytton-2020/</link><pubDate>Sun, 06 Oct 2019 11:07:55 +0200</pubDate><guid>https://www.magnusson.io/post/lyttle-lytton-2020/</guid><description>&lt;div class="paragraph">
 &lt;p>My &lt;a href="http://adamcadre.ac/lyttle.html">Lyttle Lytton&lt;/a> entry for 2020:&lt;/p>
 &lt;/div>
 &lt;div class="quoteblock">
@@ -814,7 +814,7 @@ pulled my foreskin back and cunnilingussed my pee hole.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>I’m not exactly proud of it, but I’m glad it’s no longer in my head.&lt;/p>
-&lt;/div></description></item><item><title>Not made for this world</title><link>https://gunnihinn.github.io/post/not-this-world/</link><pubDate>Wed, 31 Jul 2019 07:38:25 +0200</pubDate><guid>https://gunnihinn.github.io/post/not-this-world/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Not made for this world</title><link>https://www.magnusson.io/post/not-this-world/</link><pubDate>Wed, 31 Jul 2019 07:38:25 +0200</pubDate><guid>https://www.magnusson.io/post/not-this-world/</guid><description>&lt;div class="paragraph">
 &lt;p>It’s hot tonight, and this is going to be mostly the whiskey talking while I
 wait for it to get cool enough to sleep. I’ve killed the mosquitos I’ve seen,
 however, so until then I have only Haskell to keep me company.&lt;/p>
@@ -891,7 +891,7 @@ deal with any actual users.&lt;/p>
 &lt;div class="footnote" id="_footnotedef_1">
 &lt;a href="#_footnoteref_1">1&lt;/a>. One could say that what I mean is something more like making FFI as easy as possible, but that’s missing the point and would just move this discussion to some other, less inflammatory, level that we’re keen to avoid.
 &lt;/div>
-&lt;/div></description></item><item><title>Curvature as a bilinear form</title><link>https://gunnihinn.github.io/post/curvature/</link><pubDate>Wed, 15 May 2019 07:36:52 +0200</pubDate><guid>https://gunnihinn.github.io/post/curvature/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Curvature as a bilinear form</title><link>https://www.magnusson.io/post/curvature/</link><pubDate>Wed, 15 May 2019 07:36:52 +0200</pubDate><guid>https://www.magnusson.io/post/curvature/</guid><description>&lt;div class="paragraph">
 &lt;p>Here’s something I thought of when I couldn’t sleep last night.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -915,13 +915,13 @@ of \(X\).&lt;/p>
 what is its norm with respect to the Riemannian metric on the Kähler cone, or
 its trace with respect to that metric? Can we integrate it over some subset of
 the cone?&lt;/p>
-&lt;/div></description></item><item><title>Choices</title><link>https://gunnihinn.github.io/post/choices/</link><pubDate>Sat, 09 Mar 2019 07:32:23 +0200</pubDate><guid>https://gunnihinn.github.io/post/choices/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Choices</title><link>https://www.magnusson.io/post/choices/</link><pubDate>Sat, 09 Mar 2019 07:32:23 +0200</pubDate><guid>https://www.magnusson.io/post/choices/</guid><description>&lt;div class="paragraph">
 &lt;p>I only have time to work on the arXiv project so often, so I’m taking a lot of
 time between sessions to think about what I’m doing. When I look at my system
 design notes, I feel like all the decisions I’m making are the obvious choices,
 but they also were not at all obvious when I started thinking about them. It’s a
 good feeling.&lt;/p>
-&lt;/div></description></item><item><title>Queuesim</title><link>https://gunnihinn.github.io/post/queuesim/</link><pubDate>Fri, 08 Mar 2019 07:33:20 +0200</pubDate><guid>https://gunnihinn.github.io/post/queuesim/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Queuesim</title><link>https://www.magnusson.io/post/queuesim/</link><pubDate>Fri, 08 Mar 2019 07:33:20 +0200</pubDate><guid>https://www.magnusson.io/post/queuesim/</guid><description>&lt;div class="paragraph">
 &lt;p>I haven’t made a lot of progress on my projects. I &lt;em>did&lt;/em> create a Scaleway VM
 and shoved an OAI harvester on there that’s happily downloading the arXiv’s
 backlog of metadata. I can also parse the XML it fetches, and have some ideas
@@ -939,13 +939,13 @@ in demonstrating.&lt;/p>
 &lt;div class="paragraph">
 &lt;p>Funnily enough, that very simple thing is one of my most popular Github
 projects ever.&lt;/p>
-&lt;/div></description></item><item><title>Ignore Mastodon</title><link>https://gunnihinn.github.io/post/ignore-mastodon/</link><pubDate>Tue, 05 Mar 2019 07:33:59 +0200</pubDate><guid>https://gunnihinn.github.io/post/ignore-mastodon/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Ignore Mastodon</title><link>https://www.magnusson.io/post/ignore-mastodon/</link><pubDate>Tue, 05 Mar 2019 07:33:59 +0200</pubDate><guid>https://www.magnusson.io/post/ignore-mastodon/</guid><description>&lt;div class="paragraph">
 &lt;p>Point: &lt;a href="https://carlchenet.com/do-not-ignore-the-mastodon-social-network/">You should not ignore the Mastodon social network any more&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Counterpoint: I truly, madly, deeply want to ignore all new and existing social
 networks.&lt;/p>
-&lt;/div></description></item><item><title>Shame</title><link>https://gunnihinn.github.io/post/shame/</link><pubDate>Mon, 04 Mar 2019 07:34:40 +0200</pubDate><guid>https://gunnihinn.github.io/post/shame/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Shame</title><link>https://www.magnusson.io/post/shame/</link><pubDate>Mon, 04 Mar 2019 07:34:40 +0200</pubDate><guid>https://www.magnusson.io/post/shame/</guid><description>&lt;div class="paragraph">
 &lt;p>To motivate me to actually finish some of the projects I start, I’m going to
 try announcing them to the world. Shame me into finishing these:&lt;/p>
 &lt;/div>
@@ -961,7 +961,7 @@ try announcing them to the world. Shame me into finishing these:&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Shame. Shame. Shame.&lt;/p>
-&lt;/div></description></item><item><title>Request-level configuration invariance in Go</title><link>https://gunnihinn.github.io/post/golang-state-channels/</link><pubDate>Wed, 12 Sep 2018 07:44:22 +0200</pubDate><guid>https://gunnihinn.github.io/post/golang-state-channels/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Request-level configuration invariance in Go</title><link>https://www.magnusson.io/post/golang-state-channels/</link><pubDate>Wed, 12 Sep 2018 07:44:22 +0200</pubDate><guid>https://www.magnusson.io/post/golang-state-channels/</guid><description>&lt;div class="paragraph">
 &lt;p>Suppose we have an HTTP service. The behaviour of service depends on some
 configuration that may change at runtime; it may reload a static configuration
 file on &lt;code>SIGHUP&lt;/code>, need to react to changes in its service discovery mechanism,
@@ -1098,7 +1098,7 @@ pattern won’t need to worry about those locks either.&lt;/p>
 &lt;p>There are no silver bullets in heavily concurrent systems, but in Go we can
 choose to not deal with some of the footguns we would need to handle in C, Java
 or other similar languages.&lt;/p>
-&lt;/div></description></item><item><title>Hey, hvar eru allir?</title><link>https://gunnihinn.github.io/post/hey-hvar-eru-allir/</link><pubDate>Tue, 12 Nov 2013 13:58:28 +0000</pubDate><guid>https://gunnihinn.github.io/post/hey-hvar-eru-allir/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Hey, hvar eru allir?</title><link>https://www.magnusson.io/post/hey-hvar-eru-allir/</link><pubDate>Tue, 12 Nov 2013 13:58:28 +0000</pubDate><guid>https://www.magnusson.io/post/hey-hvar-eru-allir/</guid><description>&lt;div class="paragraph">
 &lt;p>Sorrí með mig, síðasta vika er búin að vera svo leiðinleg að ég hef ekki haft neinn tíma til að skynsemast.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1106,7 +1106,7 @@ or other similar languages.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Þessi leiðindaskúr er vonandi búinn, svo hefðbundin dagskrá getur hafið göngu sína á ný.&lt;/p>
-&lt;/div></description></item><item><title>Gúrkutíð</title><link>https://gunnihinn.github.io/post/gurkutid/</link><pubDate>Wed, 06 Nov 2013 14:29:09 +0000</pubDate><guid>https://gunnihinn.github.io/post/gurkutid/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Gúrkutíð</title><link>https://www.magnusson.io/post/gurkutid/</link><pubDate>Wed, 06 Nov 2013 14:29:09 +0000</pubDate><guid>https://www.magnusson.io/post/gurkutid/</guid><description>&lt;div class="paragraph">
 &lt;p>Kæru lesendur, ef ég lærði eitthvað um helgina var það að kaupa ekki mat sem inniheldur kjöt úti á götu í litlum, sætum fjallaþorpum í Mexíkó. Eftir á að hyggja veit ég ekki af hverju ég gat ekki sagt mér það sjálfur fyrirfram.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1117,7 +1117,7 @@ or other similar languages.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Hvað segið þið?&lt;/p>
-&lt;/div></description></item><item><title>Afsakið hlé</title><link>https://gunnihinn.github.io/post/afsakid-hle/</link><pubDate>Tue, 05 Nov 2013 16:17:50 +0000</pubDate><guid>https://gunnihinn.github.io/post/afsakid-hle/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Afsakið hlé</title><link>https://www.magnusson.io/post/afsakid-hle/</link><pubDate>Tue, 05 Nov 2013 16:17:50 +0000</pubDate><guid>https://www.magnusson.io/post/afsakid-hle/</guid><description>&lt;div class="paragraph">
 &lt;p>Ég skrifaði ekkert í gær því ég var í brúðkaupi.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1125,7 +1125,7 @@ or other similar languages.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Við sjáum til á morgun.&lt;/p>
-&lt;/div></description></item><item><title>Hún ögrar viðteknum viðhorfum</title><link>https://gunnihinn.github.io/post/hun-ograr-vidteknum-vidhorfum/</link><pubDate>Fri, 01 Nov 2013 14:50:12 +0000</pubDate><guid>https://gunnihinn.github.io/post/hun-ograr-vidteknum-vidhorfum/</guid><description>&lt;div class="quoteblock">
+&lt;/div></description></item><item><title>Hún ögrar viðteknum viðhorfum</title><link>https://www.magnusson.io/post/hun-ograr-vidteknum-vidhorfum/</link><pubDate>Fri, 01 Nov 2013 14:50:12 +0000</pubDate><guid>https://www.magnusson.io/post/hun-ograr-vidteknum-vidhorfum/</guid><description>&lt;div class="quoteblock">
 &lt;blockquote>
 &lt;div class="paragraph">
 &lt;p>Hver er vinsælasti kvenrithöfundur heims? Hver er um leið áhrifamesti kvenheimspekingur heims? Hún er rússnesk-bandaríski rithöfundurinn Ayn Rand, en bækur hennar hafa selst í 30 milljónum eintaka um allan heim.&lt;/p>
@@ -1171,7 +1171,7 @@ or other similar languages.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>(3) Hér er ansi lítið vitnað í Mencken (ef ég dæmi bók með orðunum &amp;#34;Ég skemmti mér frábærlega yfir þessu rusli&amp;#34; má vitna í það sem &amp;#34;Ég skemmti mér frábærlega&amp;#34; á kápu hennar; sjá &lt;a href="http://en.wikipedia.org/wiki/Cherry_picking_(fallacy)">berjatínslu&lt;/a>) en miðað við skrif hans er ég alveg tilbúinn að trúa að hann hafi fílað Rand. Að Mencken finnist bók &amp;#34;frábær&amp;#34; og ekkert annað er samt ófullnægjandi &lt;a href="http://en.wikipedia.org/wiki/Appeal_to_authority">vísun í kennivald&lt;/a>.&lt;/p>
-&lt;/div></description></item><item><title>Sko Svía</title><link>https://gunnihinn.github.io/post/sko-svia/</link><pubDate>Wed, 30 Oct 2013 19:56:21 +0000</pubDate><guid>https://gunnihinn.github.io/post/sko-svia/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Sko Svía</title><link>https://www.magnusson.io/post/sko-svia/</link><pubDate>Wed, 30 Oct 2013 19:56:21 +0000</pubDate><guid>https://www.magnusson.io/post/sko-svia/</guid><description>&lt;div class="paragraph">
 &lt;p>Síðan ég byrjaði að lesa leiðara Morgunblaðsins hefur mig langað að skoða einhvern þeirra betur hér. Það er ekki vandkvæðalaust, því leiðararnir skiptast í tvo flokka. Í öðrum er talað af rósemi og skoðanir viðraðar með vísun í rök og ég hef ekkert út á þá leiðara að setja. Í hinum fara höfundar eins og kettir í kringum heitan graut, nefna fá ef einhver nöfn eða hugmyndir og skjóta ómerkilega á allt í færi. Þó mér þætti gaman að skoða þessa leiðara betur er það ekki oft hægt, því í þeim eiga höfundarnir til að segja ekki nokkurn skapaðan hlut. Mig er farið að gruna að ritstjórarnir skiptist á að skrifa leiðara blaðsins og að markmiðin með skrifum þeirra séu ansi ólík.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1258,7 +1258,7 @@ Ritstjórn Morgunblaðsins (Davíð Oddson og Haraldur Johannessen)&lt;/p>
 &lt;p>Á Íslandi er því kjörlendi fyrir þá sem vilja kafa ofan í hlerunarmál og vilji Solberg fara með sitt hlerunarmál lengra þarf hún ekki að leita annað.&lt;/p>
 &lt;/div>
 &lt;/blockquote>
-&lt;/div></description></item><item><title>Í pottinum með Birni Bjarnasyni</title><link>https://gunnihinn.github.io/post/i-pottinum-med-birni-bjarnasyni/</link><pubDate>Tue, 29 Oct 2013 19:16:11 +0000</pubDate><guid>https://gunnihinn.github.io/post/i-pottinum-med-birni-bjarnasyni/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Í pottinum með Birni Bjarnasyni</title><link>https://www.magnusson.io/post/i-pottinum-med-birni-bjarnasyni/</link><pubDate>Tue, 29 Oct 2013 19:16:11 +0000</pubDate><guid>https://www.magnusson.io/post/i-pottinum-med-birni-bjarnasyni/</guid><description>&lt;div class="paragraph">
 &lt;p>Góðvinur minn og fyrirmynd Björn Bjarnason skrifaði í gær &lt;a href="http://evropuvaktin.is/i_pottinum/30834/">pistil á vef Evrópuvaktarinnar&lt;/a>. Tilefnið var &lt;a href="http://www.youtube.com/watch?v=6yiX2CGDcwM">Youtube myndband&lt;/a> Láru Hönnu Einarsdóttur, fyrrverandi blaðamanns og núverandi varaformanns í stjórn RÚV, þar sem hún gagnrýndi nýjan sunnudagsþátt Gísla Marteins Baldurssonar.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1330,7 +1330,7 @@ Ritstjórn Morgunblaðsins (Davíð Oddson og Haraldur Johannessen)&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Þannig starfsmenn RÚV mega tjá sig eins og þeir vilja, svo lengi sem þeir tjá sig rétt?&lt;/p>
-&lt;/div></description></item><item><title>Það sem þig raunverulega langar</title><link>https://gunnihinn.github.io/post/thad-sem-thig-raunverulega-langar/</link><pubDate>Mon, 28 Oct 2013 20:04:39 +0000</pubDate><guid>https://gunnihinn.github.io/post/thad-sem-thig-raunverulega-langar/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Það sem þig raunverulega langar</title><link>https://www.magnusson.io/post/thad-sem-thig-raunverulega-langar/</link><pubDate>Mon, 28 Oct 2013 20:04:39 +0000</pubDate><guid>https://www.magnusson.io/post/thad-sem-thig-raunverulega-langar/</guid><description>&lt;div class="paragraph">
 &lt;p>Um helgina birtist leiðarinn &lt;a href="http://visir.is/thad-sem-thig-raunverulega-langar/article/2013710269959">Það sem þig raunverulega langar&lt;/a> eftir Ólaf Þ. Stephensen í Fréttablaðinu. Ólafur er ritstjóri Fréttablaðsins, fyrir þá sem ekki vissu.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1360,7 +1360,7 @@ Ritstjórn Morgunblaðsins (Davíð Oddson og Haraldur Johannessen)&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Auðvitað dytti hvorki mér né lesendum slíkt í hug.&lt;/p>
-&lt;/div></description></item><item><title>Erlendar IP tölur og allsherjarsamsæri</title><link>https://gunnihinn.github.io/post/erlendar-ip-tolur-og-allsherjarsamsaeri/</link><pubDate>Fri, 25 Oct 2013 14:40:29 +0000</pubDate><guid>https://gunnihinn.github.io/post/erlendar-ip-tolur-og-allsherjarsamsaeri/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Erlendar IP tölur og allsherjarsamsæri</title><link>https://www.magnusson.io/post/erlendar-ip-tolur-og-allsherjarsamsaeri/</link><pubDate>Fri, 25 Oct 2013 14:40:29 +0000</pubDate><guid>https://www.magnusson.io/post/erlendar-ip-tolur-og-allsherjarsamsaeri/</guid><description>&lt;div class="paragraph">
 &lt;p>Þegar rignir, þá hellirignir. Í gær fann ég engar rökvillur sem ég gat hugsað mér að tala um en í dag flæðir á þeirra yfir bakka sína og útbíar okkur upp að hnjám. Skrifum þetta flóð í bili upp á almenna föstudagsstemmingu. Við fáum tvo aðskilda mola í dag:&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1452,7 +1452,7 @@ Ritstjórn Morgunblaðsins (Davíð Oddson og Haraldur Johannessen)&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Á aðeins alvarlegri nótum fjallar Hrafnkell Lárusson um ýmsar &lt;a href="http://visir.is/einraedisgaelur-innan-marka-lydraedis/article/2013710259987">birtingamyndir einræðis&lt;/a> í stjórnmálum. Pistill hans er hlutlaus og fræðandi, fyrir alla fjölskylduna.&lt;/p>
-&lt;/div></description></item><item><title>Aflaleysi 1</title><link>https://gunnihinn.github.io/post/aflaleysi-1/</link><pubDate>Thu, 24 Oct 2013 14:22:07 +0000</pubDate><guid>https://gunnihinn.github.io/post/aflaleysi-1/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Aflaleysi 1</title><link>https://www.magnusson.io/post/aflaleysi-1/</link><pubDate>Thu, 24 Oct 2013 14:22:07 +0000</pubDate><guid>https://www.magnusson.io/post/aflaleysi-1/</guid><description>&lt;div class="paragraph">
 &lt;p>Þegar ég byrjaði á þessu bloggi ákvað ég að taka aðeins fyrir skrif hvers dags fyrir sig en leggjast ekki í fornleifauppgröft á rökvillum. Það verkefni tæki aldrei enda. Því hlaut að koma að því að einhvern daginn fyndi ég ekkert til að tala um; fallegur og fullkominn dagur þar sem engin rökvilla sem tekur því að tala um var framin í íslenskri umræðu.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1463,7 +1463,7 @@ Ritstjórn Morgunblaðsins (Davíð Oddson og Haraldur Johannessen)&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;code&amp;gt;&lt;a href="mailto:rokvillur@gmail.com">rokvillur@gmail.com&lt;/a>&amp;lt;/code&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Hugleiðingar um Skálholt</title><link>https://gunnihinn.github.io/post/hugleidingar-um-skalholt/</link><pubDate>Wed, 23 Oct 2013 18:15:12 +0000</pubDate><guid>https://gunnihinn.github.io/post/hugleidingar-um-skalholt/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Hugleiðingar um Skálholt</title><link>https://www.magnusson.io/post/hugleidingar-um-skalholt/</link><pubDate>Wed, 23 Oct 2013 18:15:12 +0000</pubDate><guid>https://www.magnusson.io/post/hugleidingar-um-skalholt/</guid><description>&lt;div class="paragraph">
 &lt;p>Guðbjörg Snót Jónsdóttir er ekki hamingjusöm í Morgunblaðinu í dag:&lt;/p>
 &lt;/div>
 &lt;div class="quoteblock">
@@ -1556,7 +1556,7 @@ ein aðgerð hafi stigvaxandi afleiðingar sem endi með ósköpum er &lt;a href
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Guðni rektor í MR var gjarn á að áminna okkur nemendur sína á ensku að nota heilann, þegar honum fannst við fara fram úr okkur að einhverju leyti eða gera einhverjar vitleysur. Ég held ég sendi þau orðin til Kirkjuráðs hér í lokin og bæti við: Notið heilann og látið nú skynsemina ráða. Þetta gengur ekki lengur.&lt;/p>
-&lt;/div></description></item><item><title>Mistök 1</title><link>https://gunnihinn.github.io/post/mistok-1/</link><pubDate>Tue, 22 Oct 2013 22:28:30 +0000</pubDate><guid>https://gunnihinn.github.io/post/mistok-1/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Mistök 1</title><link>https://www.magnusson.io/post/mistok-1/</link><pubDate>Tue, 22 Oct 2013 22:28:30 +0000</pubDate><guid>https://www.magnusson.io/post/mistok-1/</guid><description>&lt;div class="paragraph">
 &lt;p>Stefán Gunnar Sveinsson, höfundur &lt;a href="http://skynsemi.wordpress.com/2013/10/21/fra-kakastan-til-dyrafjardar/">Frá Kasakstan til Dýrafjarðar&lt;/a> sem ég fjallaði um í gær, hafði samband við mig í dag.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1567,7 +1567,7 @@ ein aðgerð hafi stigvaxandi afleiðingar sem endi með ósköpum er &lt;a href
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Sem dásamlega lokakaldhæðni býð ég lesendum að lesa pistil Stefáns aftur, en eitt þemað í honum er að mistök séu mannleg.&lt;/p>
-&lt;/div></description></item><item><title>Tillögur stjórnlagaráðs vondar</title><link>https://gunnihinn.github.io/post/tillogur-stjornlagarads-vondar/</link><pubDate>Tue, 22 Oct 2013 14:11:13 +0000</pubDate><guid>https://gunnihinn.github.io/post/tillogur-stjornlagarads-vondar/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Tillögur stjórnlagaráðs vondar</title><link>https://www.magnusson.io/post/tillogur-stjornlagarads-vondar/</link><pubDate>Tue, 22 Oct 2013 14:11:13 +0000</pubDate><guid>https://www.magnusson.io/post/tillogur-stjornlagarads-vondar/</guid><description>&lt;div class="paragraph">
 &lt;p>Við ætlum að breyta aðeins frá hefðbundinni dagskrá í dag. Í staðinn fyrir að skoða texta og benda á rökvillur í honum ætlum við að lesa textann á aðeins hærra plani og meta röksemdafærslur í honum í heild sinni. Þetta er ekki alveg sami hluturinn; að finna rökvillu er eins og að finna tvo víra í húsi sem ekki eru tengdir saman og leiða engan rafstraum sín á milli en að skoða röksemdafærslu er að sjá að allt húsið hallar um 40 gráður til hægri. Til þess þarf yfirleitt meiri vinnu en bara til að finna rökvillu, það þarf að skoða heimildir og fréttir til að athuga staðreyndir, fyrir utan að inn í það blandast óhjákvæmilega tilfinningar manns á málinu sem um ræðir.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1685,7 +1685,7 @@ ein aðgerð hafi stigvaxandi afleiðingar sem endi með ósköpum er &lt;a href
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Þetta er erfitt og flókið mál og því á ég erfitt með að skilja afdráttarlausan dóm Brynjars um að niðurstaðan sé ekki marktæk, sérstaklega þegar hann hvílir á tiltölulega veikum rökum. Að mínu mati þarf Brynjar að rökstyðja stöðu sína betur, að minnsta kosti ef að baki henni hvíla raunveruleg rök en ekki persónuleg eða pólitísk sannfæring.&lt;/p>
-&lt;/div></description></item><item><title>Frá Kakastan til Dýrafjarðar</title><link>https://gunnihinn.github.io/post/fra-kakastan-til-dyrafjardar/</link><pubDate>Mon, 21 Oct 2013 19:19:46 +0000</pubDate><guid>https://gunnihinn.github.io/post/fra-kakastan-til-dyrafjardar/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Frá Kakastan til Dýrafjarðar</title><link>https://www.magnusson.io/post/fra-kakastan-til-dyrafjardar/</link><pubDate>Mon, 21 Oct 2013 19:19:46 +0000</pubDate><guid>https://www.magnusson.io/post/fra-kakastan-til-dyrafjardar/</guid><description>&lt;div class="paragraph">
 &lt;p>Nýlega mistókst utanríkisráðherra vorum að bera fram nafn landsins &lt;a href="http://en.wikipedia.org/wiki/Kazakhstan">Kasakstan&lt;/a> við opinbert tilefni. Þetta er neyðarlegt mjög fyrir ráðherrann, sem hefur verið gagnrýndur fyrir reynsluleysi og vanþekkingu á viðfangsefni ráðuneyti síns: útlöndum. Stefán Gunnar Sveinsson tekur upp hanskann fyrir ráðherrann í Morgunblaðinu í dag:&lt;/p>
 &lt;/div>
 &lt;div class="quoteblock">
@@ -1748,7 +1748,7 @@ Stefán Gunnar Sveinsson&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Hvaðan ætli þetta umburðarleysi gagnvart sárasaklausum mismælum og minniháttar mistökum komi? Er þetta hluti af þeirri óheillaþróun sem hefur sést hér eftir hrun að enginn virðist ábyrgur orða sinna og hægt er að láta allt flakka í heift sinni gagnvart öðru fólki? Er ekki kominn tími til að slaka aðeins á? Á móti kemur að kannski er upphlaupið nú meira vegna þess að gúrkutíð sumarsins virðist hafa teygt sig yfir á veturinn. Og kannski ættum við að þakka fyrir það að geta hlegið í ládeyðunni að mismælunum um &amp;#34;Kakastan&amp;#34; eftir alla þá býsnavetur sem hér hafa riðið yfir síðustu árin. Líklega orðuðu Rómverjarnir þetta best: Errare humanum est. Eða var það Romanes eunt domus?&lt;/p>
-&lt;/div></description></item><item><title>Eru moskur ólöglegar á Íslandi</title><link>https://gunnihinn.github.io/post/eru-moskur-ologlegar-a-islandi/</link><pubDate>Fri, 18 Oct 2013 19:01:05 +0000</pubDate><guid>https://gunnihinn.github.io/post/eru-moskur-ologlegar-a-islandi/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Eru moskur ólöglegar á Íslandi</title><link>https://www.magnusson.io/post/eru-moskur-ologlegar-a-islandi/</link><pubDate>Fri, 18 Oct 2013 19:01:05 +0000</pubDate><guid>https://www.magnusson.io/post/eru-moskur-ologlegar-a-islandi/</guid><description>&lt;div class="paragraph">
 &lt;p>Fallegasta orð íslenkrar tungu finnst mér vera &amp;#34;heimska&amp;#34;. Það lýsir viðfangsefni sínu svo ótrúlega vel. Að vera heimskur er að hafa sleggjudóma um efni sem maður þekkir ekki og neita að fullnægja grunnforvitni sinni um heiminn. Besta leiðin til að verða svona er að halda sig heima hjá sér, trúa því sem manni er sagt og skoða heiminn ekki sjálfur. Því er þessu ástandi svo vel lýst með &amp;#34;heimsku&amp;#34;; fólk er heimskt því það hangir heima.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1841,7 +1841,7 @@ Stefán Gunnar Sveinsson&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Atburðarásin í borgarstjórn Reykjavíkur er með ólíkindum. Borgarfulltrúar vilja refsa yfirvöldum í Rússlandi fyrir að setja lög um fræðsluefni til barna um samkynhneigð. Á sama tíma styðja þau félagsskap sem boðar hugmyndafræði þar sem samkynhneigðir skulu pyntaðir og drepnir. Moska verður tákn Reykjavíkur. Óvinatákn vestrænnar menningar og kristinna gilda sem hún byggir á. Vinstri menn fagna og sjálfstæðismenn samþykkja með þögninni. Bræðralag múslima og dótturfélög þeirra heyja nú áróðursstríð á Vesturlöndum. Hluti af þeirri baráttu felst í því að byggja moskur og koma þar inn klerkum. Frá 11. september 2001 hefur mikill fjöldi moska verið byggður á Vesturlöndum. Fjármagnið kemur frá Sádi-Arabíu og Bræðralagið útvegar klerka og fræðsluefni. Hlutverk klerkanna er að hafa áhrif á stjórnvöld og fjölmiðla á hverjum stað og stjórna umræðu og kennsluefni um íslam. Innræting barna múslima er einnig á þeirra könnu og börn múslima eru tekin í kórannám í moskum, oft frá 5 ára aldri. Félög múslima á Vesturlöndum hafa á síðustu árum gengið hart fram í að þagga niður í þeim sem segja sannleikann um íslam og Múhameð. Þar er öllum ráðum beitt. Hótanir, ofbeldi, morð, hryðjuverk og lögsóknir eru þar á meðal. Lögsóknir hafa farið fram með stuðningi arabískra auðmanna þar sem gagnrýnendur íslams eru ákærðir og lögsóttir fyrir brot á lögum um málfrelsi, trúfrelsi, kynþáttaníð eða guðlast. Búast má við slíkum árásum á einstaklinga á Íslandi ef íslam fær að dafna hér. Ég hvet þingmenn Íslendinga til að skoða leiðir og setja lög sem verja málfrelsi fólks á Íslandi á ótvíræðan hátt og að fella úr gildi lög sem setja trú og trúfélög ofar málfrelsi hver svo sem guðsmynd þeirra kann að vera. Trú sem ekki þolir gagnrýni á ekki rétt á sér. Og við skulum átta okkur á því að íslam kemur ekki frá Guði. Íslam kemur frá villimönnum af eyðimörkum Arabíu. Frumstæð hugmyndafræði með frumstæð gildi: stríð, heiður og hefnd.&lt;/p>
-&lt;/div></description></item><item><title>Skilvirkari samgöngur</title><link>https://gunnihinn.github.io/post/skilvirkari-samgongur/</link><pubDate>Thu, 17 Oct 2013 19:32:15 +0000</pubDate><guid>https://gunnihinn.github.io/post/skilvirkari-samgongur/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Skilvirkari samgöngur</title><link>https://www.magnusson.io/post/skilvirkari-samgongur/</link><pubDate>Thu, 17 Oct 2013 19:32:15 +0000</pubDate><guid>https://www.magnusson.io/post/skilvirkari-samgongur/</guid><description>&lt;div class="paragraph">
 &lt;p>Viðar Guðjohnsen skrifar grein í Morgunblaðið í dag þar sem hann talar um samgöngur í Reykjavík. Þar sem ólíklegt er að allir lesendur hér séu áskrifendur að Morgunblaðinu og mér finnst ósanngjarnt að tala um hluti sem ekki allir geta lesið læt ég grein Viðars fylgja hér fyrir neðan.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -1901,7 +1901,7 @@ Viðar Guðjohnsen&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Þá mætti skoða þá hugmynd að hvetja til aukinnar verslunar og þjónustu á ákveðnum svæðum með markvissum aðgerðum, t.d. með svæðisbundinni lækkun á fasteignagjöldum og öðrum opinberum gjöldum á þá sem taka slaginn.&lt;/p>
-&lt;/div></description></item><item><title>Markaðsfólk er ekki með horn og hala</title><link>https://gunnihinn.github.io/post/markadsfolk-er-ekki-med-horn-og-hala/</link><pubDate>Wed, 16 Oct 2013 19:08:00 +0000</pubDate><guid>https://gunnihinn.github.io/post/markadsfolk-er-ekki-med-horn-og-hala/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Markaðsfólk er ekki með horn og hala</title><link>https://www.magnusson.io/post/markadsfolk-er-ekki-med-horn-og-hala/</link><pubDate>Wed, 16 Oct 2013 19:08:00 +0000</pubDate><guid>https://www.magnusson.io/post/markadsfolk-er-ekki-med-horn-og-hala/</guid><description>&lt;div class="paragraph">
 &lt;p>Látum oss í dag byrja á ómálefnalegu niðurrakki.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2001,7 +2001,7 @@ Viðar Guðjohnsen&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Að markaðsfólk vilji bæta ímynd sína er ágætt mál, en mikið yrði ég ánægður ef það gerði það án þess að stytta sér leið gegnum rökvillukviksyndið og draga okkur með í leiðinni&lt;/p>
-&lt;/div></description></item><item><title>Skoðanasamfélagið</title><link>https://gunnihinn.github.io/post/skodanasamfelagid/</link><pubDate>Tue, 15 Oct 2013 18:08:38 +0000</pubDate><guid>https://gunnihinn.github.io/post/skodanasamfelagid/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Skoðanasamfélagið</title><link>https://www.magnusson.io/post/skodanasamfelagid/</link><pubDate>Tue, 15 Oct 2013 18:08:38 +0000</pubDate><guid>https://www.magnusson.io/post/skodanasamfelagid/</guid><description>&lt;div class="paragraph">
 &lt;p>Hin daglega rökvilla er í boði Halldórs Halldórssonar (einnig þekktur sem Dóri DNA). Ég er ekki ósammála mörgu í &lt;a href="http://visir.is/skodanasamfelagid-/article/2013710159963">pistli hans&lt;/a> á vísi.is, en vegna dræmrar rökvilluveiði í dag verðum við að tala um það sem hægt er.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2057,7 +2057,7 @@ Viðar Guðjohnsen&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Kæri lesandi, þú ert að lesa skoðun manns á skoðun manns á skoðunum. Meta!&lt;/p>
-&lt;/div></description></item><item><title>„Brennivínið gefur anda og snilli“</title><link>https://gunnihinn.github.io/post/brennivinid-gefur-anda-og-snilli/</link><pubDate>Mon, 14 Oct 2013 20:20:04 +0000</pubDate><guid>https://gunnihinn.github.io/post/brennivinid-gefur-anda-og-snilli/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>„Brennivínið gefur anda og snilli“</title><link>https://www.magnusson.io/post/brennivinid-gefur-anda-og-snilli/</link><pubDate>Mon, 14 Oct 2013 20:20:04 +0000</pubDate><guid>https://www.magnusson.io/post/brennivinid-gefur-anda-og-snilli/</guid><description>&lt;div class="paragraph">
 &lt;p>Guðmundur Andri Thorsson skrifar pistil á vísi.is í dag. Hann má lesa í heild sinni &lt;a href="http://visir.is/-brennivinid-gefur-anda-og-snilli-/article/2013710149971">hér&lt;/a>. Markmið þessa pistils er að sannfæra okkur, lesendur, um að á Vogi sé hin góða barátta gegn alkahólisma á Íslandi unnin. Athugum hvernig Guðmundi tekst til.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2125,7 +2125,7 @@ Viðar Guðjohnsen&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Pistill Guðmundar var skrifaður af beiðni vinar síns og átti að útskýra það starf sem fer fram á Vogum og mikilvægi þess starfs. Af þeim rúmum 800 orðum sem pistillinn telur er engu þeirra varið til að segja okkur hvað gerist á Vogum. Það er erfitt að álykta annað en að pistill Guðmundar hafi misst marks.&lt;/p>
-&lt;/div></description></item><item><title>Um skynsemi</title><link>https://gunnihinn.github.io/post/about/</link><pubDate>Sun, 13 Oct 2013 00:09:01 +0000</pubDate><guid>https://gunnihinn.github.io/post/about/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Um skynsemi</title><link>https://www.magnusson.io/post/about/</link><pubDate>Sun, 13 Oct 2013 00:09:01 +0000</pubDate><guid>https://www.magnusson.io/post/about/</guid><description>&lt;div class="paragraph">
 &lt;p>Kæru vinir,&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2156,7 +2156,7 @@ Viðar Guðjohnsen&lt;/p>
 &lt;div class="content">
 &lt;pre>rokvillur@gmail.com&lt;/pre>
 &lt;/div>
-&lt;/div></description></item><item><title>Personal communication</title><link>https://gunnihinn.github.io/post/personal-communication/</link><pubDate>Fri, 28 Jun 2013 14:08:02 +0000</pubDate><guid>https://gunnihinn.github.io/post/personal-communication/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Personal communication</title><link>https://www.magnusson.io/post/personal-communication/</link><pubDate>Fri, 28 Jun 2013 14:08:02 +0000</pubDate><guid>https://www.magnusson.io/post/personal-communication/</guid><description>&lt;div class="paragraph">
 &lt;p>There’s a type of citation that we should agree to kill. Come on, let’s light torches, strew gasoline on the ground, lock the children in the barn for their protection, and hope that our plan doesn’t have any unintended consequences.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2175,22 +2175,22 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;#34;Personal communication&amp;#34; is the academic equivalent of name-dropping famous people you know at a dinner party. It is crass and vulgar and if asked the famous person won’t know who you are. Don’t do it.&lt;/p>
-&lt;/div></description></item><item><title>Órói er fluttur...</title><link>https://gunnihinn.github.io/post/oroi-er-fluttur/</link><pubDate>Mon, 25 Mar 2013 18:55:16 +0000</pubDate><guid>https://gunnihinn.github.io/post/oroi-er-fluttur/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Órói er fluttur...</title><link>https://www.magnusson.io/post/oroi-er-fluttur/</link><pubDate>Mon, 25 Mar 2013 18:55:16 +0000</pubDate><guid>https://www.magnusson.io/post/oroi-er-fluttur/</guid><description>&lt;div class="paragraph">
 &lt;p>…​&lt;a href="http://www.gthm.is">hingað&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Nýja síðan verður meira að segja uppfærð! Ég lofa!&lt;/p>
-&lt;/div></description></item><item><title>Colored</title><link>https://gunnihinn.github.io/post/colored/</link><pubDate>Tue, 19 Feb 2013 08:13:30 +0000</pubDate><guid>https://gunnihinn.github.io/post/colored/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Colored</title><link>https://www.magnusson.io/post/colored/</link><pubDate>Tue, 19 Feb 2013 08:13:30 +0000</pubDate><guid>https://www.magnusson.io/post/colored/</guid><description>&lt;div class="paragraph">
 &lt;p>The title of a paper I’m working on includes the words &amp;#34;colored Jones polynomial&amp;#34;. Every time, &lt;em>every single time&lt;/em> I see it a voice in my head goes:&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;img class=&amp;#34;aligncenter&amp;#34; alt=&amp;#34;&amp;#34; src=&amp;#34;http://www.clevescene.com/binary/3e89/1349813923-thats-racist.gif&amp;#34; width=&amp;#34;265&amp;#34; height=&amp;#34;236&amp;#34; /&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Do you really want Hurtubise?</title><link>https://gunnihinn.github.io/post/do-you-really-want-hurtubise/</link><pubDate>Fri, 15 Feb 2013 08:37:21 +0000</pubDate><guid>https://gunnihinn.github.io/post/do-you-really-want-hurtubise/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Do you really want Hurtubise?</title><link>https://www.magnusson.io/post/do-you-really-want-hurtubise/</link><pubDate>Fri, 15 Feb 2013 08:37:21 +0000</pubDate><guid>https://www.magnusson.io/post/do-you-really-want-hurtubise/</guid><description>&lt;div class="paragraph">
 &lt;p>One of the authors of a paper I’m working on is called &amp;#34;Hurtubise&amp;#34;. I can’t help but pronounce his name with a French accent in my head. Heeuuuuurtubeeeeze.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>If he was my rival for the affections of a woman I wouldn’t pull any punches. Dirt would get thrown. I’d make a youtube video of Boy George’s classic &amp;#34;Do you really want to hurt me&amp;#34;, but change the chorus lyrics to &amp;#34;Do you really want Hurtubise&amp;#34;. I might not end up with the woman of our dreams, but after she sees that video, neither would he. Scorched earth, baby.&lt;/p>
-&lt;/div></description></item><item><title>Unglingar</title><link>https://gunnihinn.github.io/post/unglingar/</link><pubDate>Sun, 27 Jan 2013 11:27:42 +0000</pubDate><guid>https://gunnihinn.github.io/post/unglingar/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Unglingar</title><link>https://www.magnusson.io/post/unglingar/</link><pubDate>Sun, 27 Jan 2013 11:27:42 +0000</pubDate><guid>https://www.magnusson.io/post/unglingar/</guid><description>&lt;div class="paragraph">
 &lt;p>Ítalski meðleigjandinn minn var að vakna á hádegi á sunnudegi. Hún er búin að ráfa fram og aftur úr stofunni síðasta hálftímann, dæsa og reyna að myrða lyklaborðið á símanum sínum. Ég geri ráð fyrir að hún hafi hætt með jólafrísstráknum sínum í gærkvöldi.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2198,7 +2198,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Ætli það sé ekki fyrir bestu að við flytjum öll út eftir mánuð.&lt;/p>
-&lt;/div></description></item><item><title>Eftirmiðdegi og kaffiskeiðar</title><link>https://gunnihinn.github.io/post/eftirmiddegi-og-kaffiskeidar/</link><pubDate>Thu, 11 Oct 2012 23:08:26 +0000</pubDate><guid>https://gunnihinn.github.io/post/eftirmiddegi-og-kaffiskeidar/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Eftirmiðdegi og kaffiskeiðar</title><link>https://www.magnusson.io/post/eftirmiddegi-og-kaffiskeidar/</link><pubDate>Thu, 11 Oct 2012 23:08:26 +0000</pubDate><guid>https://www.magnusson.io/post/eftirmiddegi-og-kaffiskeidar/</guid><description>&lt;div class="paragraph">
 &lt;p>Á eftir fer ég í helgarferð til Grenoble. Hjá heilbrigðu fólki hefði staðið &amp;#34;Á morgun …​&amp;#34;, en við vitum öll hvers konar bransi er stundaður hér. Eftir fjóra klukkutíma þarf ég að vakna og taka lest til að taka rútu einhvert, sem væri allt í lagi ef ég hefði ekki farið út að drekka með félaga mínum eftir kóræfingu okkar.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2209,7 +2209,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Miklu.&lt;/p>
-&lt;/div></description></item><item><title>Svalir</title><link>https://gunnihinn.github.io/post/svalir/</link><pubDate>Thu, 11 Oct 2012 07:27:19 +0000</pubDate><guid>https://gunnihinn.github.io/post/svalir/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Svalir</title><link>https://www.magnusson.io/post/svalir/</link><pubDate>Thu, 11 Oct 2012 07:27:19 +0000</pubDate><guid>https://www.magnusson.io/post/svalir/</guid><description>&lt;div class="paragraph">
 &lt;p>Sem betur fer er Montpellier við Miðjarðahafið, svo hér er alltaf gott veður.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2220,7 +2220,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Sem betur fer er gott veður í Montpellier.&lt;/p>
-&lt;/div></description></item><item><title>Flutningar</title><link>https://gunnihinn.github.io/post/flutningar/</link><pubDate>Sat, 22 Sep 2012 18:00:44 +0000</pubDate><guid>https://gunnihinn.github.io/post/flutningar/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Flutningar</title><link>https://www.magnusson.io/post/flutningar/</link><pubDate>Sat, 22 Sep 2012 18:00:44 +0000</pubDate><guid>https://www.magnusson.io/post/flutningar/</guid><description>&lt;div class="paragraph">
 &lt;p>Til allrar hamingju var &amp;#34;First day of my life&amp;#34; með Bright Eyes að detta inn í slembilistann sem er í gangi heima. Það minnir mig á þegar ég bjó niðri í miðbæ í stórri íbúð með góðu fólki.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2228,7 +2228,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Munum að anda. Restin kemur af sjálfu sér.&lt;/p>
-&lt;/div></description></item><item><title>Óviljandi</title><link>https://gunnihinn.github.io/post/oviljandi/</link><pubDate>Tue, 24 Jul 2012 02:51:37 +0000</pubDate><guid>https://gunnihinn.github.io/post/oviljandi/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Óviljandi</title><link>https://www.magnusson.io/post/oviljandi/</link><pubDate>Tue, 24 Jul 2012 02:51:37 +0000</pubDate><guid>https://www.magnusson.io/post/oviljandi/</guid><description>&lt;div class="paragraph">
 &lt;p>Árið 1687 olli Isaac Newton heiminum miklum vandræðum. Eftir mikla vinnu og strit setti hann fram lögmál sín um aflfræði og þyngdarkraftinn. Þessi lögmál voru einföld, nákvæm og stærðfræðileg. Þau öfluðu Newton frægðar, peninga og fræðilegs kvenfólks (Newton dó ósaurgaður af holdlegum freistingum þessa heims)---og mikilla óvinsælda meðal andans manna.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2242,7 +2242,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Mig varðar lítið hvort frjáls vilji sé til eða ekki. Ég fæ ekki betur séð en að líf mitt haldi áfram mikið eins og áður í hvoru tilfellinu. Ef eitthvað þætti mér skemmtilegra að hann væri ekki til. Hugsið ykkur þá alla hjörðina af heimsspekingum sem hafa verið sannfærðir um að svo væri en hafa, algjörlega vegna gangs alheimsins, neyðst til að sitja heilu kvöldin við að skrifa langar ritgerðir um að frjáls vilji réði öllu, fullkomlega gegn vilja sínum, og kjökrað sig svo í svefn á eftir.&lt;/p>
-&lt;/div></description></item><item><title>CSI</title><link>https://gunnihinn.github.io/post/csi/</link><pubDate>Wed, 11 Jul 2012 22:48:05 +0000</pubDate><guid>https://gunnihinn.github.io/post/csi/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>CSI</title><link>https://www.magnusson.io/post/csi/</link><pubDate>Wed, 11 Jul 2012 22:48:05 +0000</pubDate><guid>https://www.magnusson.io/post/csi/</guid><description>&lt;div class="paragraph">
 &lt;p>Þegar ég var yngri voru vikulegir þættir í sjónvarpinu sem fjölluðu um lögreglumenn. Sem slíkt skilur þetta mig á engan hátt frá öllum kynslóðum sem hafa alist upp við sjónvarp. Sérhver kynslóð á sér þó sín sérkenni. Minnar voru að lögreglumennirnir voru í raun óspillanlegir vísindamenn sem gátu púslað saman hvaða atburðarrás sem er út frá minnstu sönnunargögnum.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2262,7 +2262,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Einhversstaðar vil ég samt bara að mín verði minnst.&lt;/p>
-&lt;/div></description></item><item><title>Hiti</title><link>https://gunnihinn.github.io/post/hello-world-oroi/</link><pubDate>Tue, 03 Jul 2012 20:46:01 +0000</pubDate><guid>https://gunnihinn.github.io/post/hello-world-oroi/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Hiti</title><link>https://www.magnusson.io/post/hello-world-oroi/</link><pubDate>Tue, 03 Jul 2012 20:46:01 +0000</pubDate><guid>https://www.magnusson.io/post/hello-world-oroi/</guid><description>&lt;div class="paragraph">
 &lt;p>Um leið og ég gekk inn um dyrnar í kvöld slökkti ég öll ljós…​ eða…​ ef þau hefðu þegar verið kveikt hefði ég slökkt á þeim. Þetta er reyndar andstæðan við það fyrsta sem ég gerði, því ég hafði bjór sem þurfti að fara inn í frysti. Þar sem ég sá ekki neitt kveikti ég ljósin, í beinni mótsögn við fyrstu setningu mína.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2288,7 +2288,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Áður en ég flutti til Frakklands langaði mig mest að komast til heitari lands þar sem væri enginn vindur. Stundum rætast óskir manns.&lt;/p>
-&lt;/div></description></item><item><title>Hlé fram yfir áramót</title><link>https://gunnihinn.github.io/post/hle-fram-yfir-aramot/</link><pubDate>Tue, 13 Oct 2009 18:37:27 +0000</pubDate><guid>https://gunnihinn.github.io/post/hle-fram-yfir-aramot/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Hlé fram yfir áramót</title><link>https://www.magnusson.io/post/hle-fram-yfir-aramot/</link><pubDate>Tue, 13 Oct 2009 18:37:27 +0000</pubDate><guid>https://www.magnusson.io/post/hle-fram-yfir-aramot/</guid><description>&lt;div class="paragraph">
 &lt;p>Ókei, þetta gengur ekki. Ég get engan veginn haldið þessu bloggi uppi í augnablikinu.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2302,7 +2302,7 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Sjáumst í mesta skammdeginu.&lt;/p>
-&lt;/div></description></item><item><title>Doublefail</title><link>https://gunnihinn.github.io/post/doublefail/</link><pubDate>Thu, 08 Oct 2009 20:12:50 +0000</pubDate><guid>https://gunnihinn.github.io/post/doublefail/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Doublefail</title><link>https://www.magnusson.io/post/doublefail/</link><pubDate>Thu, 08 Oct 2009 20:12:50 +0000</pubDate><guid>https://www.magnusson.io/post/doublefail/</guid><description>&lt;div class="paragraph">
 &lt;p>Þið vitið hvað þeir segja: þú hefur ekki feilað fyrr en þú hefur tvöfaltfeilað. &amp;#34;Þeir&amp;#34; verandi fólk sem þýðir hluti beint yfir á íslensku án þess að færa hug að samhengi. Eða orðum sem eru í raun til á öðru hvoru tungumálinu.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2310,12 +2310,12 @@ information. At least none that is relevant to the subject at hand, for it
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Síðustu tíu, þrettán dagar hafa einkennst af því að vakna klukkan sex, hálf sjö, og fara að sofa í kringum tíu, með litlu öðru en kennslu og lestri þar á milli. Bæði mitt vikulega hryllingsmyndaröfl, sem og vandræðalegt daður við kvenmenn hefur þjáðst fyrir. Ég held og vona að næstu vikur og mánuðir verði öðruvísi, okkar allra vegna.&lt;/p>
-&lt;/div></description></item><item><title>Nobattabattabatta</title><link>https://gunnihinn.github.io/post/nobattabattabatta/</link><pubDate>Fri, 02 Oct 2009 19:21:06 +0000</pubDate><guid>https://gunnihinn.github.io/post/nobattabattabatta/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Nobattabattabatta</title><link>https://www.magnusson.io/post/nobattabattabatta/</link><pubDate>Fri, 02 Oct 2009 19:21:06 +0000</pubDate><guid>https://www.magnusson.io/post/nobattabattabatta/</guid><description>&lt;div class="paragraph">
 &lt;p>Jebb, við verðum seint á ferðinni þessa vikuna. Ég ætla að giska á að &lt;em>Cold Prey&lt;/em> detti inn á sunnudagskvöldið. Ég var ótrúlega þreyttur í gær, að kenna til sex í dag, og er að fara á mjög nördalegt &lt;em>retreat to move forward&lt;/em> á morgun og hinn.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Þannig: sunnudagur. Sennilega. En við verðum á réttum tíma á fimmtudaginn í næstu viku.&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/22-the-last-man-on-earth/</link><pubDate>Thu, 24 Sep 2009 20:11:15 +0000</pubDate><guid>https://gunnihinn.github.io/post/22-the-last-man-on-earth/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/22-the-last-man-on-earth/</link><pubDate>Thu, 24 Sep 2009 20:11:15 +0000</pubDate><guid>https://www.magnusson.io/post/22-the-last-man-on-earth/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/09/22-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2390,7 +2390,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=uDWe2QbCTG8&amp;amp;hl=en&amp;amp;fs=1&amp;amp;]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Upprunaleg dagskrá hefst óvart aftur</title><link>https://gunnihinn.github.io/post/upprunaleg-dagskra-hefst-ovart-aftur/</link><pubDate>Mon, 21 Sep 2009 20:24:55 +0000</pubDate><guid>https://gunnihinn.github.io/post/upprunaleg-dagskra-hefst-ovart-aftur/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Upprunaleg dagskrá hefst óvart aftur</title><link>https://www.magnusson.io/post/upprunaleg-dagskra-hefst-ovart-aftur/</link><pubDate>Mon, 21 Sep 2009 20:24:55 +0000</pubDate><guid>https://www.magnusson.io/post/upprunaleg-dagskra-hefst-ovart-aftur/</guid><description>&lt;div class="paragraph">
 &lt;p>Okkur ber skylda til að tilkynna að núna á fimmtudaginn munum við ekki ræða norsku slashermyndina &lt;em>Cold Prey&lt;/em> eins og til stóð, heldur ætlum við að bregða aftur okkur til litblindari tíma og kíkja á &lt;em>The last man on Earth&lt;/em> frá árinu 1964 með kempunni Vincent Price í aðalhlutverki.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2409,7 +2409,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>[youtube=http://www.youtube.com/watch?v=i4mYireNvcg&amp;amp;hl=en&amp;amp;fs=1&amp;amp;]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/21-deadgirl/</link><pubDate>Thu, 17 Sep 2009 13:40:53 +0000</pubDate><guid>https://gunnihinn.github.io/post/21-deadgirl/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/21-deadgirl/</link><pubDate>Thu, 17 Sep 2009 13:40:53 +0000</pubDate><guid>https://www.magnusson.io/post/21-deadgirl/</guid><description>&lt;div class="paragraph">
 &lt;p>Jæja, börnin góð. September er kominn, með sílækkandi sól, dimmum nóttum, kaldara lofti, og helgibænum múslima í næstu húsum í tilefni af ramadan er berast gegnum gluggann þegar við sitjum á gólfunum okkar að sötra bjór af því að við eigum engin húsgögn. Út úr litlum krókum og kimum skríða milljónir kakkalakka þegar enginn sér til, og það gerum við líka. &lt;em>Ár hinna lifandi dauðu&lt;/em> er komið úr sumarfríi. Ég vona að þið, eins og ég, bindið þennan klút um ennið á ykkur og minnist orða atómskáldsins Private Vasquez úr &lt;em>Aliens&lt;/em>: ,,Rock and roll! [skothríð]``&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2453,7 +2453,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Við heimsækjum vini og frændur okkar Norðmenn aftur og förum á slasherflakk um jökla í &amp;lt;em&amp;gt;&amp;lt;a&amp;gt;Cold Prey&amp;lt;/a&amp;gt;&amp;lt;/em&amp;gt;.&lt;/p>
-&lt;/div></description></item><item><title>Uppstefnumót!</title><link>https://gunnihinn.github.io/post/uppstefnumot/</link><pubDate>Sat, 05 Sep 2009 16:30:11 +0000</pubDate><guid>https://gunnihinn.github.io/post/uppstefnumot/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Uppstefnumót!</title><link>https://www.magnusson.io/post/uppstefnumot/</link><pubDate>Sat, 05 Sep 2009 16:30:11 +0000</pubDate><guid>https://www.magnusson.io/post/uppstefnumot/</guid><description>&lt;div class="paragraph">
 &lt;p>Eins og ég lofaði í sumar byrjar reglulegt hryllingsmyndaáhorf aftur núna í september, en það er ennþá aðeins á reiki nákvæmlega hvenær það gerist. Ótrúlega bjartsýnt væri núna á fimmtudaginn, en ég þori að lofa því að við verðum byrjuð aftur vikuna eftir það.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2466,7 +2466,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;p>Friður út!
 &amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;strong&amp;gt;Deadgirl&amp;lt;/strong&amp;gt;
 [youtube=http://www.youtube.com/watch?v=-2SSL6Ipnvw&amp;amp;hl=en&amp;amp;fs=1&amp;amp;]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Sumarfrí</title><link>https://gunnihinn.github.io/post/sumarfri/</link><pubDate>Thu, 18 Jun 2009 18:59:48 +0000</pubDate><guid>https://gunnihinn.github.io/post/sumarfri/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Sumarfrí</title><link>https://www.magnusson.io/post/sumarfri/</link><pubDate>Thu, 18 Jun 2009 18:59:48 +0000</pubDate><guid>https://www.magnusson.io/post/sumarfri/</guid><description>&lt;div class="paragraph">
 &lt;p>&lt;em>Ár hinna lifandi dauðu&lt;/em> er farið í sumarfríi. &lt;a href="http://www.youtube.com/watch?v=NisCkxU544c">Like a boss!&lt;/a> Reglulegt vondumyndaröfl hefst aftur í september.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2480,7 +2480,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Gleðilegt sumar!&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/20-teeth/</link><pubDate>Thu, 18 Jun 2009 18:58:29 +0000</pubDate><guid>https://gunnihinn.github.io/post/20-teeth/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/20-teeth/</link><pubDate>Thu, 18 Jun 2009 18:58:29 +0000</pubDate><guid>https://www.magnusson.io/post/20-teeth/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/06/20-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2531,7 +2531,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Sumarfrí. Og næstu nokkrar vikur þar á eftir líka. Sjá &lt;a href="http://hrollur.wordpress.com/2009/06/18/sumarfri/">þessa&lt;/a> færslu.&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/19-poultrygeist-night-of-the-chicken-dead/</link><pubDate>Thu, 04 Jun 2009 23:35:30 +0000</pubDate><guid>https://gunnihinn.github.io/post/19-poultrygeist-night-of-the-chicken-dead/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/19-poultrygeist-night-of-the-chicken-dead/</link><pubDate>Thu, 04 Jun 2009 23:35:30 +0000</pubDate><guid>https://www.magnusson.io/post/19-poultrygeist-night-of-the-chicken-dead/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/06/19-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2585,7 +2585,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=yH8yuld4DUE&amp;amp;hl=fr&amp;amp;fs=1&amp;amp;]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Afsakið hlé</title><link>https://gunnihinn.github.io/post/afsaki%c3%b0-hle/</link><pubDate>Fri, 29 May 2009 19:04:37 +0000</pubDate><guid>https://gunnihinn.github.io/post/afsaki%c3%b0-hle/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Afsakið hlé</title><link>https://www.magnusson.io/post/afsaki%c3%b0-hle/</link><pubDate>Fri, 29 May 2009 19:04:37 +0000</pubDate><guid>https://www.magnusson.io/post/afsaki%c3%b0-hle/</guid><description>&lt;div class="paragraph">
 &lt;p>Af ótrúlega flóknum og kettlingadrepandi ástæðum verður seinkun á &lt;em>Poultrygeist&lt;/em> umfjölluninni. Á mjög tæknilegu máli gleymdi ég hleðslutækinu að fartölvunni - einu tölvunni sem ég hef aðgang að - uppi í skóla áðan, og þar sem ég bý í Frakklandi þar sem að fólk tekur helgarfríið sitt mjög alvarlega, þá er skólinn lokaður um helgar.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2593,7 +2593,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Þangað til að ég kemst í hleðslutækið mitt og &lt;em>Poultrygeist&lt;/em> kemur upp, þá getið þið horft á &lt;a href="http://www.youtube.com/watch?v=ymxLcIsgJ_s">Time Trumpet&lt;/a> og &lt;a href="http://www.youtube.com/watch?v=IjQws4ZYxZA">Stewart Lee’s Comedy Vehicle&lt;/a>, sem eru sjáanlegir í heild sinni á Youtube. Þeir eru kannski nær óþekktir breskir grínþættir sem hafa lítið sem ekkert að gera með hrylling, en þeir eru mannbætandi andskoti engu að síður.&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/18-eden-log/</link><pubDate>Thu, 21 May 2009 18:07:59 +0000</pubDate><guid>https://gunnihinn.github.io/post/18-eden-log/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/18-eden-log/</link><pubDate>Thu, 21 May 2009 18:07:59 +0000</pubDate><guid>https://www.magnusson.io/post/18-eden-log/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/05/18-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2644,7 +2644,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=bLp1JJWJ5l4&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/17-the-children/</link><pubDate>Thu, 14 May 2009 17:41:46 +0000</pubDate><guid>https://gunnihinn.github.io/post/17-the-children/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/17-the-children/</link><pubDate>Thu, 14 May 2009 17:41:46 +0000</pubDate><guid>https://www.magnusson.io/post/17-the-children/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/05/17-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2695,7 +2695,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=mXP72WbxSKQ&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/16-dead-snow/</link><pubDate>Fri, 08 May 2009 00:03:26 +0000</pubDate><guid>https://gunnihinn.github.io/post/16-dead-snow/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/16-dead-snow/</link><pubDate>Fri, 08 May 2009 00:03:26 +0000</pubDate><guid>https://www.magnusson.io/post/16-dead-snow/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/05/16-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2768,7 +2768,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=QOrcIyvW5Rk&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/15-eden-lake/</link><pubDate>Fri, 01 May 2009 09:04:46 +0000</pubDate><guid>https://gunnihinn.github.io/post/15-eden-lake/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/15-eden-lake/</link><pubDate>Fri, 01 May 2009 09:04:46 +0000</pubDate><guid>https://www.magnusson.io/post/15-eden-lake/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/04/15-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2832,12 +2832,12 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=3-KQh87_V2Q&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Seinkun. Aftur. Vei</title><link>https://gunnihinn.github.io/post/seinkun-aftur-vei/</link><pubDate>Thu, 30 Apr 2009 17:26:53 +0000</pubDate><guid>https://gunnihinn.github.io/post/seinkun-aftur-vei/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Seinkun. Aftur. Vei</title><link>https://www.magnusson.io/post/seinkun-aftur-vei/</link><pubDate>Thu, 30 Apr 2009 17:26:53 +0000</pubDate><guid>https://www.magnusson.io/post/seinkun-aftur-vei/</guid><description>&lt;div class="paragraph">
 &lt;p>Sjitt, þetta eru ekki mínar tvær vikur. Sökum óreglu og almenns dekadens (ég var í Lyon í gær og fyrradag) kemur &lt;em>Eden Lake&lt;/em> inn á morgun.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Mér til afsökunar er ég búinn að skrifa umfjöllunina, en ég á eftir að finna myndir og ég hef ekki tíma til að endurskrifa hana í kvöld. Hún kemur í staðinn inn strax í fyrramálið, sennilega áður en þið vaknið vegna tímamismunarins.&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/14-the-host/</link><pubDate>Sun, 26 Apr 2009 15:43:39 +0000</pubDate><guid>https://gunnihinn.github.io/post/14-the-host/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/14-the-host/</link><pubDate>Sun, 26 Apr 2009 15:43:39 +0000</pubDate><guid>https://www.magnusson.io/post/14-the-host/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/04/14-poster1.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2901,12 +2901,12 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=Z1QaFtd55MI&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title>Seinkun</title><link>https://gunnihinn.github.io/post/seinkun/</link><pubDate>Wed, 22 Apr 2009 18:24:45 +0000</pubDate><guid>https://gunnihinn.github.io/post/seinkun/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Seinkun</title><link>https://www.magnusson.io/post/seinkun/</link><pubDate>Wed, 22 Apr 2009 18:24:45 +0000</pubDate><guid>https://www.magnusson.io/post/seinkun/</guid><description>&lt;div class="paragraph">
 &lt;p>&lt;em>The Host&lt;/em> seinkar og kemur sennilega inn á laugardaginn.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>Alla síðustu viku er ég búinn að vera á stærðfræðiráðstefnum á Íslandi, plús að reyna að troða inn að hitta eins marga ættingja og vini og ég gat áður en ég færi heim í fyrramálið. Að segja að ég hafi ekki haft tíma til að skrifa er epískur úrdráttur.&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/13-jack-brooks-monster-slayer/</link><pubDate>Thu, 16 Apr 2009 17:07:58 +0000</pubDate><guid>https://gunnihinn.github.io/post/13-jack-brooks-monster-slayer/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/13-jack-brooks-monster-slayer/</link><pubDate>Thu, 16 Apr 2009 17:07:58 +0000</pubDate><guid>https://www.magnusson.io/post/13-jack-brooks-monster-slayer/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/04/13-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -2970,7 +2970,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=hJnq9sm4Zxk&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/12-midnight-meat-train/</link><pubDate>Thu, 09 Apr 2009 11:36:07 +0000</pubDate><guid>https://gunnihinn.github.io/post/12-midnight-meat-train/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/12-midnight-meat-train/</link><pubDate>Thu, 09 Apr 2009 11:36:07 +0000</pubDate><guid>https://www.magnusson.io/post/12-midnight-meat-train/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/04/12-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3037,7 +3037,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=ejwdhipRQJU&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/11-the-unborn/</link><pubDate>Thu, 02 Apr 2009 08:32:09 +0000</pubDate><guid>https://gunnihinn.github.io/post/11-the-unborn/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/11-the-unborn/</link><pubDate>Thu, 02 Apr 2009 08:32:09 +0000</pubDate><guid>https://www.magnusson.io/post/11-the-unborn/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/04/11-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3095,7 +3095,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=FysmKMq1D4Y&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/10-fears-of-the-dark/</link><pubDate>Thu, 26 Mar 2009 09:22:33 +0000</pubDate><guid>https://gunnihinn.github.io/post/10-fears-of-the-dark/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/10-fears-of-the-dark/</link><pubDate>Thu, 26 Mar 2009 09:22:33 +0000</pubDate><guid>https://www.magnusson.io/post/10-fears-of-the-dark/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/03/10-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3156,7 +3156,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=sc3Cba0qOco&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/9-repo-the-genetic-opera/</link><pubDate>Thu, 19 Mar 2009 10:12:35 +0000</pubDate><guid>https://gunnihinn.github.io/post/9-repo-the-genetic-opera/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/9-repo-the-genetic-opera/</link><pubDate>Thu, 19 Mar 2009 10:12:35 +0000</pubDate><guid>https://www.magnusson.io/post/9-repo-the-genetic-opera/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/03/09-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3224,7 +3224,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=T1SbeoOLOUM&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/8-the-ruins/</link><pubDate>Thu, 12 Mar 2009 10:28:52 +0000</pubDate><guid>https://gunnihinn.github.io/post/8-the-ruins/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/8-the-ruins/</link><pubDate>Thu, 12 Mar 2009 10:28:52 +0000</pubDate><guid>https://www.magnusson.io/post/8-the-ruins/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/03/08-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3288,7 +3288,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/7-mirrors/</link><pubDate>Thu, 05 Mar 2009 08:38:32 +0000</pubDate><guid>https://gunnihinn.github.io/post/7-mirrors/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/7-mirrors/</link><pubDate>Thu, 05 Mar 2009 08:38:32 +0000</pubDate><guid>https://www.magnusson.io/post/7-mirrors/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/02/07-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3349,7 +3349,7 @@ engan áhrifavald hér á ferð.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=ZKcCXyi7Pjs&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/6-let-the-right-one-in/</link><pubDate>Thu, 26 Feb 2009 09:05:51 +0000</pubDate><guid>https://gunnihinn.github.io/post/6-let-the-right-one-in/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/6-let-the-right-one-in/</link><pubDate>Thu, 26 Feb 2009 09:05:51 +0000</pubDate><guid>https://www.magnusson.io/post/6-let-the-right-one-in/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/02/06-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3411,7 +3411,7 @@ Jack Bauer vinnur störukeppni við spegilmyndina sína í &amp;lt;a href=&amp;#
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=O92QxxgeCO8&amp;amp;hl=fr&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/5-my-name-is-bruce/</link><pubDate>Thu, 19 Feb 2009 07:04:48 +0000</pubDate><guid>https://gunnihinn.github.io/post/5-my-name-is-bruce/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/5-my-name-is-bruce/</link><pubDate>Thu, 19 Feb 2009 07:04:48 +0000</pubDate><guid>https://www.magnusson.io/post/5-my-name-is-bruce/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/02/05-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3466,7 +3466,7 @@ Ungur sænskur drengur verður fyrir einelti og vingast við vampýru á sjöund
 &amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=ICp4g9p_rgo&amp;amp;hl=en&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/dd>
 &lt;/dl>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/4-frontiers/</link><pubDate>Thu, 12 Feb 2009 08:45:50 +0000</pubDate><guid>https://gunnihinn.github.io/post/4-frontiers/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/4-frontiers/</link><pubDate>Thu, 12 Feb 2009 08:45:50 +0000</pubDate><guid>https://www.magnusson.io/post/4-frontiers/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/02/04-poster.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3536,7 +3536,7 @@ Bruce Campbell (leikinn af Bruce Campbell) er rænt af aðdáendum sínum sem vi
 &amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=2tmMYS8s-Pk&amp;amp;hl=en&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/dd>
 &lt;/dl>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/3-house/</link><pubDate>Thu, 05 Feb 2009 08:57:17 +0000</pubDate><guid>https://gunnihinn.github.io/post/3-house/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/3-house/</link><pubDate>Thu, 05 Feb 2009 08:57:17 +0000</pubDate><guid>https://www.magnusson.io/post/3-house/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/01/03-poster1.jpg&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="quoteblock">
@@ -3628,7 +3628,7 @@ Um þetta leyti hélt ég að ég væri búinn að fatta myndina. Okkar biði s�
 &lt;/div>
 &lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=GmmpJSiqU3Y&amp;amp;hl=en&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/2-splinter/</link><pubDate>Thu, 29 Jan 2009 08:11:59 +0000</pubDate><guid>https://gunnihinn.github.io/post/2-splinter/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/2-splinter/</link><pubDate>Thu, 29 Jan 2009 08:11:59 +0000</pubDate><guid>https://www.magnusson.io/post/2-splinter/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/04/02-poster.jpg&amp;#34; /&amp;gt;&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
@@ -3687,7 +3687,7 @@ Um þetta leyti hélt ég að ég væri búinn að fatta myndina. Okkar biði s�
 &amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=25e0xgdGZ3k&amp;amp;hl=en&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/dd>
 &lt;/dl>
-&lt;/div></description></item><item><title/><link>https://gunnihinn.github.io/post/1-day-of-the-dead/</link><pubDate>Thu, 22 Jan 2009 09:02:47 +0000</pubDate><guid>https://gunnihinn.github.io/post/1-day-of-the-dead/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title/><link>https://www.magnusson.io/post/1-day-of-the-dead/</link><pubDate>Thu, 22 Jan 2009 09:02:47 +0000</pubDate><guid>https://www.magnusson.io/post/1-day-of-the-dead/</guid><description>&lt;div class="paragraph">
 &lt;p>&amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;http://hrollur.files.wordpress.com/2009/01/dotd-titles1.jpg&amp;#34; /&amp;gt;
 &lt;em>Fyrsta stig alvarlegs Helvetica-smits.&lt;/em>&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/div>
@@ -3762,7 +3762,7 @@ Um þetta leyti hélt ég að ég væri búinn að fatta myndina. Okkar biði s�
 &amp;lt;p align=&amp;#34;center&amp;#34;&amp;gt;[youtube=http://www.youtube.com/watch?v=aJndd5Eyz18&amp;amp;hl=en&amp;amp;fs=1]&amp;lt;/p&amp;gt;&lt;/p>
 &lt;/dd>
 &lt;/dl>
-&lt;/div></description></item><item><title>Hæ!</title><link>https://gunnihinn.github.io/post/hello-world/</link><pubDate>Mon, 19 Jan 2009 18:02:42 +0000</pubDate><guid>https://gunnihinn.github.io/post/hello-world/</guid><description>&lt;div class="paragraph">
+&lt;/div></description></item><item><title>Hæ!</title><link>https://www.magnusson.io/post/hello-world/</link><pubDate>Mon, 19 Jan 2009 18:02:42 +0000</pubDate><guid>https://www.magnusson.io/post/hello-world/</guid><description>&lt;div class="paragraph">
 &lt;p>Fyrsta umfjöllunin kemur á fimmtudaginn. Hún verður um upprunalegu útgáfuna af Day of the Dead eftir George Romero, í nær fullkominni mótsögn við fullyrðingu mína um að skrifa sem mest um nýjar myndir.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
