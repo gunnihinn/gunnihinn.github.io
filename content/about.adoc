@@ -4,8 +4,8 @@ date: 2019-10-05T07:54:31+02:00
 draft: false
 ---
 
-I am a developer, mathematician, editor, and writer who lives in Amsterdam. I
-grew up in Iceland, and have also lived in France and Mexico.
+I am a developer, mathematician, editor, and writer who lives in Iceland. I
+grew up there, and have also lived in France, Mexico and the Netherlands.
 
 As a developer, I am interested in distributed systems, reliability and
 debugging. I enjoy solving hard business problems through the use of computers,
@@ -65,11 +65,15 @@ since 2012.
 
 === Professional experience
 
-2020&mdash;now::
-Senior developer, http://www.booking.com[Booking.com].
-I am working on the API modernization effort in the Accommodations Business Unit.
-The project I've been running involves automatic conversion between legacy message formats and new ones on the edge of our network.
-Its purpose is to enable developer velocity during the department's modernization efforts.
+2022&mdash;now::
+Software engineer, https://www.tern.systems/[Tern Systems].
+I am working on airplane separation detection in our air traffic management system in use at Keflavík airport.
+
+2020&mdash;2022::
+Senior developer, https://www.booking.com[Booking.com].
+I worked on the API modernization effort in the Accommodations Business Unit.
+The project I ran involves automatic conversion between legacy message formats and new ones on the edge of our network.
+Its purpose was to enable developer velocity during the department's modernization efforts.
 
 - Defined the project scope during conversations with leadership, chose technical tools, and wrote and deployed a reusable base upon which future work by different teams can be done.
 - Collaborated with stakeholders across other teams to ensure the smooth adoption of the API adapters in a production environment.
