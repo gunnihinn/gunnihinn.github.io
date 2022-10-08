@@ -1,6 +1,6 @@
 ---
 title: "About me"
-date: 2019-10-05T07:54:31+02:00
+date: 2022-10-08T08:25:31+00:00
 draft: false
 ---
 
@@ -16,9 +16,7 @@ coworkers.
 As a mathematician, I am interested in complex differential geometry and its
 applications to projective algebraic geometry. I'm also an amateur of linear
 algebra, and prefer deep understanding of subjects to casual acquaintance.
-I don't do a lot of research anymore, but keep meaning to finish a manuscript
-on an interesting, but ultimately disappointing, cohomological approach to the
-Riemannian geometry of the Kähler cones of compact manifolds.
+I do a little research on the side for fun. Ask me what I'm getting wrong at the moment!
 
 == Skills
 
