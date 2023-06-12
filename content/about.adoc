@@ -192,6 +192,9 @@ B.Sc. in Mathematics, University of Iceland, Reykjavík, Iceland.
 
 === Academic
 
+- _A remark on Wu's remark on holomorphic sectional curvature_, 2022,
+https://arxiv.org/abs/2210.17102[arXiv].
+
 - _Degenerate Hermitian geometry and curvatures of holomorphic fibrations_, 2022,
 https://arxiv.org/abs/2210.01885[arXiv].
 
