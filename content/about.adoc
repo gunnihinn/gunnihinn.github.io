@@ -41,7 +41,7 @@ I do a little research on the side for fun. Ask me what I'm getting wrong at the
 
 == Online presence
 
-- mailto:gunnar.thor.magnusson@gmail.com[Email]
+- mailto:gunnar@magnusson.io[Email]
 - https://github.com/gunnihinn/[Github]
 - https://www.linkedin.com/in/gunnar-magn%C3%BAsson-45b636105/[LinkedIn]
 - https://mathoverflow.net/users/4054/gunnar-%c3%9e%c3%b3r-magn%c3%basson[MathOverflow]
