@@ -4,7 +4,7 @@ date: 2023-07-21T09:02:06-06:00
 draft: false
 ---
 
-If \(R\) is the curvature tensor of a Kahler metric, we define its holomorphic
+If \(R\) is the curvature tensor of a Kähler metric, we define its holomorphic
 sectional curvature to be
 \[
 H(x) = R(x, \bar x, x, \bar x) / |x|^4
@@ -17,7 +17,7 @@ curvature of \( R \) at the center to be
 s = \sum_{j,k=1}^n R(e_j, \bar e_j, e_k, \bar e_k).
 \]
 A classical result of Berger is that the sign of the holomorphic sectional
-curvature determines the sign of the scalar curvature. More precicely he proved that
+curvature determines the sign of the scalar curvature. More precisely he proved that
 \[
 \int_{S^{2n-1}} H(x) \, d\sigma(x)
 = \frac{1}{\binom{n+1}{2}} s,
@@ -56,7 +56,7 @@ If \( (x_1, \ldots, x_n) \) are local coordinates in \( \mathbf C^n \) the torus
 \psi(x)
 = ( e^{it_1} x_1, \ldots, e^{it_n} x_n ).
 \]
-Given a curvature tensor \( R \) of a Kahler metric, we then define
+Given a curvature tensor \( R \) of a Kähler metric, we then define
 \[
 \hat R(x, \bar y, z, \bar w)
 = \frac{1}{(2\pi)^n} \int_{T^n} \psi^* R(x, \bar y, z, \bar w) \, dt_1 \cdots dt_n.
@@ -66,7 +66,7 @@ We note some properties of \( \hat R \):
 1. \( \hat R_{jklm} = R_{jklm} \) if \( j=k \) and \( l=m \) or \( j=m \) and
 \( k=l \) and is zero otherwise. This is clear by evaluating the integral.
 
-2. \( \hat R \) has the symmetries of a Kahler curvature tensor, by 1.
+2. \( \hat R \) has the symmetries of a Kähler curvature tensor, by 1.
 
 3. \( \hat{\hat R} = \hat R \), by 1.
 
@@ -81,7 +81,7 @@ s = \sum_{j,k=1}^n R_{jjkk}
 We can explain what \( \hat R \) is:
 Recall that a Hermitian curvature tensor on \( \mathbf C^n \) can be viewed as
 a Hermitian form on \( \mathbf C^n \otimes \mathbf C^n \), and that such a
-tensor has the symmetries of a Kahler curvature tensor if and only if it is the
+tensor has the symmetries of a Kähler curvature tensor if and only if it is the
 pullback of a Hermitian form on \( \operatorname{Sym}^2 \mathbf C^n \).
 Then \( \hat R \) is just the projection of \( R \) onto the subspace of
 diagonal Hermitian forms on \( \operatorname{Sym}^2 \mathbf C^n \).
