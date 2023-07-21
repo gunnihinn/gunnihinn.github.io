@@ -7,7 +7,7 @@ H(x) = R(x, \bar x, x, \bar x) / |x|^4
 for nonzero \(x\).
 If \( (e_1, \ldots, e_n) \) is a frame of the tangent bundle that is
 orthonormal at the center of a coordinate system, we also define the scalar
-curvature of $R$ at the center to be
+curvature of \( R \) at the center to be
 \[
 s = \sum_{j,k=1}^n R(e_j, \bar e_j, e_k, \bar e_k).
 \]
