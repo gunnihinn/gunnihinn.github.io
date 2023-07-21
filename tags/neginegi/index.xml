@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://www.magnusson.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>neginegi on Gunnar Þór Magnússon</title><link>https://www.magnusson.io/tags/neginegi/</link><description>Recent content in neginegi on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2013 14:08:02 +0000</lastBuildDate><atom:link href="https://www.magnusson.io/tags/neginegi/index.xml" rel="self" type="application/rss+xml"/><item><title>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</title><link>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</link><pubDate>Fri, 21 Jul 2023 09:02:06 -0600</pubDate><guid>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</guid><description>&lt;div class="paragraph">
-&lt;p>If \(R\) is the curvature tensor of a Kahler metric, we define its holomorphic
+&lt;p>If \(R\) is the curvature tensor of a Kähler metric, we define its holomorphic
 sectional curvature to be
 \[
 H(x) = R(x, \bar x, x, \bar x) / |x|^4
@@ -12,7 +12,7 @@ curvature of \( R \) at the center to be
 s = \sum_{j,k=1}^n R(e_j, \bar e_j, e_k, \bar e_k).
 \]
 A classical result of Berger is that the sign of the holomorphic sectional
-curvature determines the sign of the scalar curvature. More precicely he proved that
+curvature determines the sign of the scalar curvature. More precisely he proved that
 \[
 \int_{S^{2n-1}} H(x) \, d\sigma(x)
 = \frac{1}{\binom{n+1}{2}} s,
@@ -53,7 +53,7 @@ If \( (x_1, \ldots, x_n) \) are local coordinates in \( \mathbf C^n \) the torus
 \psi(x)
 = ( e^{it_1} x_1, \ldots, e^{it_n} x_n ).
 \]
-Given a curvature tensor \( R \) of a Kahler metric, we then define
+Given a curvature tensor \( R \) of a Kähler metric, we then define
 \[
 \hat R(x, \bar y, z, \bar w)
 = \frac{1}{(2\pi)^n} \int_{T^n} \psi^* R(x, \bar y, z, \bar w) \, dt_1 \cdots dt_n.
@@ -67,7 +67,7 @@ We note some properties of \( \hat R \):&lt;/p>
 \( k=l \) and is zero otherwise. This is clear by evaluating the integral.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>\( \hat R \) has the symmetries of a Kahler curvature tensor, by 1.&lt;/p>
+&lt;p>\( \hat R \) has the symmetries of a Kähler curvature tensor, by 1.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>\( \hat{\hat R} = \hat R \), by 1.&lt;/p>
@@ -88,7 +88,7 @@ s = \sum_{j,k=1}^n R_{jjkk}
 &lt;p>We can explain what \( \hat R \) is:
 Recall that a Hermitian curvature tensor on \( \mathbf C^n \) can be viewed as
 a Hermitian form on \( \mathbf C^n \otimes \mathbf C^n \), and that such a
-tensor has the symmetries of a Kahler curvature tensor if and only if it is the
+tensor has the symmetries of a Kähler curvature tensor if and only if it is the
 pullback of a Hermitian form on \( \operatorname{Sym}^2 \mathbf C^n \).
 Then \( \hat R \) is just the projection of \( R \) onto the subspace of
 diagonal Hermitian forms on \( \operatorname{Sym}^2 \mathbf C^n \).
