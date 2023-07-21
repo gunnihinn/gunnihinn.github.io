@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://www.magnusson.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Gunnar Þór Magnússon</title><link>https://www.magnusson.io/tags/</link><description>Recent content in Tags on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 12 Nov 2013 13:58:28 +0000</lastBuildDate><atom:link href="https://www.magnusson.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Local distributed rate limiting</title><link>https://www.magnusson.io/post/local-distributed-rate-limiting/</link><pubDate>Fri, 22 Oct 2021 19:22:54 +0200</pubDate><guid>https://www.magnusson.io/post/local-distributed-rate-limiting/</guid><description>&lt;div class="paragraph">
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://www.magnusson.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Gunnar Þór Magnússon</title><link>https://www.magnusson.io/tags/</link><description>Recent content in Tags on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 12 Nov 2013 13:58:28 +0000</lastBuildDate><atom:link href="https://www.magnusson.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</title><link>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</link><pubDate>Fri, 21 Jul 2023 09:02:06 -0600</pubDate><guid>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</guid><description>&lt;div class="paragraph">
+&lt;p>If \(R\) is the curvature tensor of a Kahler metric, we define its holomorphic
+sectional curvature to be
+\[
+H(x) = R(x, \bar x, x, \bar x) / |x|^4
+\]
+for nonzero \(x\).
+If \( (e_1, \ldots, e_n) \) is a frame of the tangent bundle that is
+orthonormal at the center of a coordinate system, we also define the scalar
+curvature of $R$ at the center to be
+\[
+s = \sum_{j,k=1}^n R(e_j, \bar e_j, e_k, \bar e_k).
+\]
+A classical result of Berger is that the sign of the holomorphic sectional
+curvature determines the sign of the scalar curvature. More precicely he proved that
+\[
+\int_{S^{2n-1}} H(x) \, d\sigma(x)
+= \frac{1}{\binom{n+1}{2}} s,
+\]
+where \( d\sigma \) is the Lebesgue measure on the sphere normalized to have
+volume one. Berger’s proof is by a straightforward calculation that proceeds by
+expanding \( H(x) \) in terms of a local frame and then integrating each
+polynomial factor over the sphere. There is also a slightly less painful proof
+that uses representation theory to compute the integral.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We are going to explain a new, worse, proof of the fact that the holomorphic
+sectional curvature determines the sign of the scalar curvature.
+The classical proof of Berger’s result is not very illuminating, as it seems to
+hinge on the fact that the integrals of \(|z_j|^4\) and \(|z_j|^2 |z_k|^2\)
+over the unit sphere agree up to a factor of two.
+The representation-theoretic calculation of the integral explains why this happens;
+the integral is invariant under such a large group action that the whole thing
+has to be the trace, which evaluates to the scalar curvature.
+Our new proof offers no explanations, only brute force calculations that work
+out, somehow. If we conspire to write
+\( R(x) := R(x, \bar x, x, \bar x) \)
+then we will show that
+\[
+\sum_{j=1}^n \hat R(e_j) + \hat R\biggl( \sum_{j=1}^n e_j \biggr) = 2 s
+\]
+for a &lt;em>different&lt;/em> curvature tensor \( \hat R \) whose holomorphic sectional
+curvature has the same sign as that of \( R \). Since \( \hat R(x) \) has
+the same sign as \( H(x) \), we conclude that the sign of \( H \)
+determines that of \( s \).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We’re going to work at the center of a normal coordinate system, so we will pick
+an orthonormal basis \((e_1, \ldots, e_n)\) of the tangent space at that point.
+If \( (x_1, \ldots, x_n) \) are local coordinates in \( \mathbf C^n \) the torus
+\( T^n := S^1 \times \cdots \times S^1 \) acts on \( \mathbf C^n \) by
+\[
+\psi(x)
+= ( e^{it_1} x_1, \ldots, e^{it_n} x_n ).
+\]
+Given a curvature tensor \( R \) of a Kahler metric, we then define
+\[
+\hat R(x, \bar y, z, \bar w)
+= \frac{1}{(2\pi)^n} \int_{T^n} \psi^* R(x, \bar y, z, \bar w) \, dt_1 \cdots dt_n.
+\]
+We note some properties of \( \hat R \):&lt;/p>
+&lt;/div>
+&lt;div class="olist arabic">
+&lt;ol class="arabic">
+&lt;li>
+&lt;p>\( \hat R_{jklm} = R_{jklm} \) if \( j=k \) and \( l=m \) or \( j=m \) and
+\( k=l \) and is zero otherwise. This is clear by evaluating the integral.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>\( \hat R \) has the symmetries of a Kahler curvature tensor, by 1.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>\( \hat{\hat R} = \hat R \), by 1.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If \( R(x) &amp;gt; 0 \) for all \( x \) then \( \hat R(x) &amp;gt; 0 \) for all \( x \), because then the integrand is positive for all \( x \) and \( (t_1, \ldots, t_n) \).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The scalar curvatures of \( R \) and \( \hat R \) are equal, because
+\(
+s = \sum_{j,k=1}^n R_{jjkk}
+= \sum_{j,k=1}^n \hat R_{jjkk}
+\).&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We can explain what \( \hat R \) is:
+Recall that a Hermitian curvature tensor on \( \mathbf C^n \) can be viewed as
+a Hermitian form on \( \mathbf C^n \otimes \mathbf C^n \), and that such a
+tensor has the symmetries of a Kahler curvature tensor if and only if it is the
+pullback of a Hermitian form on \( \operatorname{Sym}^2 \mathbf C^n \).
+Then \( \hat R \) is just the projection of \( R \) onto the subspace of
+diagonal Hermitian forms on \( \operatorname{Sym}^2 \mathbf C^n \).
+This way however it’s not so clear that \( \hat R \) also has positive
+holomorphic sectional curvature if \( R \) does.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We now note that
+\[
+\hat R\biggl( \sum_{j=1}^n e_j \biggr)
+= \sum_{j=1}^n R_{jjjj}
++ 4 \sum_{j\not=k} R_{jjkk}
+\]
+and so
+\[
+\hat R\biggl( \sum_{j=1}^n e_j \biggr)
++ \sum_{j=1}^n \hat R(e_j)
+= 2s.
+\]
+If the holomorphic sectional curvature of \( R \) is positive, then so is the
+one of \( \hat R \), and thus \( s &amp;gt; 0 \).&lt;/p>
+&lt;/div></description></item><item><title>Local distributed rate limiting</title><link>https://www.magnusson.io/post/local-distributed-rate-limiting/</link><pubDate>Fri, 22 Oct 2021 19:22:54 +0200</pubDate><guid>https://www.magnusson.io/post/local-distributed-rate-limiting/</guid><description>&lt;div class="paragraph">
 &lt;p>Suppose our job is to design a rate limiting system. It could be embedded in a
 service or be a service of its own. Given some details about a request from
 which we build a source identifier (an IP address is popular and we may assume

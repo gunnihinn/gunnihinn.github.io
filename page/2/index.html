@@ -1,4 +1,27 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.113.0"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/><link rel=alternate type=application/rss+xml href=https://www.magnusson.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/bug-checklist/ rel=bookmark>Bug-fixing checklist</a></h2><time datetime=2020-04-15T07:04:37+02:00>15 April, 2020</time></header><div class=paragraph><p>It is OK not to do all of these things for a given bug. Some bugs are trivial,
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.115.4"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/><link rel=alternate type=application/rss+xml href=https://www.magnusson.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/kleroteria/ rel=bookmark>Kleroteria</a></h2><time datetime=2020-04-15T08:51:31+02:00>15 April, 2020</time></header><div class=paragraph><p>I got picked in
+<a href=https://www.kleroteria.org/>Kleroteria</a>
+a couple of months ago. This is my contribution.</p></div><hr><div class=paragraph><p>Three years ago, my wife and I moved to Amsterdam. We wanted to have kids, and
+thought the Netherlands was a better place to do that than Mexico, where my wife
+is from and we lived.</p></div><div class=paragraph><p>We’ve both moved around a lot, and have picked up the languages of the places
+we’ve lived. That’s how we speak French and Spanish, along with English.
+Learning those was always a necessity; no one in France is going to speak
+English voluntarily, and my in-laws don’t speak the best English so I had to
+learn Spanish.</p></div><div class=paragraph><p>So it was a change to come to the Netherlands. Everyone here speaks perfect
+English. They also have no patience for your attempts at Dutch pronunciation or
+verb conjugation. The second they hear you’re not from here, they switch. On
+paper this is great, but it means that after three years here I still don’t
+speak Dutch. I can never get anyone to have a whole conversation with me in it.</p></div><div class=paragraph><p>A couple of weeks after we came here, we got pregnant. We had a boy, who has
+grown up into a little man who loves cars and trains, makes funny faces at the
+dinner table, and keeps trying to show our dog his books. ("Pancho! See!", but
+Pancho doesn’t care.)</p></div><div class=paragraph><p>We speak to him each in our own language, and by now he understands what we say.
+He’s been going to daycare here since he was five months old, where they speak
+Dutch, so he understands that as well. Kids who grow up with more than one
+language start speaking later, which is can be frustrating for everyone. He
+knows what he wants to say, but can’t figure out what words to use, and we have
+to keep guessing at sounds while other parents don’t.</p></div><div class=paragraph><p>He’s finally speaking now. He tells us everything he wants and knows. In Dutch.
+Every time. Every word comes out in Dutch. And we still don’t really speak it.
+It’s not really any less frustrating for anyone. There’s a lot of guessing at
+pronunciation and Google translate.</p></div><div class=paragraph><p>But what do you know. I did finally get someone to speak Dutch to me.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/bug-checklist/ rel=bookmark>Bug-fixing checklist</a></h2><time datetime=2020-04-15T07:04:37+02:00>15 April, 2020</time></header><div class=paragraph><p>It is OK not to do all of these things for a given bug. Some bugs are trivial,
 or nontrivial to reproduce or write tests for. But you should explicitly decide
 not to do some of these things for any given bug, and be able to explain why.</p></div><div class="olist arabic"><ol class=arabic><li><p>Is there a (possibly old, closed) issue for the bug?</p></li><li><p>Can you reproduce the bug manually?</p></li><li><p>Can you write a regression test for the bug?</p></li><li><p>Did you check that your change actually fixes the problem?</p></li><li><p>Does the fix’s commit message explain the bug, the fix, and point to the issue?</p></li></ol></div><div class=paragraph><p>It’s debatable whether checking for old or closed issues is the responsibility
 of the developer fixing the bug or a project manager who triages the backlog.
@@ -131,103 +154,5 @@ FIFO queues perform very poorly under load, as I
 in demonstrating.</p></div><div class=paragraph><p>Funnily enough, that very simple thing is one of my most popular Github
 projects ever.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/ignore-mastodon/ rel=bookmark>Ignore Mastodon</a></h2><time datetime=2019-03-05T07:33:59+02:00>5 March, 2019</time></header><div class=paragraph><p>Point: <a href=https://carlchenet.com/do-not-ignore-the-mastodon-social-network/>You should not ignore the Mastodon social network any more</a>.</p></div><div class=paragraph><p>Counterpoint: I truly, madly, deeply want to ignore all new and existing social
 networks.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/shame/ rel=bookmark>Shame</a></h2><time datetime=2019-03-04T07:34:40+02:00>4 March, 2019</time></header><div class=paragraph><p>To motivate me to actually finish some of the projects I start, I’m going to
-try announcing them to the world. Shame me into finishing these:</p></div><div class=ulist><ul><li><p>A nicer arXiv frontend of daily new additions.</p></li><li><p>A modern typesetting of Beauville’s <em>Surfaces algebriques complexes</em>.</p></li></ul></div><div class=paragraph><p>Shame. Shame. Shame.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/golang-state-channels/ rel=bookmark>Request-level configuration invariance in Go</a></h2><time datetime=2018-09-12T07:44:22+02:00>12 September, 2018</time></header><div class=paragraph><p>Suppose we have an HTTP service. The behaviour of service depends on some
-configuration that may change at runtime; it may reload a static configuration
-file on <code>SIGHUP</code>, need to react to changes in its service discovery mechanism,
-or have A/B test state or features toggled on and off.</p></div><div class=paragraph><p>In Go, a naive way of handling this is by writing our configuration state to a
-struct and updating it in background goroutines:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
-    frobinate bool
-}
-
-var state State{}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    if s.frobinate {
-        fmt.Fprintln(w, &#34;Great success&#34;)
-    } else {
-        fmt.Fprintln(w, &#34;Great non-success&#34;)
-    }
-}</code></pre></div></div><div class=paragraph><p>This naive approach has at least two problems:</p></div><div class="olist arabic"><ol class=arabic><li><p>The state may change while we’re processing a request, causing us to process
-part of the request with one state, and another part with another. This isn’t a
-big deal in our example, but becomes more of a problem as the time needed to
-handle a request increases.</p></li><li><p>There are no synchronization primitives in play, so updating the state has data
-race conditions.</p></li></ol></div><div class=paragraph><p>Check out the working example in
-<a href=https://github.com/gunnihinn/go-state-channel/tree/ecb5ac180cdcd31f1f1885a1b82d7ca57a9195f4:>this
-commit</a>
-to see the first problem in action.</p></div><div class=paragraph><p>One way to resolve these problems is to add a mutex and to pass copies of the
-state to the request handlers:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
-    frobinate bool
-
-    *sync.Mutex
-}
-
-// Copy may be arbitrarily complicated if State contains slices, maps,
-// pointers, or other structs.
-func (s *State) Copy() State {
-    s.Lock()
-    defer s.Unlock()
-
-    return *s
-}
-
-var state &amp;State{}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    s := state.Copy()
-
-    if s.frobinate {
-        fmt.Fprintln(w, &#34;Great success&#34;)
-    } else {
-        fmt.Fprintln(w, &#34;Great non-success&#34;)
-    }
-}</code></pre></div></div><div class=paragraph><p>The background goroutine that updates the state then either does so through a
-dedicated method that locks/unlocks the mutex, or does the locking itself.</p></div><div class=paragraph><p>While this works fine, it relies on global state and uses none of Go’s built-in
-concurrency features. We were promised a brave new world, and encouraged to
-"share memory by communicating". This points the way to another solution to our
-two problems that leverages Go’s primitives better:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>type State struct {
-    frobinate bool
-}
-
-// Copy may be arbitrarily complicated if State contains slices, maps,
-// pointers, or other structs.
-func (s State) Copy() State {
-    return s
-}
-
-var stateCh chan State
-var toggle chan struct{}
-
-func stateManager() {
-    state := State{}
-
-    for {
-        select {
-        case stateCh &lt;- state.Copy():
-
-        case &lt;-toggle:
-            state.frobinate = !state.frobinate
-        }
-    }
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    s := &lt;-stateCh
-
-    if s.frobinate {
-        fmt.Fprintln(w, &#34;Great success&#34;)
-    } else {
-        fmt.Fprintln(w, &#34;Great non-success&#34;)
-    }
-}</code></pre></div></div><div class=paragraph><p>A complete working example is
-<a href=https://github.com/gunnihinn/go-state-channel/blob/master/go-state-channel.go>here</a>.
-Note that the working example doesn’t rely
-on any global state to pass state to the handler functions, using closures
-instead. Modifying the state is also only possible within the <code>stateManager</code>
-function. The working example could also be extended to have middleware copy the
-state to each request processing function instead of the ad-hoc way done there.</p></div><div class=paragraph><p>It is still up to the developers to ensure the <code>Copy</code> method doesn’t pass mutable
-state around, but they no longer need to deal with mutexes and locks themselves.
-This also means that any future additions to the program that use the same
-pattern won’t need to worry about those locks either.</p></div><div class=paragraph><p>There are no silver bullets in heavily concurrent systems, but in Go we can
-choose to not deal with some of the footguns we would need to handle in C, Java
-or other similar languages.</p></div></article><nav><a class="Pagination u-clickable" href=https://www.magnusson.io/page/3/ rel=prev>« Previous</a>
+try announcing them to the world. Shame me into finishing these:</p></div><div class=ulist><ul><li><p>A nicer arXiv frontend of daily new additions.</p></li><li><p>A modern typesetting of Beauville’s <em>Surfaces algebriques complexes</em>.</p></li></ul></div><div class=paragraph><p>Shame. Shame. Shame.</p></div></article><nav><a class="Pagination u-clickable" href=https://www.magnusson.io/page/3/ rel=prev>« Previous</a>
 <a class="Pagination Pagination--right u-clickable" href=https://www.magnusson.io/ rel=next>Next »</a></nav></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>

@@ -1,0 +1,80 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.115.4"><title>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature | Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/post/hsc-dominates-scalar-curvature/><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/index.xml>RSS</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/hsc-dominates-scalar-curvature/ rel=bookmark>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</a></h2><time datetime=2023-07-21T09:02:06-06:00>21 July, 2023</time></header><div class=paragraph><p>If \(R\) is the curvature tensor of a Kahler metric, we define its holomorphic
+sectional curvature to be
+\[
+H(x) = R(x, \bar x, x, \bar x) / |x|^4
+\]
+for nonzero \(x\).
+If \( (e_1, \ldots, e_n) \) is a frame of the tangent bundle that is
+orthonormal at the center of a coordinate system, we also define the scalar
+curvature of $R$ at the center to be
+\[
+s = \sum_{j,k=1}^n R(e_j, \bar e_j, e_k, \bar e_k).
+\]
+A classical result of Berger is that the sign of the holomorphic sectional
+curvature determines the sign of the scalar curvature. More precicely he proved that
+\[
+\int_{S^{2n-1}} H(x) \, d\sigma(x)
+= \frac{1}{\binom{n+1}{2}} s,
+\]
+where \( d\sigma \) is the Lebesgue measure on the sphere normalized to have
+volume one. Berger’s proof is by a straightforward calculation that proceeds by
+expanding \( H(x) \) in terms of a local frame and then integrating each
+polynomial factor over the sphere. There is also a slightly less painful proof
+that uses representation theory to compute the integral.</p></div><div class=paragraph><p>We are going to explain a new, worse, proof of the fact that the holomorphic
+sectional curvature determines the sign of the scalar curvature.
+The classical proof of Berger’s result is not very illuminating, as it seems to
+hinge on the fact that the integrals of \(|z_j|^4\) and \(|z_j|^2 |z_k|^2\)
+over the unit sphere agree up to a factor of two.
+The representation-theoretic calculation of the integral explains why this happens;
+the integral is invariant under such a large group action that the whole thing
+has to be the trace, which evaluates to the scalar curvature.
+Our new proof offers no explanations, only brute force calculations that work
+out, somehow. If we conspire to write
+\( R(x) := R(x, \bar x, x, \bar x) \)
+then we will show that
+\[
+\sum_{j=1}^n \hat R(e_j) + \hat R\biggl( \sum_{j=1}^n e_j \biggr) = 2 s
+\]
+for a <em>different</em> curvature tensor \( \hat R \) whose holomorphic sectional
+curvature has the same sign as that of \( R \). Since \( \hat R(x) \) has
+the same sign as \( H(x) \), we conclude that the sign of \( H \)
+determines that of \( s \).</p></div><div class=paragraph><p>We’re going to work at the center of a normal coordinate system, so we will pick
+an orthonormal basis \((e_1, \ldots, e_n)\) of the tangent space at that point.
+If \( (x_1, \ldots, x_n) \) are local coordinates in \( \mathbf C^n \) the torus
+\( T^n := S^1 \times \cdots \times S^1 \) acts on \( \mathbf C^n \) by
+\[
+\psi(x)
+= ( e^{it_1} x_1, \ldots, e^{it_n} x_n ).
+\]
+Given a curvature tensor \( R \) of a Kahler metric, we then define
+\[
+\hat R(x, \bar y, z, \bar w)
+= \frac{1}{(2\pi)^n} \int_{T^n} \psi^* R(x, \bar y, z, \bar w) \, dt_1 \cdots dt_n.
+\]
+We note some properties of \( \hat R \):</p></div><div class="olist arabic"><ol class=arabic><li><p>\( \hat R_{jklm} = R_{jklm} \) if \( j=k \) and \( l=m \) or \( j=m \) and
+\( k=l \) and is zero otherwise. This is clear by evaluating the integral.</p></li><li><p>\( \hat R \) has the symmetries of a Kahler curvature tensor, by 1.</p></li><li><p>\( \hat{\hat R} = \hat R \), by 1.</p></li><li><p>If \( R(x) > 0 \) for all \( x \) then \( \hat R(x) > 0 \) for all \( x \), because then the integrand is positive for all \( x \) and \( (t_1, \ldots, t_n) \).</p></li><li><p>The scalar curvatures of \( R \) and \( \hat R \) are equal, because
+\(
+s = \sum_{j,k=1}^n R_{jjkk}
+= \sum_{j,k=1}^n \hat R_{jjkk}
+\).</p></li></ol></div><div class=paragraph><p>We can explain what \( \hat R \) is:
+Recall that a Hermitian curvature tensor on \( \mathbf C^n \) can be viewed as
+a Hermitian form on \( \mathbf C^n \otimes \mathbf C^n \), and that such a
+tensor has the symmetries of a Kahler curvature tensor if and only if it is the
+pullback of a Hermitian form on \( \operatorname{Sym}^2 \mathbf C^n \).
+Then \( \hat R \) is just the projection of \( R \) onto the subspace of
+diagonal Hermitian forms on \( \operatorname{Sym}^2 \mathbf C^n \).
+This way however it’s not so clear that \( \hat R \) also has positive
+holomorphic sectional curvature if \( R \) does.</p></div><div class=paragraph><p>We now note that
+\[
+\hat R\biggl( \sum_{j=1}^n e_j \biggr)
+= \sum_{j=1}^n R_{jjjj}
++ 4 \sum_{j\not=k} R_{jjkk}
+\]
+and so
+\[
+\hat R\biggl( \sum_{j=1}^n e_j \biggr)
++ \sum_{j=1}^n \hat R(e_j)
+= 2s.
+\]
+If the holomorphic sectional curvature of \( R \) is positive, then so is the
+one of \( \hat R \), and thus \( s > 0 \).</p></div></article></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright 2018-2020 :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>
