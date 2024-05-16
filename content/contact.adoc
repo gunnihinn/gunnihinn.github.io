@@ -1,0 +1,7 @@
+---
+title: "Contact information"
+date: 2024-05-16T17:51:31+00:00
+draft: false
+---
+
+If you want to contact me you can email me mailto:gunnar@magnusson.io[here].
