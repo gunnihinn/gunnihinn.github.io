@@ -20,7 +20,7 @@ menu:
     url: about/
     weight: 1
   - name: Contact
-    url: about/
+    url: contact/
     weight: 2
   - name: Posts
     url: post/
