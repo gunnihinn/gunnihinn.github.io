@@ -23,3 +23,8 @@ $ make dev
 ----
 
 To publish, commit the changes and push to Github.
+
+
+== Publish
+
+Because I don't read my own readme file, to publish, commit the changes you've made on `main` and push to Github.
