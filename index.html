@@ -1,4 +1,372 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.147.7"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/><link rel=alternate type=application/rss+xml href=https://www.magnusson.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/contact/>Contact</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/hsc-dominates-scalar-curvature/ rel=bookmark>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</a></h2><time datetime=2023-07-21T09:02:06-06:00>21 July, 2023</time></header><div class=paragraph><p>If \(R\) is the curvature tensor of a Kähler metric, we define its holomorphic
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.147.7"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/><link rel=alternate type=application/rss+xml href=https://www.magnusson.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/contact/>Contact</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/curvature-examples/ rel=bookmark>Counterexamples of positivity implications in Kähler curvature tensors</a></h2><time datetime=2025-06-03T08:51:50Z>3 June, 2025</time></header><div class=paragraph><p>It is well-known that the curvature properties of Kähler metrics "flow downward".
+To give meaning to this statement,
+let us say that a tensor \( \alpha \) <em>dominates</em> a tensor \( \beta \)
+if any of the following implications hold:
+\begin{align*}
+\alpha > 0 &\implies \beta > 0,
+&
+\alpha &\geq 0 \implies \beta \geq 0,
+\\
+\alpha &lt; 0 &\implies \beta &lt; 0,
+&
+\alpha &\leq 0 \implies \beta \leq 0.
+\end{align*}
+Strictly speaking we need to specify what it means for a tensor to be
+"positive" or "negative" for this to make sense.
+This is fairly clear for the tensors we’ll discuss here, except for the
+Kähler curvature tensor itself which we mean to be Griffiths positive (or
+negative).</p></div><div class=paragraph><p>If \( R \) is the curvature tensor of a Kähler metric, its various derived
+curvature tensors are the holomorphic sectional curvature \( H \), the Ricci
+tensor \( r \) and the scalar curvature \( s \).
+Then \( R \to H \to s \) and \( R \to r \to s \),
+where an arrow \( \alpha \to \beta \) means that \( \alpha \) dominates \( \beta \).</p></div><div class=paragraph><p>The witches of the field know that neither \( H \) nor \( r \) dominates the other.
+The best evidence for this seems to be indirect.
+We for example know that Hirzebruch surfaces (surfaces that are projective
+bundles over \( \mathbf{P}^1 \)) carry metrics with positive holomorphic sectional
+curvature, but carry no metric of positive Ricci curvature as their anticanonical
+bundle is not ample.
+There are some suggestive results in the negatively curved case though,
+where a compact Kähler manifold that carries a metric of negative holomorphic
+sectional curvature also carries a possibly different metric of negative Ricci
+curvature.
+We don’t know if these are the same metric.
+It would be nice if some easy local calculations said they were, but in this note we will see they don’t.</p></div><div class=paragraph><p>It is also folklore that all of the reverse relations in the diagram fail.
+Some do not hold by general considerations; for
+example Hirzebruch surfaces
+again carry a metric of positive holomorphic sectional curvature but not one of
+positive Griffiths curvature, for otherwise they would be \( \mathbf{P}^2 \) by
+Siu—​Yau’s solution of the Frankel conjecture and, lo,
+they are not.</p></div><div class=paragraph><p>We feel like it would be nice to see explicitly what doesn’t hold here.
+In this light reading note we work out local examples that show that the reverse of any known
+positivity implication fails.
+As other people have noted it would be nice to have compact examples of these
+failures but it is fairly difficult to get one’s hands on those.
+Suggestions are welcome.</p></div><h1 id=_algebraic_curvature_tensors class=sect0>Algebraic curvature tensors</h1><div class=paragraph><p>Let \( V \) be a complex vector space of dimension \( n \), which we think of as the
+tangent space of a complex manifold at a given point.
+The curvature tensor \( R \) of a Hermitian metric on the manifold identifies with
+a Hermitian form \( q \) on \( V \otimes V \), defined by
+\[
+R(x, \overline{y}, z, \overline{w})
+= q(x \otimes z, \overline{y \otimes w}).
+\]
+If the metric is Kähler we get an additional symmetry
+\( R(x, \overline{y}, z, \overline{w}) = R(z, \overline{y}, x, \overline{w}) \)
+(and the ones induced by conjugating).</p></div><div class=paragraph><p>We write \( B(V) \) for the real vector space of Hermitian forms on \( V \).
+The curvature tensor of a Hermitian metric is then just a member of \( B(V
+\otimes V) \).
+We’ll call such an element an algebraic curvature tensor, and one that
+satisfies the symmetries of a Kähler curvature tensor an algebraic
+Kähler curvature tensor.</p></div><div class=paragraph><p><strong>Proposition</strong>
+If \( R \) is an algebraic Kähler curvature tensor, then \( R \to H \to s \) and \( R \to r \to s \).</p></div><div class=paragraph><p>This is both well-known and mostly easily proved by taking traces in an
+orthonormal basis.
+The trickiest impliciation is to show that \( H \to s \).
+Berger gave the original proof by showing that
+\[
+\frac{1}{\operatorname{Vol} S^{2n-1}} \int_{S^{2n-1}} \!\!\! H(v) \, d\sigma(v)
+= \frac{1}{\binom{n+1}{2}} s
+\]
+by writing \( v = \sum_{j=1}^n v_j e_j \) in an orthonormal basis \( (e_j) \),
+expanding the curvature tensor \( R(v, \bar v, v, \bar v) \), and integrating
+polynomials in \( v_j \) over the sphere. (The reader who wants to try their
+hand at this can see Folland’s paper on integrating polynomials over spheres for the last part.)</p></div><h1 id=_examples_of_non_dominance_in_dimension_two class=sect0>Examples of non-dominance in dimension two</h1><div class=paragraph><p>Let’s define
+\begin{align*}
+\mathcal{H}(V)
+&= \{ \text{germs of smooth Hermitian metrics on \( V \) at \( 0 \)} \},
+\\
+\mathcal{K}(V)
+&= \{ \text{germs of smooth Kähler metrics on \( V \) at \( 0 \)} \}.
+\end{align*}
+We just write \( \mathcal{H} \) if \( V \) is clear from context and will usually mean \( V =
+\mathbf{C}^n \). Note that \( \mathcal{K} \) and \( \mathcal{H} \) are only convex open cones in real
+vector spaces and not full subspaces.
+Evaluating the curvature tensor of a metric at \( 0 \) defines nonlinear maps and a
+commutative diagram
+\begin{align*}
+\mathcal{K} &\stackrel{\mathcal{R}}{\longrightarrow} B(\operatorname{Sym}^2 \mathbf{C}^n)
+\\
+\downarrow & \qquad\qquad \downarrow
+\\
+\mathcal{H} &\stackrel{\mathcal{R}}{\longrightarrow} B(\mathbf{C}^n \otimes \mathbf{C}^n).
+\end{align*}
+Both vertical arrows are of course injective.
+The horizonal arrows are neither injective nor surjective in general.</p></div><div class=paragraph><p>Let \( H \) be the matrix of a Hermitian metric \( h \) in a neighborhood around \( 0 \) in
+\( V \). The Chern connection of \( h \) is given by \( D^{1,0} = H^{-1}\partial H \) and its
+curvature form is
+\[
+F = \tfrac i2 \bar\partial(H^{-1}\partial H)
+= - \tfrac i2 H^{-1} \bar\partial H \wedge H^{-1} \partial H
+- \tfrac i2 H^{-1} \partial \bar\partial H.
+\]
+The curvature tensor is then \( R(x,\overline{y}, z, \overline{w}) = h(F(x, \overline{y}) z, \overline{w}) \).</p></div><div class=paragraph><p>We can pick coordinates such that \( H = I_n \) at \( 0 \).
+If \( h \) is Kähler we can further get \( \partial H = 0 \) at \( 0 \).
+We will arrange this in our examples.
+We now restrict to \( V = \mathbf{C}^2 \).</p></div><div class=paragraph><p><strong>Proposition.</strong>
+The image of \( \mathcal{K}(\mathbf{C}^2) \) in \( B(\mathbf{C}^2 \otimes \mathbf{C}^2) \) is the set of matrices of the form
+\[
+\begin{pmatrix}
+x & a & a & c
+\\
+\bar a & z & z & b
+\\
+\bar a & z & z & b
+\\
+\bar c & \bar b & \bar b & y
+\end{pmatrix}
+\]
+where \( x, y, z \in \mathbf{R} \), \( a, b, c \in \mathbf{C} \).</p></div><div class=paragraph><p><em>Proof:</em>
+If \( h \) is a Hermitian metric on a neighborhood of \( 0 \) in \( \mathbf{C}^2 \)
+we can write it in matrix form as
+\[
+H = \begin{pmatrix}
+a & c
+\\
+\overline{c} & b
+\end{pmatrix}.
+\]
+After a change of coordinates, we can assume that \( H(0) = I_2 \).
+Assuming \( h \) is Kähler we can also arrange that \( \partial H(0) = 0 \).
+Then the matrix of the curvature tensor in the basis
+\( (\partial / \partial z \otimes \partial / \partial z,
+\partial / \partial z \otimes \partial / \partial w,
+\partial / \partial w \otimes \partial / \partial z,
+\partial / \partial w \otimes \partial / \partial w) \)
+is
+\[
+R = \begin{pmatrix}
+a_{z \overline{z}} & \overline{c}_{z \overline{z}} & a_{z \overline{w}} & \overline{c}_{z \overline{w}}
+\\
+c_{z \overline{z}} & b_{z \overline{z}} & c_{z \overline{w}} & b_{z \overline{w}}
+\\
+a_{w \overline{z}} & \overline{c}_{w \overline{z}} & a_{w \overline{w}} & \overline{c}_{w \overline{w}}
+\\
+c_{w \overline{z}} & b_{w \overline{z}} & c_{w \overline{w}} & b_{w \overline{w}}
+\end{pmatrix}.
+\]
+We’ve written, for example, \( a_{z \overline{w}} \) instead of \( \frac{\partial^2 a}{\partial z \partial \overline{w}} \).
+The metric \( h \) is Kähler, so we have
+\[
+a_w = c_{z},
+\quad
+a_{\overline{w}} = \overline{c}_{\overline{z}},
+\quad
+b_z = \overline{c}_w,
+\quad
+b_{\overline{z}} = c_{\overline{w}},
+\]
+and thus
+\[
+c_{z \overline{z}} = a_{w \overline{z}},
+\quad
+\overline{c}_{w \overline{w}} = b_{z \overline{w}},
+\quad
+c_{z \overline{w}} = a_{w \overline{w}},
+\quad
+\overline{c}_{w \overline{z}} = b_{z \overline{z}}
+\]
+Then we get
+\[
+R = \begin{pmatrix}
+a_{z \overline{z}} & a_{z \overline{w}} & a_{z \overline{w}} & a_{w \overline{w}}
+\\
+a_{w \overline{z}} & a_{w \overline{w}} & a_{w \overline{w}} & b_{z \overline{w}}
+\\
+a_{w \overline{z}} & a_{w \overline{w}} & a_{w \overline{w}} & b_{z \overline{w}}
+\\
+a_{w \overline{w}} & b_{w \overline{z}} & b_{w \overline{z}} & b_{w \overline{w}}
+\end{pmatrix},
+\]
+where some simplifications happen because \( a \) is real so \( a_{w \overline{z}} =
+a_{z \overline{w}} \) and we can ping-pong to \( b_{z \overline{z}} = a_{w \overline{w}} \).
+This is exactly of the form we announced.</p></div><div class=paragraph><p>We will conclude the proof by taking the above Hermitian matrix as given and
+constructing a germ of a Kähler metric whose curvature tensor agrees with it
+at \( 0 \).
+Suppose we let
+\[
+f(z,w)
+= a_{z \overline{z}} z \bar z
++ a_{z \overline{w}} z \overline{w}
++ a_{w \overline{z}} w \overline{z}
++ a_{w \overline{w}} w \bar w.
+\]
+Then \( f(0) = 0 \) and \( df(0) = 0 \) and
+\[
+\operatorname{Hess} f(0)
+= \begin{pmatrix}
+a_{z \overline{z}} & a_{z \overline{w}}
+\\
+a_{w \overline{z}} & a_{w \overline{w}}
+\end{pmatrix}.
+\]
+We also let
+\[
+g(z,w)
+= a_{w \overline{w}} z \bar z
++ b_{z \overline{w}} z \overline{w}
++ b_{w \overline{z}} w \overline{z}
++ b_{w \overline{w}} w \bar w
+\]
+and
+\[
+h(z,w)
+= h_1 z \bar z
++ h_2 z \overline{w}
++ h_3 w \overline{z}
++ h_4 w \bar w.
+\]
+We want
+\[
+a_{w \overline{z}} \overline{z} + a_{w \overline{w}} \bar w
+= f_w = h_z
+= h_1 \overline{z} + h_2 \overline{w},
+\]
+so we set \( h_1 = a_{w \overline{z}} \) and \( h_2 = a_{w \overline{w}} \).
+We also want
+\[
+a_{w \overline{w}} \overline{z} + b_{z \overline{w}} \overline{w}
+= g_z = \overline{h}_w
+= \overline{h}_3 \bar z + \overline{h}_4 \overline{w}
+\]
+so \( h_3 = \overline{h_2} \) and \( h_4 = b_{z \overline{w}} \).
+The germ of the Kähler metric
+\[
+h(z,w)
+= \begin{pmatrix}
+1 + f(z,w) & h(z,w)
+\\
+\overline{h(z,w)} & 1 + g(z,w)
+\end{pmatrix}
+\]
+then has the curvature tensor \( R \) above.</p></div><div class=sect1><h2 id=_special_cases>Special cases</h2><div class=sectionbody><div class=paragraph><p>Let’s look at some special cases. If the tensor looks like
+\[
+R =
+\begin{pmatrix}
+x & 0 & 0 & z
+\\
+0 & z & z & 0
+\\
+0 & z & z & 0
+\\
+z & 0 & 0 & y
+\end{pmatrix}
+\]
+and we set \( \xi = (u, v) \) then
+\begin{align*}
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+&= |u|^4 x + 2 (2 |u|^2 |v|^2 + \operatorname{re}(\bar u^2 v^2))z + |v|^4 y
+\\
+r(\xi, \overline{\eta})
+&=
+\overline{\eta}^t
+\begin{pmatrix}
+x + z & 0 \\ 0 & z + x
+\end{pmatrix}
+\xi
+\\
+s &= x + 2z + y,
+\end{align*}
+and the sign of \( R(\xi, \overline{\xi}, \xi, \overline{\xi}) \) is the same as the sign of the
+holomorphic sectional curvature \( H(\xi) \).
+For complex numbers we have \( |\!\operatorname{re} z| \leq |z| \), so we have
+\begin{align*}
+x |u|^4 + y |v|^4 + 2z |u|^2 |v|^2
+&\leq R(\xi, \overline{\xi}, \xi, \overline{\xi})
+\\
+&\leq x |u|^4 + y |v|^4 + 6z |u|^2 |v|^2.
+\end{align*}
+If further \( u = v \) then
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+= (x + 6z + y) |u|^4.
+\]</p></div><div class=sect2><h3 id=_example_s_notto_h>Example: \( s \not\to H \)</h3><div class=paragraph><p>We can find \( x, y, z \) such that \( x + 2z + y > 0 \) but \( x + 6z + y &lt; 0 \),
+(like \( x = y = 4 \), \( z = -3 \)), so the scalar curvature does not dominate
+the holomorphic sectional curvature.</p></div></div><div class=sect2><h3 id=_example_s_notto_r>Example: \( s \not\to r \)</h3><div class=paragraph><p>Take \( x = 4 \), \( y = -1 \) and \( z = -1 \). Then \( x + 2z + y = 1 > 0 \) but
+\[
+r(\xi, \overline{\eta}) =
+\overline{\eta}^t
+\begin{pmatrix}
+3 & 0 \\ 0 & -2
+\end{pmatrix}
+\xi,
+\]
+is neither positive nor negative semidefinite, so the scalar curvature
+does not dominate the Ricci curvature.</p></div></div><div class=sect2><h3 id=_example_r_notto_h>Example: \( r \not\to H \)</h3><div class=paragraph><p>Let \( x = y = 2 \) and \( z = -1 \). Then
+\[
+r(\xi, \overline{\eta}) =
+\overline{\eta}^t
+\begin{pmatrix}
+1 & 0 \\ 0 & 1
+\end{pmatrix}
+\xi
+\]
+is positive-definite, but at \( \xi = (u, u) \) we have
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi}) = -4 |u|^4
+\]
+so the Ricci curvature does not dominate the holomorphic sectional curvature.
+Note that the Ricci form is a multiple of the metric, so the metric is
+Kähler—​Einstein at the origin.
+Any statement like ``this metric is Kähler—​Einstein so its holomorphic
+sectional curvature has a sign'' thus needs more information about the metric
+or the manifold to have a chance of being true.</p></div></div><div class=sect2><h3 id=_example_h_notto_r>Example: \( H \not\to r \)</h3><div class=paragraph><p>We have
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+\geq
+x |u|^4 + 2z |u|^2 |v|^2 + c |v|^4
+\]
+and the right-hand side is the quadratic form defined by
+\[
+Q = \begin{pmatrix}
+x & z \\ z & y
+\end{pmatrix}.
+\]
+This form is positive-definite if and only if
+\[
+0 &lt; \operatorname{tr} Q = x + z
+\quad\text{and}\quad
+0 &lt; \det Q = xy - z^2.
+\]
+Suppose \( z = -y - \epsilon \) with \( \epsilon > 0 \).
+Then
+\[
+xy - z^2
+= xy - y^2 - 2y \epsilon - \epsilon^2
+= y(x - y - 2\epsilon) - \epsilon^2.
+\]
+If \( x > y \), this is positive for small enough \( \epsilon \) (like \( x = 10 \), \( y =
+1 \), \( \epsilon = 1 \)).
+But then the Ricci form is
+\[
+r(\xi, \overline{\eta}) =
+\overline{\eta}^t
+\begin{pmatrix}
+x & 0 \\ 0 & -\epsilon
+\end{pmatrix}
+\xi
+\]
+which is not positive-definite,
+so the holomorphic sectional curvature does not dominate the Ricci
+curvature.</p></div></div><div class=sect2><h3 id=_example_r_notto_r>Example: \( r \not\to R \)</h3><div class=paragraph><p>We have \( \det R = 0 \), because the curvature tensor of a Kähler metric
+always has a nontrivial kernel (on manifolds of dimension \( > 1 \)).
+It is then enough to pick a metric with \( r \) positive
+to get a curvature tensor whose Ricci tensor is positive but is not itself
+Griffiths positive.
+Otherwise this direction is also covered by the \( r \not\to H \) one.</p></div></div><div class=sect2><h3 id=_example_h_notto_r_2>Example: \( H \not\to R \)</h3><div class=paragraph><p>Let \( x = y = 2 \) and \( z = -1 \).
+Then
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+\geq 2 |u|^4 + 2 |v|^4 - 2 |u|^2 |v|^2
+= |u|^4 + |v|^4 + { ( {|u|^2} - {|v|^2} ) }^2
+> 0
+\]
+so the holomorphic sectional curvature is positive, but
+for \( \xi = (u,0) \) and \( \eta = (0,v) \) we have
+\[
+R(\xi, \overline{\xi}, \eta, \overline{\eta})
+= - (|u|^2 + |v|^2 + u \overline{v} + v \overline{u})
+\leq 0
+\]
+and the inequality can be strict, so the holomorphic sectional curvature does
+not dominate the Griffiths curvature.</p></div></div></div></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/hsc-dominates-scalar-curvature/ rel=bookmark>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</a></h2><time datetime=2023-07-21T09:02:06-06:00>21 July, 2023</time></header><div class=paragraph><p>If \(R\) is the curvature tensor of a Kähler metric, we define its holomorphic
 sectional curvature to be
 \[
 H(x) = R(x, \bar x, x, \bar x) / |x|^4
@@ -322,33 +690,4 @@ gamers (a well-adjusted group of humans if there ever was one) would call
 care very much about learning how to write enough Nix to make that happen.</p></div><div class=paragraph><p>I’m not included in those groups, as I run this system and explicitly
 want to learn to use Nix in anger so I can try and fail to convince
 people to run it in production at work. Home manager is fine software and if it
-makes you happy, then please use it.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/use-ad-hoc-structs-for-flags/ rel=bookmark>Use ad hoc structs for command-line flags in Go</a></h2><time datetime=2020-06-29T09:15:48+02:00>29 June, 2020</time></header><div class=paragraph><p>The path of least resistance to commandline flag parsing in Go is to use the <a href=https://golang.org/pkg/flag/>flag</a> package from the standard library. A lot of times the result looks like this:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>func main() {
-  help := flags.Bool(&#34;help&#34;, false, &#34;HALP&#34;)
-  frobinate := flags.Int(&#34;frobinate&#34;, 0, &#34;Amount to frobinate by&#34;)
-  blargalarg := flags.String(&#34;blargalarg&#34;, &#34;&#34;, &#34;Social media comment&#34;)
-  // [713 variables later]
-  flag.Parse()
-
-  // Much later
-  if *blargalarg != &#34;&#34; {
-    // Do things. We may or may not remember what this variable is.
-  }
-}</code></pre></div></div><div class=paragraph><p>That is, we have a bunch of variables lying around we don’t really care about and take up perfectly good names. If we see one of them later in the program, we don’t have any context on where it comes from, so we have to start jumping around in the source.</p></div><div class=paragraph><p>In my projects I’ve used a little accounting trick to hold these flags. I find it helps me deal with them. We just define an anonymous struct to hold the flags:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>func main() {
-  flags := struct{
-    help *bool
-    frobinate *int
-    blargalarg *string
-    // [713 field definitions]
-  }{
-    help: flags.Bool(&#34;help&#34;, false, &#34;HALP&#34;),
-    frobinate: flags.Int(&#34;frobinate&#34;, 0, &#34;Amount to frobinate by&#34;),
-    blargalarg: flags.String(&#34;blargalarg&#34;, &#34;&#34;, &#34;Social media comment&#34;),
-    // [713 field instantiations]
-  }
-  flag.Parse()
-
-  // Much later
-  if *flags.blargalarg != &#34;&#34; {
-    // AAAAAH YES IT&#39;S A FLAG
-  }
-}</code></pre></div></div><div class=paragraph><p>If I really need to, I can pull the anonymous struct out into its own global variable or type definition or whatever, and pass it around as arguments to functions that deal with its contents. That is not as handy with a litter of flag variables. But really I just find that defining all these flags clearly in one place makes the program easier to read later once I’ve forgotten what it does.</p></div></article><nav><a class="Pagination u-clickable" href=https://www.magnusson.io/page/2/ rel=prev>« Previous</a></nav></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>
+makes you happy, then please use it.</p></div></article><nav><a class="Pagination u-clickable" href=https://www.magnusson.io/page/2/ rel=prev>« Previous</a></nav></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>

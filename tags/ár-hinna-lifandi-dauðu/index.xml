@@ -1,4 +1,462 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://www.magnusson.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ár Hinna Lifandi Dauðu on Gunnar Þór Magnússon</title><link>https://www.magnusson.io/tags/%C3%A1r-hinna-lifandi-dau%C3%B0u/</link><description>Recent content in Ár Hinna Lifandi Dauðu on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Oct 2009 18:37:27 +0000</lastBuildDate><atom:link href="https://www.magnusson.io/tags/%C3%A1r-hinna-lifandi-dau%C3%B0u/index.xml" rel="self" type="application/rss+xml"/><item><title>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</title><link>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</link><pubDate>Fri, 21 Jul 2023 09:02:06 -0600</pubDate><guid>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</guid><description>&lt;div class="paragraph">
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://www.magnusson.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ár Hinna Lifandi Dauðu on Gunnar Þór Magnússon</title><link>https://www.magnusson.io/tags/%C3%A1r-hinna-lifandi-dau%C3%B0u/</link><description>Recent content in Ár Hinna Lifandi Dauðu on Gunnar Þór Magnússon</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Oct 2009 18:37:27 +0000</lastBuildDate><atom:link href="https://www.magnusson.io/tags/%C3%A1r-hinna-lifandi-dau%C3%B0u/index.xml" rel="self" type="application/rss+xml"/><item><title>Counterexamples of positivity implications in Kähler curvature tensors</title><link>https://www.magnusson.io/post/curvature-examples/</link><pubDate>Tue, 03 Jun 2025 08:51:50 +0000</pubDate><guid>https://www.magnusson.io/post/curvature-examples/</guid><description>&lt;div class="paragraph">
+&lt;p>It is well-known that the curvature properties of Kähler metrics &amp;#34;flow downward&amp;#34;.
+To give meaning to this statement,
+let us say that a tensor \( \alpha \) &lt;em>dominates&lt;/em> a tensor \( \beta \)
+if any of the following implications hold:
+\begin{align*}
+\alpha &amp;gt; 0 &amp;amp;\implies \beta &amp;gt; 0,
+&amp;amp;
+\alpha &amp;amp;\geq 0 \implies \beta \geq 0,
+\\
+\alpha &amp;lt; 0 &amp;amp;\implies \beta &amp;lt; 0,
+&amp;amp;
+\alpha &amp;amp;\leq 0 \implies \beta \leq 0.
+\end{align*}
+Strictly speaking we need to specify what it means for a tensor to be
+&amp;#34;positive&amp;#34; or &amp;#34;negative&amp;#34; for this to make sense.
+This is fairly clear for the tensors we’ll discuss here, except for the
+Kähler curvature tensor itself which we mean to be Griffiths positive (or
+negative).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>If \( R \) is the curvature tensor of a Kähler metric, its various derived
+curvature tensors are the holomorphic sectional curvature \( H \), the Ricci
+tensor \( r \) and the scalar curvature \( s \).
+Then \( R \to H \to s \) and \( R \to r \to s \),
+where an arrow \( \alpha \to \beta \) means that \( \alpha \) dominates \( \beta \).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>The witches of the field know that neither \( H \) nor \( r \) dominates the other.
+The best evidence for this seems to be indirect.
+We for example know that Hirzebruch surfaces (surfaces that are projective
+bundles over \( \mathbf{P}^1 \)) carry metrics with positive holomorphic sectional
+curvature, but carry no metric of positive Ricci curvature as their anticanonical
+bundle is not ample.
+There are some suggestive results in the negatively curved case though,
+where a compact Kähler manifold that carries a metric of negative holomorphic
+sectional curvature also carries a possibly different metric of negative Ricci
+curvature.
+We don’t know if these are the same metric.
+It would be nice if some easy local calculations said they were, but in this note we will see they don’t.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>It is also folklore that all of the reverse relations in the diagram fail.
+Some do not hold by general considerations; for
+example Hirzebruch surfaces
+again carry a metric of positive holomorphic sectional curvature but not one of
+positive Griffiths curvature, for otherwise they would be \( \mathbf{P}^2 \) by
+Siu—​Yau’s solution of the Frankel conjecture and, lo,
+they are not.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We feel like it would be nice to see explicitly what doesn’t hold here.
+In this light reading note we work out local examples that show that the reverse of any known
+positivity implication fails.
+As other people have noted it would be nice to have compact examples of these
+failures but it is fairly difficult to get one’s hands on those.
+Suggestions are welcome.&lt;/p>
+&lt;/div>
+&lt;h1 id="_algebraic_curvature_tensors" class="sect0">Algebraic curvature tensors&lt;/h1>
+&lt;div class="paragraph">
+&lt;p>Let \( V \) be a complex vector space of dimension \( n \), which we think of as the
+tangent space of a complex manifold at a given point.
+The curvature tensor \( R \) of a Hermitian metric on the manifold identifies with
+a Hermitian form \( q \) on \( V \otimes V \), defined by
+\[
+R(x, \overline{y}, z, \overline{w})
+= q(x \otimes z, \overline{y \otimes w}).
+\]
+If the metric is Kähler we get an additional symmetry
+\( R(x, \overline{y}, z, \overline{w}) = R(z, \overline{y}, x, \overline{w}) \)
+(and the ones induced by conjugating).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We write \( B(V) \) for the real vector space of Hermitian forms on \( V \).
+The curvature tensor of a Hermitian metric is then just a member of \( B(V
+\otimes V) \).
+We’ll call such an element an algebraic curvature tensor, and one that
+satisfies the symmetries of a Kähler curvature tensor an algebraic
+Kähler curvature tensor.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>&lt;strong>Proposition&lt;/strong>
+If \( R \) is an algebraic Kähler curvature tensor, then \( R \to H \to s \) and \( R \to r \to s \).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>This is both well-known and mostly easily proved by taking traces in an
+orthonormal basis.
+The trickiest impliciation is to show that \( H \to s \).
+Berger gave the original proof by showing that
+\[
+\frac{1}{\operatorname{Vol} S^{2n-1}} \int_{S^{2n-1}} \!\!\! H(v) \, d\sigma(v)
+= \frac{1}{\binom{n+1}{2}} s
+\]
+by writing \( v = \sum_{j=1}^n v_j e_j \) in an orthonormal basis \( (e_j) \),
+expanding the curvature tensor \( R(v, \bar v, v, \bar v) \), and integrating
+polynomials in \( v_j \) over the sphere. (The reader who wants to try their
+hand at this can see Folland’s paper on integrating polynomials over spheres for the last part.)&lt;/p>
+&lt;/div>
+&lt;h1 id="_examples_of_non_dominance_in_dimension_two" class="sect0">Examples of non-dominance in dimension two&lt;/h1>
+&lt;div class="paragraph">
+&lt;p>Let’s define
+\begin{align*}
+\mathcal{H}(V)
+&amp;amp;= \{ \text{germs of smooth Hermitian metrics on \( V \) at \( 0 \)} \},
+\\
+\mathcal{K}(V)
+&amp;amp;= \{ \text{germs of smooth Kähler metrics on \( V \) at \( 0 \)} \}.
+\end{align*}
+We just write \( \mathcal{H} \) if \( V \) is clear from context and will usually mean \( V =
+\mathbf{C}^n \). Note that \( \mathcal{K} \) and \( \mathcal{H} \) are only convex open cones in real
+vector spaces and not full subspaces.
+Evaluating the curvature tensor of a metric at \( 0 \) defines nonlinear maps and a
+commutative diagram
+\begin{align*}
+\mathcal{K} &amp;amp;\stackrel{\mathcal{R}}{\longrightarrow} B(\operatorname{Sym}^2 \mathbf{C}^n)
+\\
+\downarrow &amp;amp; \qquad\qquad \downarrow
+\\
+\mathcal{H} &amp;amp;\stackrel{\mathcal{R}}{\longrightarrow} B(\mathbf{C}^n \otimes \mathbf{C}^n).
+\end{align*}
+Both vertical arrows are of course injective.
+The horizonal arrows are neither injective nor surjective in general.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>Let \( H \) be the matrix of a Hermitian metric \( h \) in a neighborhood around \( 0 \) in
+\( V \). The Chern connection of \( h \) is given by \( D^{1,0} = H^{-1}\partial H \) and its
+curvature form is
+\[
+F = \tfrac i2 \bar\partial(H^{-1}\partial H)
+= - \tfrac i2 H^{-1} \bar\partial H \wedge H^{-1} \partial H
+- \tfrac i2 H^{-1} \partial \bar\partial H.
+\]
+The curvature tensor is then \( R(x,\overline{y}, z, \overline{w}) = h(F(x, \overline{y}) z, \overline{w}) \).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We can pick coordinates such that \( H = I_n \) at \( 0 \).
+If \( h \) is Kähler we can further get \( \partial H = 0 \) at \( 0 \).
+We will arrange this in our examples.
+We now restrict to \( V = \mathbf{C}^2 \).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>&lt;strong>Proposition.&lt;/strong>
+The image of \( \mathcal{K}(\mathbf{C}^2) \) in \( B(\mathbf{C}^2 \otimes \mathbf{C}^2) \) is the set of matrices of the form
+\[
+\begin{pmatrix}
+x &amp;amp; a &amp;amp; a &amp;amp; c
+\\
+\bar a &amp;amp; z &amp;amp; z &amp;amp; b
+\\
+\bar a &amp;amp; z &amp;amp; z &amp;amp; b
+\\
+\bar c &amp;amp; \bar b &amp;amp; \bar b &amp;amp; y
+\end{pmatrix}
+\]
+where \( x, y, z \in \mathbf{R} \), \( a, b, c \in \mathbf{C} \).&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>&lt;em>Proof:&lt;/em>
+If \( h \) is a Hermitian metric on a neighborhood of \( 0 \) in \( \mathbf{C}^2 \)
+we can write it in matrix form as
+\[
+H = \begin{pmatrix}
+a &amp;amp; c
+\\
+\overline{c} &amp;amp; b
+\end{pmatrix}.
+\]
+After a change of coordinates, we can assume that \( H(0) = I_2 \).
+Assuming \( h \) is Kähler we can also arrange that \( \partial H(0) = 0 \).
+Then the matrix of the curvature tensor in the basis
+\( (\partial / \partial z \otimes \partial / \partial z,
+\partial / \partial z \otimes \partial / \partial w,
+\partial / \partial w \otimes \partial / \partial z,
+\partial / \partial w \otimes \partial / \partial w) \)
+is
+\[
+R = \begin{pmatrix}
+a_{z \overline{z}} &amp;amp; \overline{c}_{z \overline{z}} &amp;amp; a_{z \overline{w}} &amp;amp; \overline{c}_{z \overline{w}}
+\\
+c_{z \overline{z}} &amp;amp; b_{z \overline{z}} &amp;amp; c_{z \overline{w}} &amp;amp; b_{z \overline{w}}
+\\
+a_{w \overline{z}} &amp;amp; \overline{c}_{w \overline{z}} &amp;amp; a_{w \overline{w}} &amp;amp; \overline{c}_{w \overline{w}}
+\\
+c_{w \overline{z}} &amp;amp; b_{w \overline{z}} &amp;amp; c_{w \overline{w}} &amp;amp; b_{w \overline{w}}
+\end{pmatrix}.
+\]
+We’ve written, for example, \( a_{z \overline{w}} \) instead of \( \frac{\partial^2 a}{\partial z \partial \overline{w}} \).
+The metric \( h \) is Kähler, so we have
+\[
+a_w = c_{z},
+\quad
+a_{\overline{w}} = \overline{c}_{\overline{z}},
+\quad
+b_z = \overline{c}_w,
+\quad
+b_{\overline{z}} = c_{\overline{w}},
+\]
+and thus
+\[
+c_{z \overline{z}} = a_{w \overline{z}},
+\quad
+\overline{c}_{w \overline{w}} = b_{z \overline{w}},
+\quad
+c_{z \overline{w}} = a_{w \overline{w}},
+\quad
+\overline{c}_{w \overline{z}} = b_{z \overline{z}}
+\]
+Then we get
+\[
+R = \begin{pmatrix}
+a_{z \overline{z}} &amp;amp; a_{z \overline{w}} &amp;amp; a_{z \overline{w}} &amp;amp; a_{w \overline{w}}
+\\
+a_{w \overline{z}} &amp;amp; a_{w \overline{w}} &amp;amp; a_{w \overline{w}} &amp;amp; b_{z \overline{w}}
+\\
+a_{w \overline{z}} &amp;amp; a_{w \overline{w}} &amp;amp; a_{w \overline{w}} &amp;amp; b_{z \overline{w}}
+\\
+a_{w \overline{w}} &amp;amp; b_{w \overline{z}} &amp;amp; b_{w \overline{z}} &amp;amp; b_{w \overline{w}}
+\end{pmatrix},
+\]
+where some simplifications happen because \( a \) is real so \( a_{w \overline{z}} =
+a_{z \overline{w}} \) and we can ping-pong to \( b_{z \overline{z}} = a_{w \overline{w}} \).
+This is exactly of the form we announced.&lt;/p>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>We will conclude the proof by taking the above Hermitian matrix as given and
+constructing a germ of a Kähler metric whose curvature tensor agrees with it
+at \( 0 \).
+Suppose we let
+\[
+f(z,w)
+= a_{z \overline{z}} z \bar z
++ a_{z \overline{w}} z \overline{w}
++ a_{w \overline{z}} w \overline{z}
++ a_{w \overline{w}} w \bar w.
+\]
+Then \( f(0) = 0 \) and \( df(0) = 0 \) and
+\[
+\operatorname{Hess} f(0)
+= \begin{pmatrix}
+a_{z \overline{z}} &amp;amp; a_{z \overline{w}}
+\\
+a_{w \overline{z}} &amp;amp; a_{w \overline{w}}
+\end{pmatrix}.
+\]
+We also let
+\[
+g(z,w)
+= a_{w \overline{w}} z \bar z
++ b_{z \overline{w}} z \overline{w}
++ b_{w \overline{z}} w \overline{z}
++ b_{w \overline{w}} w \bar w
+\]
+and
+\[
+h(z,w)
+= h_1 z \bar z
++ h_2 z \overline{w}
++ h_3 w \overline{z}
++ h_4 w \bar w.
+\]
+We want
+\[
+a_{w \overline{z}} \overline{z} + a_{w \overline{w}} \bar w
+= f_w = h_z
+= h_1 \overline{z} + h_2 \overline{w},
+\]
+so we set \( h_1 = a_{w \overline{z}} \) and \( h_2 = a_{w \overline{w}} \).
+We also want
+\[
+a_{w \overline{w}} \overline{z} + b_{z \overline{w}} \overline{w}
+= g_z = \overline{h}_w
+= \overline{h}_3 \bar z + \overline{h}_4 \overline{w}
+\]
+so \( h_3 = \overline{h_2} \) and \( h_4 = b_{z \overline{w}} \).
+The germ of the Kähler metric
+\[
+h(z,w)
+= \begin{pmatrix}
+1 + f(z,w) &amp;amp; h(z,w)
+\\
+\overline{h(z,w)} &amp;amp; 1 + g(z,w)
+\end{pmatrix}
+\]
+then has the curvature tensor \( R \) above.&lt;/p>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_special_cases">Special cases&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="paragraph">
+&lt;p>Let’s look at some special cases. If the tensor looks like
+\[
+R =
+\begin{pmatrix}
+x &amp;amp; 0 &amp;amp; 0 &amp;amp; z
+\\
+0 &amp;amp; z &amp;amp; z &amp;amp; 0
+\\
+0 &amp;amp; z &amp;amp; z &amp;amp; 0
+\\
+z &amp;amp; 0 &amp;amp; 0 &amp;amp; y
+\end{pmatrix}
+\]
+and we set \( \xi = (u, v) \) then
+\begin{align*}
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+&amp;amp;= |u|^4 x + 2 (2 |u|^2 |v|^2 + \operatorname{re}(\bar u^2 v^2))z + |v|^4 y
+\\
+r(\xi, \overline{\eta})
+&amp;amp;=
+\overline{\eta}^t
+\begin{pmatrix}
+x + z &amp;amp; 0 \\ 0 &amp;amp; z + x
+\end{pmatrix}
+\xi
+\\
+s &amp;amp;= x + 2z + y,
+\end{align*}
+and the sign of \( R(\xi, \overline{\xi}, \xi, \overline{\xi}) \) is the same as the sign of the
+holomorphic sectional curvature \( H(\xi) \).
+For complex numbers we have \( |\!\operatorname{re} z| \leq |z| \), so we have
+\begin{align*}
+x |u|^4 + y |v|^4 + 2z |u|^2 |v|^2
+&amp;amp;\leq R(\xi, \overline{\xi}, \xi, \overline{\xi})
+\\
+&amp;amp;\leq x |u|^4 + y |v|^4 + 6z |u|^2 |v|^2.
+\end{align*}
+If further \( u = v \) then
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+= (x + 6z + y) |u|^4.
+\]&lt;/p>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_example_s_notto_h">Example: \( s \not\to H \)&lt;/h3>
+&lt;div class="paragraph">
+&lt;p>We can find \( x, y, z \) such that \( x + 2z + y &amp;gt; 0 \) but \( x + 6z + y &amp;lt; 0 \),
+(like \( x = y = 4 \), \( z = -3 \)), so the scalar curvature does not dominate
+the holomorphic sectional curvature.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_example_s_notto_r">Example: \( s \not\to r \)&lt;/h3>
+&lt;div class="paragraph">
+&lt;p>Take \( x = 4 \), \( y = -1 \) and \( z = -1 \). Then \( x + 2z + y = 1 &amp;gt; 0 \) but
+\[
+r(\xi, \overline{\eta}) =
+\overline{\eta}^t
+\begin{pmatrix}
+3 &amp;amp; 0 \\ 0 &amp;amp; -2
+\end{pmatrix}
+\xi,
+\]
+is neither positive nor negative semidefinite, so the scalar curvature
+does not dominate the Ricci curvature.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_example_r_notto_h">Example: \( r \not\to H \)&lt;/h3>
+&lt;div class="paragraph">
+&lt;p>Let \( x = y = 2 \) and \( z = -1 \). Then
+\[
+r(\xi, \overline{\eta}) =
+\overline{\eta}^t
+\begin{pmatrix}
+1 &amp;amp; 0 \\ 0 &amp;amp; 1
+\end{pmatrix}
+\xi
+\]
+is positive-definite, but at \( \xi = (u, u) \) we have
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi}) = -4 |u|^4
+\]
+so the Ricci curvature does not dominate the holomorphic sectional curvature.
+Note that the Ricci form is a multiple of the metric, so the metric is
+Kähler—​Einstein at the origin.
+Any statement like ``this metric is Kähler—​Einstein so its holomorphic
+sectional curvature has a sign&amp;#39;&amp;#39; thus needs more information about the metric
+or the manifold to have a chance of being true.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_example_h_notto_r">Example: \( H \not\to r \)&lt;/h3>
+&lt;div class="paragraph">
+&lt;p>We have
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+\geq
+x |u|^4 + 2z |u|^2 |v|^2 + c |v|^4
+\]
+and the right-hand side is the quadratic form defined by
+\[
+Q = \begin{pmatrix}
+x &amp;amp; z \\ z &amp;amp; y
+\end{pmatrix}.
+\]
+This form is positive-definite if and only if
+\[
+0 &amp;lt; \operatorname{tr} Q = x + z
+\quad\text{and}\quad
+0 &amp;lt; \det Q = xy - z^2.
+\]
+Suppose \( z = -y - \epsilon \) with \( \epsilon &amp;gt; 0 \).
+Then
+\[
+xy - z^2
+= xy - y^2 - 2y \epsilon - \epsilon^2
+= y(x - y - 2\epsilon) - \epsilon^2.
+\]
+If \( x &amp;gt; y \), this is positive for small enough \( \epsilon \) (like \( x = 10 \), \( y =
+1 \), \( \epsilon = 1 \)).
+But then the Ricci form is
+\[
+r(\xi, \overline{\eta}) =
+\overline{\eta}^t
+\begin{pmatrix}
+x &amp;amp; 0 \\ 0 &amp;amp; -\epsilon
+\end{pmatrix}
+\xi
+\]
+which is not positive-definite,
+so the holomorphic sectional curvature does not dominate the Ricci
+curvature.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_example_r_notto_r">Example: \( r \not\to R \)&lt;/h3>
+&lt;div class="paragraph">
+&lt;p>We have \( \det R = 0 \), because the curvature tensor of a Kähler metric
+always has a nontrivial kernel (on manifolds of dimension \( &amp;gt; 1 \)).
+It is then enough to pick a metric with \( r \) positive
+to get a curvature tensor whose Ricci tensor is positive but is not itself
+Griffiths positive.
+Otherwise this direction is also covered by the \( r \not\to H \) one.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_example_h_notto_r_2">Example: \( H \not\to R \)&lt;/h3>
+&lt;div class="paragraph">
+&lt;p>Let \( x = y = 2 \) and \( z = -1 \).
+Then
+\[
+R(\xi, \overline{\xi}, \xi, \overline{\xi})
+\geq 2 |u|^4 + 2 |v|^4 - 2 |u|^2 |v|^2
+= |u|^4 + |v|^4 + { ( {|u|^2} - {|v|^2} ) }^2
+&amp;gt; 0
+\]
+so the holomorphic sectional curvature is positive, but
+for \( \xi = (u,0) \) and \( \eta = (0,v) \) we have
+\[
+R(\xi, \overline{\xi}, \eta, \overline{\eta})
+= - (|u|^2 + |v|^2 + u \overline{v} + v \overline{u})
+\leq 0
+\]
+and the inequality can be strict, so the holomorphic sectional curvature does
+not dominate the Griffiths curvature.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>A new, worse, proof that the holomorphic sectional curvature dominates the scalar curvature</title><link>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</link><pubDate>Fri, 21 Jul 2023 09:02:06 -0600</pubDate><guid>https://www.magnusson.io/post/hsc-dominates-scalar-curvature/</guid><description>&lt;div class="paragraph">
 &lt;p>If \(R\) is the curvature tensor of a Kähler metric, we define its holomorphic
 sectional curvature to be
 \[
