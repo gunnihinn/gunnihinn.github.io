@@ -1,7 +1,7 @@
 ---
 title: "Counterexamples of positivity implications in Kähler curvature tensors"
 date: 2025-06-03T08:51:50Z
-draft: true
+draft: false
 ---
 
 
