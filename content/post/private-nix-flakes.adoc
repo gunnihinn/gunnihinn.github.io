@@ -1,0 +1,25 @@
+---
+title: "Using private Nix flake inputs"
+date: 2025-10-29T11:50:50Z
+draft: false
+---
+
+I want to use Nix flakes for some projects at work.
+Those projects live in private Gitlab repositories that I use SSH keys to access.
+Furthermore, the project layout doesn't mirror the usual GitHub `namespace/project` convention, but is something more like `Company/Prefix/Username/Something/project`.
+Nix's flake input mechanisms **do not** like this, and figuring out how to get them to cooperate was a bit of a romp through various abandoned forum posts.
+
+The incredibly hacky solution I finally came up with was:
+First use `git+https://gitlab.com/Company/path/to/project` in the `inputs.project.url` field.
+Then add a
+
+```
+[url "git@gitlab.com:Company/"]
+  https://gitlab.com/Company/
+```
+
+entry to my Git config file to rewrite the URL on the fly.
+
+This works, seemingly because Git actually uses SSH to access the HTTPS URL?
+Or it figures out that it should use SSH to access the rewritten URI?
+I dunno, man.
