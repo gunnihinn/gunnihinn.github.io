@@ -1,4 +1,72 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.147.7"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/><link rel=alternate type=application/rss+xml href=https://www.magnusson.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/contact/>Contact</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/use-ad-hoc-structs-for-flags/ rel=bookmark>Use ad hoc structs for command-line flags in Go</a></h2><time datetime=2020-06-29T09:15:48+02:00>29 June, 2020</time></header><div class=paragraph><p>The path of least resistance to commandline flag parsing in Go is to use the <a href=https://golang.org/pkg/flag/>flag</a> package from the standard library. A lot of times the result looks like this:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>func main() {
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.152.2"><title>Gunnar Þór Magnússon</title><link rel=canonical href=https://www.magnusson.io/><link rel=alternate type=application/rss+xml href=https://www.magnusson.io/index.xml title="Gunnar Þór Magnússon"><link rel=stylesheet href=https://www.magnusson.io/css/base.min.c8d7b76018962ae348ca009f0c82f2ed51a7ad01f94e2091060a820b89493837.css integrity="sha256-yNe3YBiWKuNIygCfDILy7VGnrQH5TiCRBgqCC4lJODc=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=https://www.magnusson.io/>Gunnar Þór Magnússon</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/about/>About</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/contact/>Contact</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=https://www.magnusson.io/post/>Posts</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/home-manager-review/ rel=bookmark>Review of home manager</a></h2><time datetime=2020-09-17T15:14:16+02:00>17 September, 2020</time></header><div class=paragraph><p>A common theme among the people who fall in love with Nix (or its cousin
+<a href=https://nixos.org/>NixOS</a>) is that they want it to manage everything for them. Finding
+out the limits of that capability and where it breaks down is part of
+each’s journey.</p></div><div class=paragraph><p>An obvious enough limit to Nix’s reach is secret management. It can
+easily handle public keys, SSH or cryptographic ones, but the private
+keys cannot be managed by its store as it is readable by all.</p></div><div class=paragraph><p>The promise of Nix is that we will never break our system by updating
+it. We can always roll back to a previous working version, once we have
+a working version at all. This is in contrast to, say, every other Linux
+distribution. I have borked Ubuntu, Arch, Fedora and others during system
+updates. Often the safest way to update the system is to back up <code>/home</code>
+and reinstall the OS.</p></div><div class=paragraph><p>From somewhere comes the idea that a user on a Linux system should be able
+to install their own programs and manage their own system services. (See
+<a href=https://nullprogram.com/blog/2017/06/19/>Chris Wellons</a> for where you can run
+with this idea to if your sysadmin gives you a C compiler.) This
+seems odd from a historical perspective. In a true multi-user system, the
+system administrators normally do not want users to be able to install
+arbitrary software or run services. On a modern "multi"-user system,
+where there is a only single user, avoiding system packages and services
+seems like some kind of theater.</p></div><div class=paragraph><p>Yet we do it anyway. An argument I sometimes make to myself is that this
+is a cleaner separation between what I need the system to do versus what
+I do on it. I may want to be able to run traceroute as root, but I don’t
+care about root being able to run the Go compiler.</p></div><div class=paragraph><p>NixOS has facilities to enforce this separation. It happily creates
+users and their home directories, and can fill in some of the bits that
+go there, like public SSH keys. It can install packages for specific
+users, and allow them to define systemd services. It will not manage
+the configuration of specific user packages (like dotfiles) without
+some coercing. One can presumably create custom derivations of, say,
+ZSH with all the configuration one wants, but who has the time?</p></div><div class=paragraph><p><a href=https://github.com/rycee/home-manager>Home manager</a> wants to fill this
+gap and bring the power of Nix to user environment and configuration
+management. It lets individual users say what packages they want
+installed; what services they want run; and what configuration files
+should go where. On the surface it seems like something I should love,
+but after using it for a month I wrote it out of my system and now use
+plain NixOS.</p></div><div class=paragraph><p>I used Home manager for three things:</p></div><div class="olist arabic"><ol class=arabic><li><p>Installing packages for my user.</p></li><li><p>Scheduling services for my user.</p></li><li><p>Installing configuration files for my software.</p></li></ol></div><div class=paragraph><p>The first one was never a big attraction. Home manager lets us define
+a list of packages in <code>home.packages</code> of packages to install. If we
+control the system configuration, we can acheive the same by defining
+those packages in <code>users.users.$username.packages</code>.</p></div><div class=paragraph><p>If a user controls the system configuration (directly or through
+a sysadmin), they can also define their own user services via
+<code>systemd.user</code>. Home manager’s selling point is that it comes with a
+large list of already defined services that we can enable with a boolean
+flag, instead of having to write our own service configuration. This is
+admittedly nice. In the end, I found that learning the idiosyncrazies
+of each home manager service definition was a less useful use of my time
+than learning how to define NixOS systemd services once and for all. The
+latter is after all where the former end up.</p></div><div class=paragraph><p>As a long-time sufferer of dotfile management, I had high hopes for the
+third point. And indeed, home manager will manage dotfiles just fine. It
+can do this in two modes: it can generate a config file from various
+options we fill out if someone has written a home manager module for
+the program we’re trying to configure, or it can plomp a file on the
+system verbatim from a source. I used the latter, as I didn’t feel like
+learning a configuration language to be able to partially configure
+program dotfiles was a good idea.</p></div><div class=paragraph><p>This works well, until we want to change anything in a dotfile. This
+experiment with home manager coincided with a regular low point in my life
+in which I try to use emacs. This comes with quite a lot of .emacs changes
+as I use Lisp for the only thing it’s ever been good for; configuring
+a text editor in the most complicated way imaginable. Now, the dotfiles
+that home manager (or Nix) puts on our systems are read-only, so every
+change would involve changing the source file and running <code>home-manager
+switch</code>. This seems like unnecessarily many steps, especially after I
+saw this brilliant <a href="https://news.ycombinator.com/item?id=11071754">Hacker news</a>
+comment, which after a week of use is a much better solution for this problem.</p></div><div class=paragraph><p>All in all home manager is nice software. I can see it being useful for
+people who either don’t control the system they run on but want to use
+Nix in user mode to run their corner of it, or for those Nix users who
+gamers (a well-adjusted group of humans if there ever was one) would call
+"filthy casuals", that is, people who just want things to work and don’t
+care very much about learning how to write enough Nix to make that happen.</p></div><div class=paragraph><p>I’m not included in those groups, as I run this system and explicitly
+want to learn to use Nix in anger so I can try and fail to convince
+people to run it in production at work. Home manager is fine software and if it
+makes you happy, then please use it.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/use-ad-hoc-structs-for-flags/ rel=bookmark>Use ad hoc structs for command-line flags in Go</a></h2><time datetime=2020-06-29T09:15:48+02:00>29 June, 2020</time></header><div class=paragraph><p>The path of least resistance to commandline flag parsing in Go is to use the <a href=https://golang.org/pkg/flag/>flag</a> package from the standard library. A lot of times the result looks like this:</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-go data-lang=go>func main() {
   help := flags.Bool(&#34;help&#34;, false, &#34;HALP&#34;)
   frobinate := flags.Int(&#34;frobinate&#34;, 0, &#34;Amount to frobinate by&#34;)
   blargalarg := flags.String(&#34;blargalarg&#34;, &#34;&#34;, &#34;Social media comment&#34;)
@@ -181,6 +249,5 @@ wanted to use a FIFO queue to hold its requests. That is a bad idea, because
 FIFO queues perform very poorly under load, as I
 <a href=https://github.com/gunnihinn/queuesim>went a little overboard</a>
 in demonstrating.</p></div><div class=paragraph><p>Funnily enough, that very simple thing is one of my most popular Github
-projects ever.</p></div></article><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://www.magnusson.io/post/ignore-mastodon/ rel=bookmark>Ignore Mastodon</a></h2><time datetime=2019-03-05T07:33:59+02:00>5 March, 2019</time></header><div class=paragraph><p>Point: <a href=https://carlchenet.com/do-not-ignore-the-mastodon-social-network/>You should not ignore the Mastodon social network any more</a>.</p></div><div class=paragraph><p>Counterpoint: I truly, madly, deeply want to ignore all new and existing social
-networks.</p></div></article><nav><a class="Pagination u-clickable" href=https://www.magnusson.io/page/3/ rel=prev>« Previous</a>
+projects ever.</p></div></article><nav><a class="Pagination u-clickable" href=https://www.magnusson.io/page/3/ rel=prev>« Previous</a>
 <a class="Pagination Pagination--right u-clickable" href=https://www.magnusson.io/ rel=next>Next »</a></nav></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding>Copyright :: Gunnar Þór Magnússon</div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></footer></body></html>
